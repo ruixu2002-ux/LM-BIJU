@@ -1,0 +1,92 @@
+{
+  "catalogo-desktop": {
+    "scores": {
+      "performance": 98,
+      "accessibility": 88,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "1.1 s",
+    "FCP": "0.4 s",
+    "SI": "0.6 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 1,444 KiB"
+  },
+  "catalogo-mobile": {
+    "scores": {
+      "performance": 87,
+      "accessibility": 80,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "3.8 s",
+    "FCP": "1.5 s",
+    "SI": "3.0 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 809 KiB"
+  },
+  "empresa-desktop": {
+    "scores": {
+      "performance": 100,
+      "accessibility": 87,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "0.4 s",
+    "FCP": "0.4 s",
+    "SI": "0.6 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 388 KiB"
+  },
+  "empresa-mobile": {
+    "scores": {
+      "performance": 99,
+      "accessibility": 78,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "1.7 s",
+    "FCP": "1.5 s",
+    "SI": "2.6 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 278 KiB"
+  },
+  "index-desktop": {
+    "scores": {
+      "performance": 100,
+      "accessibility": 90,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "0.6 s",
+    "FCP": "0.4 s",
+    "SI": "0.5 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 1,213 KiB"
+  },
+  "index-mobile": {
+    "scores": {
+      "performance": 96,
+      "accessibility": 85,
+      "best-practices": 96,
+      "seo": 100,
+      "agentic-browsing": 50
+    },
+    "LCP": "2.4 s",
+    "FCP": "1.5 s",
+    "SI": "3.8 s",
+    "TBT": "0 ms",
+    "CLS": "0",
+    "bytes": "Total size was 644 KiB"
+  }
+}
