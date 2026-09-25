@@ -4,6 +4,8 @@
 |---|---|
 | `audit-v17.md` | 现有 demo v17 的完整审计（实测数据） |
 | `foundations-phase1.md` | 路径一：色彩 / 字体 / 视频 / 图片 / 布局骨架 / WordPress 迁移 / 工作流 |
+| `phase2-proposals.md` | 竞品综合、审美升级增量、动效总表、A/B/C 三个方案规格与关键代码、推荐 |
+| `<竞品>/analysis.md` | 逐站分析（基于用户提供的截图；原始 PNG 未入库，只存了缩略总览 `screenshots-overview.jpg`） |
 | `evidence/` | 截图、字体样张、图片联络图、Lighthouse 摘要 |
 | `<竞品>/` | 竞品材料放置处（方式 B） |
 

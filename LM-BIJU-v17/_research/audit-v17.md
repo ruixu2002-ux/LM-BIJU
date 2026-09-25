@@ -135,6 +135,7 @@ Lighthouse 没把视频算进传输量（`preload="metadata"`，只取了 moov�
 | I6 | P1 | 分辨率不够（900–1200px 宽）；900px 的图被拉成 1440px 宽的 Hero | sharp 元数据 |
 | I7 | P1 | 首屏同一张图出现两次 | `hero-ouro.jpg` 在 `index.html:81/84/129` |
 | I8 | P2 | baseline JPEG，4:2:0 采样，没有 AVIF/WebP 和 srcset | 总计 1765 KiB |
+| I10 | **P0** | **文案雷同**：empresa 页的"三问卡"和 Cellibiju 首页文案几乎逐句相同（Tem/Possui uma página no Instagram ou Facebook…；…loja online ou física…；Está a pensar (em) começar um negócio com bijuteria?） | `empresa.html:78/86/94` 对照 `_research/cellibiju/` 04.png；两家同在 Varziela 工业区 |
 | I9 | P2 | `cat-colares.jpg`、`cat-pulseiras.jpg` 没有被任何页面引用 | grep |
 
 ---
