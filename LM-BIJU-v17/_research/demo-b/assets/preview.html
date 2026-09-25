@@ -1,0 +1,2856 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo B · Assets</title>
+<style>
+:root{--bg:#FBFBF9;--fg:#1C1915;--fg2:#5E574E;--fg3:#736B61;--line:#E4DED4;--card:#fff;--ok:#2F6B4F;--warn:#8A5A12;--gold:#7D5E2C;--dark:#14120F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14120F;--fg:#FAF7F2;--fg2:#CFC8BD;--fg3:#A39B90;--line:#2A2621;--card:#1C1915;--ok:#8FC7A8;--warn:#E3B868;--gold:#E2CFA4}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 "Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;padding:32px clamp(16px,4vw,48px) 64px}
+h1{font:300 clamp(32px,4vw,52px)/1.05 Georgia,serif;margin-bottom:8px}
+.sub{color:var(--fg2);max-width:80ch}
+.stats{display:flex;flex-wrap:wrap;gap:8px 24px;margin:16px 0 24px;font:13px ui-monospace,Menlo,monospace;color:var(--fg3)}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:28px;position:sticky;top:0;background:var(--bg);z-index:5}
+.bar label{font-size:13px;color:var(--fg2);display:flex;gap:8px;align-items:center}
+select{min-height:36px;padding:0 10px;border:1px solid var(--fg3);background:var(--card);color:var(--fg)}
+h2{font:500 13px/1 system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:32px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.thumb{background:var(--dark);aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;border:0;padding:0;cursor:zoom-in;width:100%}
+.thumb img,.thumb video{max-width:100%;max-height:100%;object-fit:contain}
+.body{padding:14px;display:grid;gap:6px;font-size:13px}
+.id{font:500 14px ui-monospace,Menlo,monospace;word-break:break-all}
+.row{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font:12px/1 system-ui;padding:4px 7px;border:1px solid currentColor}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.ai{color:var(--gold)}
+.muted{color:var(--fg3)}
+details summary{cursor:pointer;color:var(--fg2)}
+details ul{list-style:none;font:12px ui-monospace,Menlo,monospace;color:var(--fg3);max-height:160px;overflow:auto;margin-top:6px}
+dialog{border:0;padding:0;width:100vw;height:100vh;max-width:none;max-height:none;background:#14120F}
+dialog img{width:100%;height:100%;object-fit:contain}
+dialog button{position:absolute;top:14px;right:14px;min-height:40px;padding:0 16px;background:none;color:#FAF7F2;border:1px solid #8A8278;cursor:pointer}
+dialog p{position:absolute;left:16px;bottom:14px;color:#CFC8BD;font:12px ui-monospace,Menlo,monospace}
+</style>
+</head>
+<body>
+<h1>Demo B · Câmara Escura — assets</h1>
+<p class="sub">Todas as imagens processadas para o protótipo B (sRGB, sem metadados, AVIF + WebP + JPEG). As imagens de origem MJ levam sempre a menção "Imagem ilustrativa gerada por IA" e nunca representam uma referência específica.</p>
+<div class="stats" id="stats"></div>
+<div class="bar" role="group" aria-label="Filtros">
+  <label>Origem <select id="fs"><option value="">Todas</option><option>Legacy</option><option>MJ</option><option>Video</option></select></label>
+  <label>Uso <select id="fu"><option value="">Todos</option></select></label>
+  <label>Resolução <select id="fr"><option value="">Todas</option><option value="1">Cumpre alvo</option><option value="0">Abaixo do alvo</option></select></label>
+  <label>IA <select id="fa"><option value="">Todas</option><option value="1">Com menção IA</option><option value="0">Sem IA</option></select></label>
+  <span class="muted" id="count" aria-live="polite"></span>
+</div>
+<div id="out"></div>
+<dialog id="lb" aria-label="Imagem ampliada"><img alt=""><p></p><button type="button">Fechar</button></dialog>
+<script id="data" type="application/json">{
+ "generated": "2026-09-25T10:13:25.096Z",
+ "project": "LM BIJU · Demo B \"Câmara Escura\"",
+ "base": "_research/demo-b/assets/",
+ "rules": {
+  "aiLabelText": "Imagem ilustrativa gerada por IA",
+  "aiNeverAsSku": true,
+  "excludedSources": {
+   "images/pendente-halo.jpg": "third-party brand \"EMIZA JEWELLERY\" in frame — not used, not retouched",
+   "images/cat-brincos.jpg": "resolution (4:5 crop 540x675)",
+   "images/cat-loja.jpg": "resolution (4:5 crop 480x600)",
+   "images/anel-solitario.jpg": "composition (product only a few px)"
+  }
+ },
+ "video": {
+  "source": "media/hero.mp4 (1080x1920, H.264 High@4.2, 59.94fps, 28.7s)",
+  "segment": "2.0s–18.0s (no cuts; cuts detected at 19.09s, 21.50s, 28.66s)",
+  "fps": 3,
+  "count": 48,
+  "grade": "eq=brightness=-0.035:saturation=0.88:contrast=1.04, vignette=PI/5",
+  "encoding": "AVIF q52 effort4, 1080x1920",
+  "avgKB": 21.9,
+  "totalKB": 1051,
+  "stage0MeasuredAvgKB": 26.2,
+  "scrollMapping": "frameIndex = round(progress * (count-1)); progress = 0 at section start (top of sticky stage) → 1 at section end",
+  "poster": {
+   "frameIndex": 23,
+   "files": [
+    "video/video-poster-1080.avif",
+    "video/video-poster-1080.webp",
+    "video/video-poster-1080.jpg",
+    "video/video-poster-540.avif",
+    "video/video-poster-540.jpg"
+   ]
+  },
+  "mobile": {
+   "file": "video/video-mobile-540.mp4",
+   "bytes": 549257,
+   "spec": "H.264 Main, 540x960, 24fps, 12s (2–14s), CRF26 maxrate 0.8M, no audio, faststart"
+  },
+  "license": "Source: own shoot; model release: signed (provisional statement by client 2026-09-25, to be confirmed before launch)"
+ },
+ "assets": [
+  {
+   "id": "legacy-hero-aco-hero",
+   "source": "Legacy",
+   "sourceFile": "images/hero-aco.jpg",
+   "sourceSize": "1200x1800",
+   "use": "hero",
+   "aiLabel": false,
+   "placement": "Hero frame 1 (LCP)",
+   "variants": [
+    {
+     "file": "legacy/legacy-hero-aco-hero-600.avif",
+     "width": 600,
+     "height": 900,
+     "format": "avif",
+     "bytes": 7491
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-600.webp",
+     "width": 600,
+     "height": 900,
+     "format": "webp",
+     "bytes": 10662
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-600.jpg",
+     "width": 600,
+     "height": 900,
+     "format": "jpg",
+     "bytes": 12957
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-900.avif",
+     "width": 900,
+     "height": 1350,
+     "format": "avif",
+     "bytes": 12194
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-900.webp",
+     "width": 900,
+     "height": 1350,
+     "format": "webp",
+     "bytes": 19440
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-900.jpg",
+     "width": 900,
+     "height": 1350,
+     "format": "jpg",
+     "bytes": 24214
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-1200.avif",
+     "width": 1200,
+     "height": 1800,
+     "format": "avif",
+     "bytes": 18051
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-1200.webp",
+     "width": 1200,
+     "height": 1800,
+     "format": "webp",
+     "bytes": 29422
+    },
+    {
+     "file": "legacy/legacy-hero-aco-hero-1200.jpg",
+     "width": 1200,
+     "height": 1800,
+     "format": "jpg",
+     "bytes": 39284
+    }
+   ],
+   "resolution": {
+    "needed": "height ≥ 1800 for 2x at 900 CSS px viewport height",
+    "actual": "1200x1800",
+    "ok": true,
+    "ratio2x": "2.00x @900h"
+   },
+   "restriction": "OK for demo and production at ≤900 CSS px tall viewports",
+   "brightness": 5,
+   "useLabel": "Hero",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-hero-aco-prod",
+   "source": "Legacy",
+   "sourceFile": "images/hero-aco.jpg",
+   "sourceSize": "1200x1800",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1013 Corrente Cubana — Homem",
+   "variants": [
+    {
+     "file": "legacy/legacy-hero-aco-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 4311
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 6684
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 7987
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 8855
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 15310
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 18940
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-1200.avif",
+     "width": 1200,
+     "height": 1500,
+     "format": "avif",
+     "bytes": 13759
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-1200.webp",
+     "width": 1200,
+     "height": 1500,
+     "format": "webp",
+     "bytes": 26010
+    },
+    {
+     "file": "legacy/legacy-hero-aco-prod-1200.jpg",
+     "width": 1200,
+     "height": 1500,
+     "format": "jpg",
+     "bytes": 33148
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 1200x1500",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 5,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-homem-hero",
+   "source": "Legacy",
+   "sourceFile": "images/cat-homem.jpg",
+   "sourceSize": "1200x1600",
+   "use": "hero",
+   "aiLabel": false,
+   "placement": "Hero frame 2",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-homem-hero-600.avif",
+     "width": 600,
+     "height": 800,
+     "format": "avif",
+     "bytes": 9104
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-600.webp",
+     "width": 600,
+     "height": 800,
+     "format": "webp",
+     "bytes": 9896
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-600.jpg",
+     "width": 600,
+     "height": 800,
+     "format": "jpg",
+     "bytes": 18324
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-900.avif",
+     "width": 900,
+     "height": 1200,
+     "format": "avif",
+     "bytes": 16926
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-900.webp",
+     "width": 900,
+     "height": 1200,
+     "format": "webp",
+     "bytes": 20028
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-900.jpg",
+     "width": 900,
+     "height": 1200,
+     "format": "jpg",
+     "bytes": 37440
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-1200.avif",
+     "width": 1200,
+     "height": 1600,
+     "format": "avif",
+     "bytes": 34154
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-1200.webp",
+     "width": 1200,
+     "height": 1600,
+     "format": "webp",
+     "bytes": 35696
+    },
+    {
+     "file": "legacy/legacy-cat-homem-hero-1200.jpg",
+     "width": 1200,
+     "height": 1600,
+     "format": "jpg",
+     "bytes": 80827
+    }
+   ],
+   "resolution": {
+    "needed": "height ≥ 1800 for 2x at 900 CSS px viewport height",
+    "actual": "1200x1600",
+    "ok": false,
+    "ratio2x": "1.78x @900h"
+   },
+   "restriction": "Retina slightly soft (1.78x at 900 CSS px)",
+   "brightness": 31,
+   "useLabel": "Hero",
+   "resolutionOk": false
+  },
+  {
+   "id": "legacy-cat-homem-prod",
+   "source": "Legacy",
+   "sourceFile": "images/cat-homem.jpg",
+   "sourceSize": "1200x1600",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1009 Fio com Cruz — Homem / tile Homem",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-homem-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 5458
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 6996
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 12363
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 11992
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 17536
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 31611
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-1200.avif",
+     "width": 1200,
+     "height": 1500,
+     "format": "avif",
+     "bytes": 25837
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-1200.webp",
+     "width": 1200,
+     "height": 1500,
+     "format": "webp",
+     "bytes": 34780
+    },
+    {
+     "file": "legacy/legacy-cat-homem-prod-1200.jpg",
+     "width": 1200,
+     "height": 1500,
+     "format": "jpg",
+     "bytes": 78868
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 1200x1500",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 32,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-relogios-prod",
+   "source": "Legacy",
+   "sourceFile": "images/cat-relogios.jpg",
+   "sourceSize": "900x1350",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1008 Relógio Bracelete Milanesa / tile Relógios",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-relogios-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 17727
+    },
+    {
+     "file": "legacy/legacy-cat-relogios-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 30620
+    },
+    {
+     "file": "legacy/legacy-cat-relogios-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 35525
+    },
+    {
+     "file": "legacy/legacy-cat-relogios-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 42782
+    },
+    {
+     "file": "legacy/legacy-cat-relogios-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 74768
+    },
+    {
+     "file": "legacy/legacy-cat-relogios-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 93613
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 58,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-moda-scene",
+   "source": "Legacy",
+   "sourceFile": "images/cat-moda.jpg",
+   "sourceSize": "900x506",
+   "use": "scene",
+   "aiLabel": false,
+   "placement": "Relógios banner (small, ≤380 CSS px wide)",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-moda-scene-480.avif",
+     "width": 480,
+     "height": 320,
+     "format": "avif",
+     "bytes": 4898
+    },
+    {
+     "file": "legacy/legacy-cat-moda-scene-480.webp",
+     "width": 480,
+     "height": 320,
+     "format": "webp",
+     "bytes": 6430
+    },
+    {
+     "file": "legacy/legacy-cat-moda-scene-480.jpg",
+     "width": 480,
+     "height": 320,
+     "format": "jpg",
+     "bytes": 12527
+    },
+    {
+     "file": "legacy/legacy-cat-moda-scene-759.avif",
+     "width": 759,
+     "height": 506,
+     "format": "avif",
+     "bytes": 10469
+    },
+    {
+     "file": "legacy/legacy-cat-moda-scene-759.webp",
+     "width": 759,
+     "height": 506,
+     "format": "webp",
+     "bytes": 13432
+    },
+    {
+     "file": "legacy/legacy-cat-moda-scene-759.jpg",
+     "width": 759,
+     "height": 506,
+     "format": "jpg",
+     "bytes": 28130
+    }
+   ],
+   "resolution": {
+    "needed": "scene ≥ 2400px",
+    "actual": "crop 759x506",
+    "ok": false
+   },
+   "restriction": "Low resolution: display ≤ 379 CSS px wide",
+   "brightness": 36,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "legacy-hero-ouro-prod",
+   "source": "Legacy",
+   "sourceFile": "images/hero-ouro.jpg",
+   "sourceSize": "900x1350",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1001 Anel Pavé Dourado / tile Anéis",
+   "variants": [
+    {
+     "file": "legacy/legacy-hero-ouro-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 7744
+    },
+    {
+     "file": "legacy/legacy-hero-ouro-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 11214
+    },
+    {
+     "file": "legacy/legacy-hero-ouro-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 18235
+    },
+    {
+     "file": "legacy/legacy-hero-ouro-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 15483
+    },
+    {
+     "file": "legacy/legacy-hero-ouro-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 22990
+    },
+    {
+     "file": "legacy/legacy-hero-ouro-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 39960
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 197,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-colar-topazio-prod",
+   "source": "Legacy",
+   "sourceFile": "images/colar-topazio.jpg",
+   "sourceSize": "900x1350",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1002 Colar Corrente Fina / tile Colares",
+   "variants": [
+    {
+     "file": "legacy/legacy-colar-topazio-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 7029
+    },
+    {
+     "file": "legacy/legacy-colar-topazio-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 9724
+    },
+    {
+     "file": "legacy/legacy-colar-topazio-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 16935
+    },
+    {
+     "file": "legacy/legacy-colar-topazio-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 15007
+    },
+    {
+     "file": "legacy/legacy-colar-topazio-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 22904
+    },
+    {
+     "file": "legacy/legacy-colar-topazio-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 38626
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 154,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-argolas-pave-prod",
+   "source": "Legacy",
+   "sourceFile": "images/argolas-pave.jpg",
+   "sourceSize": "900x1200",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1003 Argolas Largas Polidas / tile Brincos",
+   "variants": [
+    {
+     "file": "legacy/legacy-argolas-pave-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 7870
+    },
+    {
+     "file": "legacy/legacy-argolas-pave-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 12938
+    },
+    {
+     "file": "legacy/legacy-argolas-pave-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 20583
+    },
+    {
+     "file": "legacy/legacy-argolas-pave-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 19390
+    },
+    {
+     "file": "legacy/legacy-argolas-pave-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 31780
+    },
+    {
+     "file": "legacy/legacy-argolas-pave-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 52019
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 109,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-brincos-safira-prod",
+   "source": "Legacy",
+   "sourceFile": "images/brincos-safira.jpg",
+   "sourceSize": "1200x1200",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1006 Brincos de Pérola",
+   "variants": [
+    {
+     "file": "legacy/legacy-brincos-safira-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 5569
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 10562
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 15358
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 19163
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 41166
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 52172
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-960.avif",
+     "width": 960,
+     "height": 1200,
+     "format": "avif",
+     "bytes": 30625
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-960.webp",
+     "width": 960,
+     "height": 1200,
+     "format": "webp",
+     "bytes": 56006
+    },
+    {
+     "file": "legacy/legacy-brincos-safira-prod-960.jpg",
+     "width": 960,
+     "height": 1200,
+     "format": "jpg",
+     "bytes": 72637
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 960x1200",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 196,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-colares-prod",
+   "source": "Legacy",
+   "sourceFile": "images/cat-colares.jpg",
+   "sourceSize": "900x1200",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1005 Colares Olho Grego — Mix",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-colares-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 26599
+    },
+    {
+     "file": "legacy/legacy-cat-colares-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 52404
+    },
+    {
+     "file": "legacy/legacy-cat-colares-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 54310
+    },
+    {
+     "file": "legacy/legacy-cat-colares-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 64828
+    },
+    {
+     "file": "legacy/legacy-cat-colares-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 119174
+    },
+    {
+     "file": "legacy/legacy-cat-colares-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 143785
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 144,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-pulseiras-prod",
+   "source": "Legacy",
+   "sourceFile": "images/cat-pulseiras.jpg",
+   "sourceSize": "900x1109",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1012 Anel Script \"Love\"",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 25319
+    },
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 50644
+    },
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 53672
+    },
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 69841
+    },
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 125264
+    },
+    {
+     "file": "legacy/legacy-cat-pulseiras-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 145957
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 887x1109",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 108,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-pulseira-rosa-prod",
+   "source": "Legacy",
+   "sourceFile": "images/pulseira-rosa.jpg",
+   "sourceSize": "900x1350",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1004 Conjunto Brincos e Pulseira / tile Pulseiras",
+   "variants": [
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 21981
+    },
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 39178
+    },
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 48116
+    },
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 59548
+    },
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 107480
+    },
+    {
+     "file": "legacy/legacy-pulseira-rosa-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 130627
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 190,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-hero-still-prod",
+   "source": "Legacy",
+   "sourceFile": "images/hero-still.jpg",
+   "sourceSize": "900x1125",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1007 Anéis Zircónia Cor — Série 7",
+   "variants": [
+    {
+     "file": "legacy/legacy-hero-still-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 5369
+    },
+    {
+     "file": "legacy/legacy-hero-still-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 7430
+    },
+    {
+     "file": "legacy/legacy-hero-still-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 10613
+    },
+    {
+     "file": "legacy/legacy-hero-still-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 11461
+    },
+    {
+     "file": "legacy/legacy-hero-still-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 17034
+    },
+    {
+     "file": "legacy/legacy-hero-still-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 26328
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 231,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "legacy-cat-aneis-prod",
+   "source": "Legacy",
+   "sourceFile": "images/cat-aneis.jpg",
+   "sourceSize": "900x1350",
+   "use": "prod",
+   "aiLabel": false,
+   "placement": "Card LB-1011 Anéis Finos Lisos — Par",
+   "variants": [
+    {
+     "file": "legacy/legacy-cat-aneis-prod-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 20655
+    },
+    {
+     "file": "legacy/legacy-cat-aneis-prod-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 36544
+    },
+    {
+     "file": "legacy/legacy-cat-aneis-prod-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 44681
+    },
+    {
+     "file": "legacy/legacy-cat-aneis-prod-840.avif",
+     "width": 840,
+     "height": 1050,
+     "format": "avif",
+     "bytes": 46997
+    },
+    {
+     "file": "legacy/legacy-cat-aneis-prod-840.webp",
+     "width": 840,
+     "height": 1050,
+     "format": "webp",
+     "bytes": 79564
+    },
+    {
+     "file": "legacy/legacy-cat-aneis-prod-840.jpg",
+     "width": 840,
+     "height": 1050,
+     "format": "jpg",
+     "bytes": 109185
+    }
+   ],
+   "resolution": {
+    "needed": "card 2x ≥ 842px (3 cols @1440); target 1600px",
+    "actual": "crop 900x1125",
+    "ok": true,
+    "okTarget": false
+   },
+   "restriction": "Card 2x OK at 1440; below 1600px target (needs reshoot for zoom/1920 screens)",
+   "brightness": 178,
+   "useLabel": "Produto",
+   "resolutionOk": true
+  },
+  {
+   "id": "mj-g3-2-hero",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_2.jpg",
+   "sourceSize": "1680x720",
+   "use": "hero",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Hero frame 3",
+   "blackPoint": {
+    "cornerBefore": "#222324",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.045,
+      "b": -11.47
+     },
+     {
+      "a": 1.053,
+      "b": -13.5
+     },
+     {
+      "a": 1.068,
+      "b": -17.34
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g3-2-hero-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 64382
+    },
+    {
+     "file": "mj/mj-g3-2-hero-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 103106
+    },
+    {
+     "file": "mj/mj-g3-2-hero-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 117550
+    },
+    {
+     "file": "mj/mj-g3-2-hero-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 80006
+    },
+    {
+     "file": "mj/mj-g3-2-hero-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 129516
+    },
+    {
+     "file": "mj/mj-g3-2-hero-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 150182
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 25,
+   "useLabel": "Hero",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g4-0-hero",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_2df68861-d2bb-4493-87d0-90fc7d20c13f_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "hero",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Hero frame 4 (temporary, replaces missing H-02)",
+   "blackPoint": {
+    "cornerBefore": "#22201c",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.0449,
+      "b": -11.44
+     },
+     {
+      "a": 1.0436,
+      "b": -11.12
+     },
+     {
+      "a": 1.0414,
+      "b": -10.56
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g4-0-hero-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 81024
+    },
+    {
+     "file": "mj/mj-g4-0-hero-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 120450
+    },
+    {
+     "file": "mj/mj-g4-0-hero-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 136764
+    },
+    {
+     "file": "mj/mj-g4-0-hero-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 103905
+    },
+    {
+     "file": "mj/mj-g4-0-hero-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 156742
+    },
+    {
+     "file": "mj/mj-g4-0-hero-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 177640
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 22,
+   "useLabel": "Hero",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g5-0-wide",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "wide",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Chapter 1 · Aço 316L",
+   "blackPoint": {
+    "cornerBefore": "#332c22",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.1078,
+      "b": -27.5
+     },
+     {
+      "a": 1.0866,
+      "b": -22.08
+     },
+     {
+      "a": 1.0613,
+      "b": -15.63
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g5-0-wide-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 35815
+    },
+    {
+     "file": "mj/mj-g5-0-wide-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 56202
+    },
+    {
+     "file": "mj/mj-g5-0-wide-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 76887
+    },
+    {
+     "file": "mj/mj-g5-0-wide-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 44834
+    },
+    {
+     "file": "mj/mj-g5-0-wide-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 70920
+    },
+    {
+     "file": "mj/mj-g5-0-wide-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 97839
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 33,
+   "useLabel": "Cena 21:9 / capítulo",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g5-1-wide",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_1.jpg",
+   "sourceSize": "1680x720",
+   "use": "wide",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Chapter 2 · Banho de ouro 18K",
+   "blackPoint": {
+    "cornerBefore": "#392f22",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.1308,
+      "b": -33.34
+     },
+     {
+      "a": 1.098,
+      "b": -24.98
+     },
+     {
+      "a": 1.0614,
+      "b": -15.66
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g5-1-wide-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 26029
+    },
+    {
+     "file": "mj/mj-g5-1-wide-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 38172
+    },
+    {
+     "file": "mj/mj-g5-1-wide-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 60061
+    },
+    {
+     "file": "mj/mj-g5-1-wide-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 31597
+    },
+    {
+     "file": "mj/mj-g5-1-wide-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 46508
+    },
+    {
+     "file": "mj/mj-g5-1-wide-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 74977
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 30,
+   "useLabel": "Cena 21:9 / capítulo",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g2-1-wide",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_1.jpg",
+   "sourceSize": "1680x720",
+   "use": "wide",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Chapter 3 · Na pele",
+   "blackPoint": {
+    "cornerBefore": "#251710",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.0543,
+      "b": -13.85
+     },
+     {
+      "a": 1.0139,
+      "b": -3.55
+     },
+     {
+      "a": 1.0021,
+      "b": -0.53
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g2-1-wide-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 43630
+    },
+    {
+     "file": "mj/mj-g2-1-wide-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 54510
+    },
+    {
+     "file": "mj/mj-g2-1-wide-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 70978
+    },
+    {
+     "file": "mj/mj-g2-1-wide-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 58970
+    },
+    {
+     "file": "mj/mj-g2-1-wide-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 72516
+    },
+    {
+     "file": "mj/mj-g2-1-wide-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 95733
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 22,
+   "useLabel": "Cena 21:9 / capítulo",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g7-3-wide",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_3.jpg",
+   "sourceSize": "1680x720",
+   "use": "wide",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Chapter 4 · Montra",
+   "blackPoint": {
+    "cornerBefore": "#292520",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.07,
+      "b": -17.84
+     },
+     {
+      "a": 1.0597,
+      "b": -15.23
+     },
+     {
+      "a": 1.0526,
+      "b": -13.41
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g7-3-wide-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 45145
+    },
+    {
+     "file": "mj/mj-g7-3-wide-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 67138
+    },
+    {
+     "file": "mj/mj-g7-3-wide-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 90504
+    },
+    {
+     "file": "mj/mj-g7-3-wide-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 55829
+    },
+    {
+     "file": "mj/mj-g7-3-wide-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 82662
+    },
+    {
+     "file": "mj/mj-g7-3-wide-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 113813
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 28,
+   "useLabel": "Cena 21:9 / capítulo",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g7-3-tile",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_3.jpg",
+   "sourceSize": "1680x720",
+   "use": "tile",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Tile Expositores (temporary)",
+   "blackPoint": {
+    "cornerBefore": "#292520",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.07,
+      "b": -17.84
+     },
+     {
+      "a": 1.0597,
+      "b": -15.23
+     },
+     {
+      "a": 1.0526,
+      "b": -13.41
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g7-3-tile-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 14737
+    },
+    {
+     "file": "mj/mj-g7-3-tile-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 24754
+    },
+    {
+     "file": "mj/mj-g7-3-tile-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 30805
+    },
+    {
+     "file": "mj/mj-g7-3-tile-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 19137
+    },
+    {
+     "file": "mj/mj-g7-3-tile-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 32442
+    },
+    {
+     "file": "mj/mj-g7-3-tile-576.jpg",
+     "width": 576,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 41160
+    }
+   ],
+   "resolution": {
+    "needed": "≥440px (tile 2x)",
+    "actual": "crop 576x720",
+    "ok": true
+   },
+   "restriction": "Temporary category tile (cropped from 21:9); replace with --ar 4:5 generation (P-01/P-02)",
+   "brightness": 40,
+   "useLabel": "Mosaico de família (temporário)",
+   "resolutionOk": true
+  },
+  {
+   "id": "mj-g1-1-wide",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_1.jpg",
+   "sourceSize": "1680x720",
+   "use": "wide",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Section \"Para a sua montra\"",
+   "blackPoint": {
+    "cornerBefore": "#3a4943",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.1331,
+      "b": -33.95
+     },
+     {
+      "a": 1.2135,
+      "b": -54.43
+     },
+     {
+      "a": 1.1922,
+      "b": -49.02
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g1-1-wide-1440.avif",
+     "width": 1440,
+     "height": 617,
+     "format": "avif",
+     "bytes": 52468
+    },
+    {
+     "file": "mj/mj-g1-1-wide-1440.webp",
+     "width": 1440,
+     "height": 617,
+     "format": "webp",
+     "bytes": 79326
+    },
+    {
+     "file": "mj/mj-g1-1-wide-1440.jpg",
+     "width": 1440,
+     "height": 617,
+     "format": "jpg",
+     "bytes": 110609
+    },
+    {
+     "file": "mj/mj-g1-1-wide-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 70949
+    },
+    {
+     "file": "mj/mj-g1-1-wide-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 108466
+    },
+    {
+     "file": "mj/mj-g1-1-wide-1680.jpg",
+     "width": 1680,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 142093
+    }
+   ],
+   "resolution": {
+    "needed": "2880px wide (2x @1440)",
+    "actual": "1680x720",
+    "ok": false,
+    "ratio2x": "1.17x @1440"
+   },
+   "restriction": "Demo only — Retina slightly soft; replace with MJ Upscale (Subtle) ≈3360x1440 before launch",
+   "brightness": 41,
+   "useLabel": "Cena 21:9 / capítulo",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g6-0-scene",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "scene",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Section \"Para a sua montra\" · Embalagens",
+   "blackPoint": {
+    "cornerBefore": "#463b33",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.1869,
+      "b": -47.66
+     },
+     {
+      "a": 1.1452,
+      "b": -37.03
+     },
+     {
+      "a": 1.1233,
+      "b": -31.44
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g6-0-scene-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 41822
+    },
+    {
+     "file": "mj/mj-g6-0-scene-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 82638
+    },
+    {
+     "file": "mj/mj-g6-0-scene-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 82709
+    },
+    {
+     "file": "mj/mj-g6-0-scene-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 68561
+    },
+    {
+     "file": "mj/mj-g6-0-scene-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 137984
+    },
+    {
+     "file": "mj/mj-g6-0-scene-1080.jpg",
+     "width": 1080,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 139796
+    }
+   ],
+   "resolution": {
+    "needed": "2400px wide",
+    "actual": "crop 1080x720",
+    "ok": false
+   },
+   "restriction": "Scene only — demo stage; must be replaced (upscale or regenerate) before launch",
+   "brightness": 56,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g6-0-tile",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "tile",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Tile Embalagens (temporary)",
+   "blackPoint": {
+    "cornerBefore": "#463b33",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.1869,
+      "b": -47.66
+     },
+     {
+      "a": 1.1452,
+      "b": -37.03
+     },
+     {
+      "a": 1.1233,
+      "b": -31.44
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g6-0-tile-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 24160
+    },
+    {
+     "file": "mj/mj-g6-0-tile-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 49370
+    },
+    {
+     "file": "mj/mj-g6-0-tile-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 50571
+    },
+    {
+     "file": "mj/mj-g6-0-tile-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 29977
+    },
+    {
+     "file": "mj/mj-g6-0-tile-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 61666
+    },
+    {
+     "file": "mj/mj-g6-0-tile-576.jpg",
+     "width": 576,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 64027
+    }
+   ],
+   "resolution": {
+    "needed": "≥440px (tile 2x)",
+    "actual": "crop 576x720",
+    "ok": true
+   },
+   "restriction": "Temporary category tile (cropped from 21:9); replace with --ar 4:5 generation (P-01/P-02)",
+   "brightness": 52,
+   "useLabel": "Mosaico de família (temporário)",
+   "resolutionOk": true
+  },
+  {
+   "id": "mj-g7-2-scene",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_2.jpg",
+   "sourceSize": "1680x720",
+   "use": "scene",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Section \"Para a sua montra\" · Expositores",
+   "blackPoint": {
+    "cornerBefore": "#211e1d",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.0426,
+      "b": -10.86
+     },
+     {
+      "a": 1.0378,
+      "b": -9.64
+     },
+     {
+      "a": 1.0434,
+      "b": -11.07
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g7-2-scene-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 21002
+    },
+    {
+     "file": "mj/mj-g7-2-scene-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 38292
+    },
+    {
+     "file": "mj/mj-g7-2-scene-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 48749
+    },
+    {
+     "file": "mj/mj-g7-2-scene-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 35815
+    },
+    {
+     "file": "mj/mj-g7-2-scene-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 67300
+    },
+    {
+     "file": "mj/mj-g7-2-scene-1080.jpg",
+     "width": 1080,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 85079
+    }
+   ],
+   "resolution": {
+    "needed": "2400px wide",
+    "actual": "crop 1080x720",
+    "ok": false
+   },
+   "restriction": "Scene only — demo stage; must be replaced (upscale or regenerate) before launch",
+   "brightness": 31,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g2-0-scene",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "scene",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Customer-type panel (Loja física)",
+   "blackPoint": {
+    "cornerBefore": "#261a13",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.0563,
+      "b": -14.36
+     },
+     {
+      "a": 1.0256,
+      "b": -6.52
+     },
+     {
+      "a": 1.0125,
+      "b": -3.18
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g2-0-scene-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 20006
+    },
+    {
+     "file": "mj/mj-g2-0-scene-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 32948
+    },
+    {
+     "file": "mj/mj-g2-0-scene-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 41383
+    },
+    {
+     "file": "mj/mj-g2-0-scene-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 35071
+    },
+    {
+     "file": "mj/mj-g2-0-scene-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 60152
+    },
+    {
+     "file": "mj/mj-g2-0-scene-1080.jpg",
+     "width": 1080,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 74904
+    }
+   ],
+   "resolution": {
+    "needed": "2400px wide",
+    "actual": "crop 1080x720",
+    "ok": false
+   },
+   "restriction": "Scene only — demo stage; must be replaced (upscale or regenerate) before launch",
+   "brightness": 38,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g3-1-scene",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_1.jpg",
+   "sourceSize": "1680x720",
+   "use": "scene",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Customer-type panel (Online)",
+   "blackPoint": {
+    "cornerBefore": "#1c1d1f",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.0233,
+      "b": -5.94
+     },
+     {
+      "a": 1.0339,
+      "b": -8.64
+     },
+     {
+      "a": 1.0494,
+      "b": -12.59
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g3-1-scene-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 33473
+    },
+    {
+     "file": "mj/mj-g3-1-scene-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 63736
+    },
+    {
+     "file": "mj/mj-g3-1-scene-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 69870
+    },
+    {
+     "file": "mj/mj-g3-1-scene-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 51783
+    },
+    {
+     "file": "mj/mj-g3-1-scene-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 102136
+    },
+    {
+     "file": "mj/mj-g3-1-scene-1080.jpg",
+     "width": 1080,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 113986
+    }
+   ],
+   "resolution": {
+    "needed": "2400px wide",
+    "actual": "crop 1080x720",
+    "ok": false
+   },
+   "restriction": "Scene only — demo stage; must be replaced (upscale or regenerate) before launch",
+   "brightness": 30,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "mj-g1-0-scene",
+   "source": "MJ",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_0.jpg",
+   "sourceSize": "1680x720",
+   "use": "scene",
+   "aiLabel": true,
+   "labelText": "Imagem ilustrativa gerada por IA",
+   "placement": "Customer-type panel (Turismo) — backup shot",
+   "blackPoint": {
+    "cornerBefore": "#344648",
+    "strength": 0.7,
+    "target": "#14120F",
+    "linear": [
+     {
+      "a": 1.112,
+      "b": -28.57
+     },
+     {
+      "a": 1.197,
+      "b": -50.24
+     },
+     {
+      "a": 1.2171,
+      "b": -55.35
+     }
+    ]
+   },
+   "variants": [
+    {
+     "file": "mj/mj-g1-0-scene-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 23120
+    },
+    {
+     "file": "mj/mj-g1-0-scene-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 39958
+    },
+    {
+     "file": "mj/mj-g1-0-scene-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 59553
+    },
+    {
+     "file": "mj/mj-g1-0-scene-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 34831
+    },
+    {
+     "file": "mj/mj-g1-0-scene-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 59966
+    },
+    {
+     "file": "mj/mj-g1-0-scene-1080.jpg",
+     "width": 1080,
+     "height": 720,
+     "format": "jpg",
+     "bytes": 94731
+    }
+   ],
+   "resolution": {
+    "needed": "2400px wide",
+    "actual": "crop 1080x720",
+    "ok": false
+   },
+   "restriction": "Scene only — demo stage; must be replaced (upscale or regenerate) before launch",
+   "brightness": 48,
+   "useLabel": "Cena",
+   "resolutionOk": false
+  },
+  {
+   "id": "video-frames",
+   "source": "Video",
+   "sourceFile": "media/hero.mp4",
+   "use": "videoFrame",
+   "useLabel": "Vídeo · fotogramas (scroll)",
+   "aiLabel": false,
+   "placement": "Home S4 \"Gesto\" (desktop ≥900px, scroll-scrub)",
+   "resolution": {
+    "needed": "1080x1920 (source native)",
+    "actual": "1080x1920",
+    "ok": true
+   },
+   "resolutionOk": true,
+   "restriction": "OK; license: own shoot + model release (provisional, confirm before launch)",
+   "variants": [
+    {
+     "file": "video/frame-001-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22817,
+     "timeSec": 2,
+     "scrollProgress": 0
+    },
+    {
+     "file": "video/frame-002-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21935,
+     "timeSec": 2.333,
+     "scrollProgress": 0.0213
+    },
+    {
+     "file": "video/frame-003-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22407,
+     "timeSec": 2.667,
+     "scrollProgress": 0.0426
+    },
+    {
+     "file": "video/frame-004-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23630,
+     "timeSec": 3,
+     "scrollProgress": 0.0638
+    },
+    {
+     "file": "video/frame-005-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23034,
+     "timeSec": 3.333,
+     "scrollProgress": 0.0851
+    },
+    {
+     "file": "video/frame-006-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22824,
+     "timeSec": 3.667,
+     "scrollProgress": 0.1064
+    },
+    {
+     "file": "video/frame-007-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 24201,
+     "timeSec": 4,
+     "scrollProgress": 0.1277
+    },
+    {
+     "file": "video/frame-008-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21767,
+     "timeSec": 4.333,
+     "scrollProgress": 0.1489
+    },
+    {
+     "file": "video/frame-009-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23342,
+     "timeSec": 4.667,
+     "scrollProgress": 0.1702
+    },
+    {
+     "file": "video/frame-010-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22346,
+     "timeSec": 5,
+     "scrollProgress": 0.1915
+    },
+    {
+     "file": "video/frame-011-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 20897,
+     "timeSec": 5.333,
+     "scrollProgress": 0.2128
+    },
+    {
+     "file": "video/frame-012-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21360,
+     "timeSec": 5.667,
+     "scrollProgress": 0.234
+    },
+    {
+     "file": "video/frame-013-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 20510,
+     "timeSec": 6,
+     "scrollProgress": 0.2553
+    },
+    {
+     "file": "video/frame-014-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23191,
+     "timeSec": 6.333,
+     "scrollProgress": 0.2766
+    },
+    {
+     "file": "video/frame-015-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22613,
+     "timeSec": 6.667,
+     "scrollProgress": 0.2979
+    },
+    {
+     "file": "video/frame-016-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22761,
+     "timeSec": 7,
+     "scrollProgress": 0.3191
+    },
+    {
+     "file": "video/frame-017-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23001,
+     "timeSec": 7.333,
+     "scrollProgress": 0.3404
+    },
+    {
+     "file": "video/frame-018-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22877,
+     "timeSec": 7.667,
+     "scrollProgress": 0.3617
+    },
+    {
+     "file": "video/frame-019-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23206,
+     "timeSec": 8,
+     "scrollProgress": 0.383
+    },
+    {
+     "file": "video/frame-020-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22056,
+     "timeSec": 8.333,
+     "scrollProgress": 0.4043
+    },
+    {
+     "file": "video/frame-021-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23916,
+     "timeSec": 8.667,
+     "scrollProgress": 0.4255
+    },
+    {
+     "file": "video/frame-022-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22860,
+     "timeSec": 9,
+     "scrollProgress": 0.4468
+    },
+    {
+     "file": "video/frame-023-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22852,
+     "timeSec": 9.333,
+     "scrollProgress": 0.4681
+    },
+    {
+     "file": "video/frame-024-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 24233,
+     "timeSec": 9.667,
+     "scrollProgress": 0.4894
+    },
+    {
+     "file": "video/frame-025-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 24290,
+     "timeSec": 10,
+     "scrollProgress": 0.5106
+    },
+    {
+     "file": "video/frame-026-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21238,
+     "timeSec": 10.333,
+     "scrollProgress": 0.5319
+    },
+    {
+     "file": "video/frame-027-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 25022,
+     "timeSec": 10.667,
+     "scrollProgress": 0.5532
+    },
+    {
+     "file": "video/frame-028-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 24481,
+     "timeSec": 11,
+     "scrollProgress": 0.5745
+    },
+    {
+     "file": "video/frame-029-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22008,
+     "timeSec": 11.333,
+     "scrollProgress": 0.5957
+    },
+    {
+     "file": "video/frame-030-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21966,
+     "timeSec": 11.667,
+     "scrollProgress": 0.617
+    },
+    {
+     "file": "video/frame-031-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22453,
+     "timeSec": 12,
+     "scrollProgress": 0.6383
+    },
+    {
+     "file": "video/frame-032-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23774,
+     "timeSec": 12.333,
+     "scrollProgress": 0.6596
+    },
+    {
+     "file": "video/frame-033-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 24415,
+     "timeSec": 12.667,
+     "scrollProgress": 0.6809
+    },
+    {
+     "file": "video/frame-034-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23863,
+     "timeSec": 13,
+     "scrollProgress": 0.7021
+    },
+    {
+     "file": "video/frame-035-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 23709,
+     "timeSec": 13.333,
+     "scrollProgress": 0.7234
+    },
+    {
+     "file": "video/frame-036-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22223,
+     "timeSec": 13.667,
+     "scrollProgress": 0.7447
+    },
+    {
+     "file": "video/frame-037-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22322,
+     "timeSec": 14,
+     "scrollProgress": 0.766
+    },
+    {
+     "file": "video/frame-038-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21472,
+     "timeSec": 14.333,
+     "scrollProgress": 0.7872
+    },
+    {
+     "file": "video/frame-039-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21934,
+     "timeSec": 14.667,
+     "scrollProgress": 0.8085
+    },
+    {
+     "file": "video/frame-040-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22407,
+     "timeSec": 15,
+     "scrollProgress": 0.8298
+    },
+    {
+     "file": "video/frame-041-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 19091,
+     "timeSec": 15.333,
+     "scrollProgress": 0.8511
+    },
+    {
+     "file": "video/frame-042-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 22094,
+     "timeSec": 15.667,
+     "scrollProgress": 0.8723
+    },
+    {
+     "file": "video/frame-043-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21604,
+     "timeSec": 16,
+     "scrollProgress": 0.8936
+    },
+    {
+     "file": "video/frame-044-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 19037,
+     "timeSec": 16.333,
+     "scrollProgress": 0.9149
+    },
+    {
+     "file": "video/frame-045-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21083,
+     "timeSec": 16.667,
+     "scrollProgress": 0.9362
+    },
+    {
+     "file": "video/frame-046-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 19029,
+     "timeSec": 17,
+     "scrollProgress": 0.9574
+    },
+    {
+     "file": "video/frame-047-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 20507,
+     "timeSec": 17.333,
+     "scrollProgress": 0.9787
+    },
+    {
+     "file": "video/frame-048-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 21891,
+     "timeSec": 17.667,
+     "scrollProgress": 1
+    }
+   ],
+   "brightness": null
+  },
+  {
+   "id": "video-poster",
+   "source": "Video",
+   "sourceFile": "media/hero.mp4 @ frame 24",
+   "use": "videoPoster",
+   "useLabel": "Vídeo · poster",
+   "aiLabel": false,
+   "placement": "S4 fallback (reduced motion / save-data) and mobile poster",
+   "resolution": {
+    "ok": true,
+    "actual": "1080x1920"
+   },
+   "resolutionOk": true,
+   "restriction": "OK",
+   "variants": [
+    {
+     "file": "video/video-poster-1080.avif",
+     "width": 1080,
+     "height": 1920,
+     "format": "avif",
+     "bytes": 26333
+    },
+    {
+     "file": "video/video-poster-1080.webp",
+     "width": 1080,
+     "height": 1920,
+     "format": "webp",
+     "bytes": 29806
+    },
+    {
+     "file": "video/video-poster-1080.jpg",
+     "width": 1080,
+     "height": 1920,
+     "format": "jpg",
+     "bytes": 62504
+    },
+    {
+     "file": "video/video-poster-540.avif",
+     "width": 540,
+     "height": 960,
+     "format": "avif",
+     "bytes": 9688
+    },
+    {
+     "file": "video/video-poster-540.jpg",
+     "width": 540,
+     "height": 960,
+     "format": "jpg",
+     "bytes": 21752
+    }
+   ],
+   "brightness": null
+  },
+  {
+   "id": "video-mobile",
+   "source": "Video",
+   "sourceFile": "media/hero.mp4 2–14s",
+   "use": "videoMobile",
+   "useLabel": "Vídeo · mobile",
+   "aiLabel": false,
+   "placement": "S4 on <900px (muted loop, plays in view)",
+   "resolution": {
+    "ok": true,
+    "actual": "540x960"
+   },
+   "resolutionOk": true,
+   "restriction": "OK",
+   "variants": [
+    {
+     "file": "video/video-mobile-540.mp4",
+     "width": 540,
+     "height": 960,
+     "format": "mp4",
+     "bytes": 549257
+    }
+   ],
+   "brightness": null
+  }
+ ]
+}</script>
+<script>
+const M=JSON.parse(document.getElementById('data').textContent);const $=s=>document.querySelector(s);
+const kb=b=>(b/1024).toFixed(0)+' KB';
+const uses=[...new Set(M.assets.map(a=>a.useLabel))];$('#fu').insertAdjacentHTML('beforeend',uses.map(u=>`<option>${u}</option>`).join(''));
+const tot=M.assets.reduce((s,a)=>s+a.variants.reduce((t,v)=>t+(v.bytes||0),0),0);
+$('#stats').innerHTML=`<span>${M.assets.length} assets</span><span>${M.assets.reduce((s,a)=>s+a.variants.length,0)} ficheiros</span><span>${(tot/1048576).toFixed(1)} MB total</span><span>gerado ${M.generated.slice(0,16).replace('T',' ')}</span>`;
+function best(a){const jp=a.variants.filter(v=>v.format==='jpg');if(jp.length)return jp.sort((x,y)=>y.width-x.width)[0];const av=a.variants.filter(v=>v.format==='avif');return av[Math.floor(av.length/2)]||a.variants[0]}
+function card(a){const b=best(a);const isVid=b.format==='mp4';
+  const media=isVid?`<video src="${b.file}" muted loop playsinline controls preload="none" poster="video/video-poster-540.jpg"></video>`:`<button class="thumb" type="button" data-src="${b.file}" data-cap="${a.id} · ${b.width}×${b.height}"><img src="${b.file}" alt="${a.id}" loading="lazy"></button>`;
+  const sizes=[...new Set(a.variants.map(v=>v.width+'×'+v.height))];
+  const res=a.resolutionOk?'<span class="pill ok">Resolução OK</span>':'<span class="pill warn">Abaixo do alvo</span>';
+  return `<article class="card">${isVid?`<div class="thumb">${media}</div>`:media}<div class="body"><div class="id">${a.id}</div>
+   <div class="row"><span class="pill">${a.source}</span><span class="pill">${a.useLabel}</span>${res}${a.aiLabel?'<span class="pill ai">IA</span>':''}</div>
+   ${a.aiLabel?'<div class="ai">Imagem ilustrativa gerada por IA</div>':''}
+   <div><b>Uso:</b> ${a.placement}</div>
+   <div class="muted">Origem: ${a.sourceFile}${a.sourceSize?' ('+a.sourceSize+')':''}</div>
+   <div class="muted">Tamanhos: ${sizes.slice(0,8).join(', ')}${sizes.length>8?' …':''}</div>
+   <div class="muted">Alvo: ${a.resolution.needed||'—'} · real: ${a.resolution.actual||'—'}${a.brightness!=null?' · luminância média '+a.brightness:''}</div>
+   <div class="${a.resolutionOk?'muted':'warn'}">${a.restriction||''}</div>
+   <details><summary>${a.variants.length} ficheiros</summary><ul>${a.variants.map(v=>`<li>${v.file} · ${v.width}×${v.height} · ${kb(v.bytes||0)}</li>`).join('')}</ul></details></div></article>`}
+function render(){const s=$('#fs').value,u=$('#fu').value,r=$('#fr').value,ai=$('#fa').value;
+  const list=M.assets.filter(a=>(!s||a.source===s)&&(!u||a.useLabel===u)&&(!r||String(+a.resolutionOk)===r)&&(!ai||String(+a.aiLabel)===ai));
+  const groups=['Legacy','MJ','Video'];$('#out').innerHTML=groups.map(g=>{const l=list.filter(a=>a.source===g);return l.length?`<h2>${g} · ${l.length}</h2><div class="grid">${l.map(card).join('')}</div>`:''}).join('');
+  $('#count').textContent=list.length+' assets'}
+['#fs','#fu','#fr','#fa'].forEach(s=>$(s).addEventListener('change',render));render();
+document.addEventListener('click',e=>{const t=e.target.closest('[data-src]');if(t){const d=$('#lb');d.querySelector('img').src=t.dataset.src;d.querySelector('img').alt=t.dataset.cap;d.querySelector('p').textContent=t.dataset.cap;d.showModal()}
+  if(e.target.closest('#lb button')||e.target.id==='lb')$('#lb').close()});
+</script>
+</body>
+</html>

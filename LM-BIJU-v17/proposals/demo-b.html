@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LM BIJU — Câmara Escura · Protótipo B</title>
+<meta name="description" content="LM BIJU, grossista de bijuteria em Vila do Conde: aço 316L, banho de ouro 18K, pérola e zircónia para lojas, montras e lojas online. Protótipo de design B.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14120F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LM BIJU — Câmara Escura">
+<meta property="og:description" content="Bijuteria por grosso, à luz certa. Protótipo de design B.">
+<meta property="og:image" content="../_research/demo-b/assets/mj/mj-g3-2-hero-1680.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..400;1,9..144,300..400&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- LCP: hero frame 1 (legacy hero-aco, 1200×1800, 2.0x @ 900 CSS px tall) -->
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+  imagesrcset="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-600.avif 600w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-900.avif 900w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.avif 1200w"
+  imagesizes="(max-aspect-ratio: 4/5) 100vw, 67vh">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"#org","name":"LM BIJU","description":"Grossista de bijuteria: aço 316L, banho de ouro 18K, pérola e zircónia.","address":{"@type":"PostalAddress","streetAddress":"Zona Industrial da Varziela","addressLocality":"Vila do Conde","addressCountry":"PT"}},
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"#/"},{"@type":"ListItem","position":2,"name":"Catálogo","item":"#/catalogo"}]},
+ {"@type":"ItemList","name":"Catálogo LM BIJU (amostra)","itemListElement":[
+  {"@type":"ListItem","position":1,"item":{"@type":"Product","sku":"LB-1001","name":"Anel Pavé Dourado","brand":{"@id":"#org"},"material":"Banho de ouro 18K","image":"../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-840.jpg"}},
+  {"@type":"ListItem","position":2,"item":{"@type":"Product","sku":"LB-1002","name":"Colar Corrente Fina Dourada","brand":{"@id":"#org"},"material":"Banho de ouro 18K","image":"../_research/demo-b/assets/legacy/legacy-colar-topazio-prod-840.jpg"}},
+  {"@type":"ListItem","position":3,"item":{"@type":"Product","sku":"LB-1003","name":"Argolas Largas Polidas","brand":{"@id":"#org"},"material":"Banho de ouro 18K sobre aço 316L","image":"../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-840.jpg"}},
+  {"@type":"ListItem","position":4,"item":{"@type":"Product","sku":"LB-1013","name":"Corrente Cubana — Homem","brand":{"@id":"#org"},"material":"Aço 316L","image":"../_research/demo-b/assets/legacy/legacy-hero-aco-prod-840.jpg"}}
+ ]}
+]}
+</script>
+<!-- Nota: o JSON-LD não inclui "offers". Preços de revenda nunca são publicados para visitantes; em produção são gerados no servidor por perfil. -->
+
+<style>
+/* ==========================================================================
+   LM BIJU · Protótipo B "Câmara Escura"
+   Tokens: foundations-phase1.md §1 + phase2-proposals.md §3.2
+   Motion (6): M01 título · M02 paralaxe/scrub · M03 máscara · M08 cursor · M09 hover · M15 transição
+   ========================================================================== */
+:root{
+  --ink-950:#14120F; --ink-900:#1C1915; --ink-800:#2A2621; --ink-700:#3D3832;
+  --paper:#FAF7F2; --stone-100:#F1ECE4; --stone-200:#E4DED4; --stone-300:#CFC8BD; --stone-400:#A39B90;
+  --stone-500:#736B61; --stone-600:#5E574E; --light:#FBFBF9; --white:#FFFFFF;
+  --gold-300:#E2CFA4; --gold-700:#7D5E2C; --gold-decor:#C9A96E; --steel-600:#6B7077; --steel-300:#C9CCD0;
+  --ok:#2F6B4F; --warn:#8A5A12; --err:#9E2B25; --ok-d:#8FC7A8; --err-d:#EE9A92;
+  --f-display:"Fraunces","Songti SC","Noto Serif SC",Georgia,serif;
+  --f-ui:"Inter Tight","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --ease-out:cubic-bezier(.16,1,.3,1); --ease-inout:cubic-bezier(.76,0,.24,1); --ease-ui:cubic-bezier(.2,0,0,1);
+  --t1:120ms; --t2:240ms; --t3:480ms; --t4:900ms; --t5:1400ms;
+  --gutter:clamp(16px,5vw,72px); --hdr:64px;
+}
+html[data-theme="dark"]{--bg:var(--ink-950);--fg:var(--paper);--fg2:var(--stone-300);--fg3:var(--stone-400);--line:var(--ink-800);--surface:var(--ink-900);--accent:var(--gold-300);--focus:var(--gold-300);--btn-bg:var(--paper);--btn-fg:var(--ink-950);--ok-c:var(--ok-d);--err-c:var(--err-d)}
+html[data-theme="light"]{--bg:var(--light);--fg:var(--ink-900);--fg2:var(--stone-600);--fg3:var(--stone-500);--line:var(--stone-200);--surface:var(--white);--accent:var(--gold-700);--focus:var(--gold-700);--btn-bg:var(--ink-900);--btn-fg:var(--paper);--ok-c:var(--ok);--err-c:var(--err)}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--f-ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video,canvas{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.02em}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.eyebrow{font:500 12px/16px var(--f-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.display{font-family:var(--f-display);font-weight:300;font-variation-settings:"opsz" 144;letter-spacing:-.02em;line-height:.98}
+.display em{font-style:italic}
+.tbc{font-family:var(--f-mono);font-size:.82em;border-bottom:1px dotted currentColor;color:var(--fg3);white-space:nowrap}
+.ai-label{font:400 12px/1.4 var(--f-mono);color:var(--stone-300);letter-spacing:.02em}
+html[data-theme="light"] .ai-label{color:var(--stone-600)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--btn-bg);color:var(--btn-fg);padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border:1px solid transparent;background:var(--btn-bg);color:var(--btn-fg);font:500 15px/1 var(--f-ui);letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:opacity var(--t2) var(--ease-ui)}
+.btn:hover{opacity:.86}
+.btn--ghost{background:transparent;color:var(--fg);border-color:currentColor}
+.btn--sm{min-height:44px;padding:0 16px;font-size:14px}
+.link{color:var(--fg);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px;text-decoration-thickness:1px}
+.link:hover{text-decoration-thickness:2px}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto;height:var(--hdr);z-index:60;display:flex;align-items:center;gap:24px;padding:0 var(--gutter);color:var(--fg)}
+html[data-view="inicio"] .hdr{background:linear-gradient(rgba(20,18,15,.72),rgba(20,18,15,0))}
+html[data-theme="light"] .hdr{background:rgba(251,251,249,.97);border-bottom:1px solid var(--line)}
+.brand{font:400 22px/1 var(--f-display);letter-spacing:.08em;text-decoration:none;white-space:nowrap}
+.brand em{font-style:italic;letter-spacing:.02em}
+.nav{display:flex;gap:28px;margin-left:24px}
+.nav a{font:500 14px/1 var(--f-ui);text-decoration:none;padding:14px 0;color:var(--fg2)}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--fg)}
+.hdr__r{margin-left:auto;display:flex;align-items:center;gap:18px}
+.sess{display:inline-flex;align-items:center;gap:10px;min-height:44px;background:none;border:0;cursor:pointer;font:500 13px/1 var(--f-ui);color:var(--fg2)}
+.sess__sw{width:34px;height:18px;border:1px solid currentColor;border-radius:9px;position:relative}
+.sess__sw::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:currentColor;transition:transform var(--t2) var(--ease-ui)}
+.sess[aria-pressed="true"]{color:var(--fg)}
+.sess[aria-pressed="true"] .sess__sw::after{transform:translateX(16px)}
+.cartlink{font:500 14px/1 var(--f-ui);text-decoration:none;display:inline-flex;gap:8px;align-items:center;min-height:44px}
+.cartlink b{font:500 12px/1 var(--f-mono);min-width:22px;height:22px;display:inline-grid;place-items:center;border:1px solid currentColor;border-radius:11px;padding:0 6px}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;font:500 14px/1 var(--f-ui)}
+.menu summary::-webkit-details-marker{display:none}
+.menu__panel{position:absolute;right:0;top:52px;background:var(--surface);border:1px solid var(--line);padding:12px 20px;min-width:220px;display:grid}
+.menu__panel a{padding:12px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu__panel a:last-child{border:0}
+.sessbar{position:fixed;top:var(--hdr);left:0;right:0;z-index:55;background:var(--gold-300);color:var(--ink-950);font:500 13px/1.4 var(--f-ui);padding:8px var(--gutter);display:none}
+html.session .sessbar{display:block}
+@media (max-width:959px){.nav,.hdr .sess__txt{display:none}.menu{display:block}}
+
+/* ---------- views ---------- */
+[data-view-section][hidden]{display:none!important}
+.view-light{padding-top:calc(var(--hdr) + 40px)}
+html.session .view-light{padding-top:calc(var(--hdr) + 76px)}
+.wrap{max-width:1600px;margin:0 auto;padding:0 var(--gutter)}
+
+/* ---------- S1 HERO ---------- */
+.hero{position:relative;height:100svh;min-height:600px;overflow:hidden;background:#050505;isolation:isolate}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:0;margin:0;background:var(--sbg,#14120F);visibility:hidden;overflow:hidden}
+.slide picture{position:absolute;inset:0}
+.slide img{position:absolute;will-change:transform}
+.slide--portrait img{top:0;right:7vw;height:100%;width:auto;max-width:none;
+  -webkit-mask-image:radial-gradient(ellipse 56% 64% at 50% 48%,#000 42%,transparent 100%);mask-image:radial-gradient(ellipse 56% 64% at 50% 48%,#000 42%,transparent 100%)}
+.slide--wide img{inset:0;width:100%;height:100%;object-fit:contain;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.slide.is-active{visibility:visible;z-index:2}
+.slide.is-active img{animation:kb 6s linear both}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1)}}
+.slide.is-entering{visibility:visible;z-index:3;clip-path:inset(0 0 0 100%)}
+.slide.is-entering.go{clip-path:inset(0 0 0 0);transition:clip-path 1.2s var(--ease-inout)}
+.slide.is-leaving{visibility:visible;z-index:2;transform:scale(1.04);opacity:.6;transition:transform 1.2s var(--ease-inout),opacity 1.2s var(--ease-inout)}
+.hero__shade{position:absolute;inset:0;z-index:4;pointer-events:none;
+  background:linear-gradient(90deg,rgba(20,18,15,.82) 0%,rgba(20,18,15,.4) 34%,rgba(20,18,15,0) 58%),linear-gradient(0deg,rgba(20,18,15,.8) 0%,rgba(20,18,15,0) 34%)}
+.hero__content{position:absolute;z-index:5;left:var(--gutter);bottom:clamp(104px,15vh,150px);max-width:min(720px,88vw)}
+.hero h1{font-size:clamp(52px,7.4vw,124px);margin:18px 0 22px}
+.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ln>span{display:block}
+.hero__lede{max-width:46ch;color:var(--stone-300);font-size:17px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;margin-top:28px}
+.hero__bar{position:absolute;z-index:5;left:var(--gutter);right:var(--gutter);bottom:28px;display:flex;align-items:center;gap:20px;border-top:1px solid rgba(201,169,110,.35);padding-top:14px}
+.hero__count{font:400 12px/1 var(--f-mono);color:var(--stone-300)}
+.hero__dots{display:flex;gap:6px}
+.hero__dots button{width:44px;height:44px;background:none;border:0;cursor:pointer;display:grid;place-items:center}
+.hero__dots button::before{content:"";width:28px;height:2px;background:rgba(207,200,189,.35);transition:background var(--t2)}
+.hero__dots button[aria-current="true"]::before{background:var(--gold-decor)}
+.hero__pause{min-height:44px;background:none;border:0;color:var(--stone-300);cursor:pointer;font:500 12px/1 var(--f-mono);letter-spacing:.06em;display:inline-flex;align-items:center;gap:8px}
+.hero__cap{margin-left:auto;text-align:right;font:400 12px/1.5 var(--f-mono);color:var(--stone-300)}
+.hero__cap .ai-label{display:block}
+.hero.static .hero__dots,.hero.static .hero__pause,.hero.static .hero__count{display:none}
+@media (max-aspect-ratio:4/5){
+  .slide--portrait img{inset:0;right:auto;width:100%;height:100%;object-fit:cover;-webkit-mask-image:none;mask-image:none}
+  .hero__shade{background:linear-gradient(0deg,rgba(20,18,15,.92) 0%,rgba(20,18,15,.5) 45%,rgba(20,18,15,0) 70%)}
+}
+@media (max-aspect-ratio:4/5){.hero__dots button:nth-child(n+3),.hero__count{display:none}}
+@media (max-width:640px){.hero__cap{display:none}.hero__lede{font-size:16px}}
+
+/* ---------- section scaffolding (dark) ---------- */
+.sec{position:relative;padding:clamp(96px,14vh,168px) 0}
+.sec h2.display{font-size:clamp(40px,5.2vw,84px)}
+.lead{font-size:18px;color:var(--fg2);max-width:52ch}
+.rule{height:1px;background:var(--gold-decor);opacity:.5;width:64px;margin:22px 0}
+
+/* ---------- S2 chapters ---------- */
+.chapters{position:relative}
+.chapters__intro{padding:clamp(96px,14vh,168px) var(--gutter) 48px}
+.chapter{position:relative;padding-bottom:clamp(56px,9vh,112px)}
+.chapter__media{position:relative;width:100%;aspect-ratio:21/9;overflow:hidden;background:var(--ink-950)}
+.chapter__media img{width:100%;height:100%;object-fit:cover}
+.chapter__media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,18,15,.85) 0%,rgba(20,18,15,0) 45%)}
+.chapter__ai{position:absolute;right:var(--gutter);top:14px;z-index:2}
+.chapter__text{position:relative;z-index:2;padding:0 var(--gutter);margin-top:clamp(-150px,-9vw,-48px);max-width:820px}
+.chapter__text h3{font-size:clamp(34px,4.4vw,72px);margin:10px 0 14px}
+.chapter__text p{color:var(--stone-300);max-width:50ch;font-size:17px}
+.chapter__text .chapter__data{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:18px;font:400 12px/1.6 var(--f-mono);color:var(--stone-400)}
+.chapters__rail{display:none}
+.chapters.is-sticky{height:420svh}
+.chapters.is-sticky .chapters__stage{position:sticky;top:0;height:100svh;overflow:hidden}
+.chapters.is-sticky .chapter{position:absolute;inset:0;padding:0}
+.chapters.is-sticky .chapter__media{position:absolute;left:0;right:0;top:var(--hdr);aspect-ratio:auto;height:min(calc(100vw * 9 / 21),calc(100svh - var(--hdr) - 96px))}
+.chapters.is-sticky .chapter__text{position:absolute;left:0;bottom:clamp(32px,7vh,72px);margin:0}
+.chapters.is-sticky .chapters__rail{display:flex;position:absolute;right:var(--gutter);bottom:clamp(32px,7vh,72px);z-index:3;flex-direction:column;gap:10px;font:400 12px/1 var(--f-mono);color:var(--stone-400)}
+.chapters__rail li{display:flex;gap:10px;align-items:center;transition:color var(--t2)}
+.chapters__rail li::before{content:"";width:18px;height:1px;background:currentColor;transition:width var(--t3) var(--ease-out)}
+.chapters__rail li.on{color:var(--paper)}
+.chapters__rail li.on::before{width:40px;background:var(--gold-decor)}
+
+/* ---------- S4 gesto (video scrub) ---------- */
+.gesto{position:relative}
+.gesto__stage{display:grid;grid-template-columns:1fr;gap:32px;padding:clamp(96px,14vh,168px) var(--gutter)}
+.gesto__media{position:relative;justify-self:center;width:min(100%,460px);aspect-ratio:9/16;background:#0d0b09}
+.gesto__media canvas,.gesto__media video,.gesto__media picture,.gesto__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gesto canvas{display:none}
+.gesto.is-scrub{height:280svh}
+.gesto.is-scrub .gesto__stage{position:sticky;top:0;height:100svh;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:var(--hdr);padding-bottom:0}
+.gesto.is-scrub .gesto__media{height:min(84svh,calc(100svh - var(--hdr) - 32px));width:auto}
+.gesto.is-scrub canvas{display:block}
+.gesto.is-scrub .gesto__fallback{display:none}
+.gesto__side{font:400 12px/1.8 var(--f-mono);color:var(--stone-400)}
+.gesto__prog{height:1px;background:var(--ink-700);margin-top:14px;position:relative;width:160px}
+.gesto__prog i{position:absolute;left:0;top:0;height:1px;background:var(--gold-decor);width:0}
+@media (max-width:899px){.gesto__side--r{display:none}}
+
+/* ---------- montra ---------- */
+.montra__wide{position:relative;aspect-ratio:21/9;overflow:hidden}
+.montra__wide img{width:100%;height:100%;object-fit:cover}
+.montra__wide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,15,.88) 0%,rgba(20,18,15,.2) 55%,rgba(20,18,15,0) 70%)}
+.montra__copy{position:absolute;z-index:2;left:var(--gutter);top:50%;transform:translateY(-50%);max-width:520px}
+.montra__copy h2{font-size:clamp(36px,4.6vw,76px);margin:12px 0 16px}
+.montra__copy p{color:var(--stone-300)}
+.montra__ai{position:absolute;z-index:2;right:var(--gutter);bottom:14px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,28px);padding:clamp(12px,2vw,28px) var(--gutter) 0}
+.duo figure{margin:0}
+.duo .frame{aspect-ratio:3/2;overflow:hidden}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:12px;font-size:15px}
+@media (max-width:899px){.montra__wide{aspect-ratio:4/5}.montra__copy{top:auto;bottom:40px;transform:none}.montra__wide::after{background:linear-gradient(0deg,rgba(20,18,15,.92) 0%,rgba(20,18,15,.3) 60%)}.duo{grid-template-columns:1fr}}
+
+/* ---------- S5 perfis + registo ---------- */
+.profiles{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:start}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 28px;border-bottom:1px solid var(--ink-800);margin:28px 0 28px}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;min-height:48px;cursor:pointer;font:500 15px/1 var(--f-ui);color:var(--stone-400)}
+.tabs button[aria-selected="true"]{color:var(--paper);border-bottom-color:var(--gold-decor)}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+.panel[hidden]{display:none}
+.panel .frame{aspect-ratio:3/2;overflow:hidden}
+.panel .frame--45{aspect-ratio:4/5}
+.panel img{width:100%;height:100%;object-fit:cover}
+.panel h3{font:400 28px/1.15 var(--f-display);margin-bottom:12px}
+.panel ul{margin-top:14px;display:grid;gap:8px;color:var(--stone-300)}
+.panel li{padding-left:18px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--gold-decor)}
+.form{display:grid;gap:18px}
+.field{display:grid;gap:6px}
+.field label{font:500 14px/1.3 var(--f-ui)}
+.field .hint{font-size:13px;color:var(--fg3)}
+.field input,.field select,.field textarea{min-height:48px;padding:12px 14px;background:transparent;border:1px solid var(--fg3);border-radius:0;color:var(--fg);width:100%}
+html[data-theme="dark"] .field input,html[data-theme="dark"] .field select,html[data-theme="dark"] .field textarea{border-color:#8A8278}
+.field select option{color:#1C1915}
+.field input[aria-invalid="true"]{border-color:var(--err-c)}
+.msg{font-size:13px;min-height:1.3em}
+.msg.ok{color:var(--ok-c)}.msg.err{color:var(--err-c)}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--fg2)}
+.check input{width:20px;height:20px;margin-top:2px;flex:0 0 auto;accent-color:var(--gold-700)}
+.result{border:1px solid var(--gold-decor);padding:20px;display:grid;gap:10px}
+html[data-theme="light"] .result{border-color:var(--gold-700)}
+.proto-note{font-size:13px;color:var(--fg3)}
+@media (max-width:1099px){.profiles{grid-template-columns:1fr}}
+@media (max-width:640px){.panel{grid-template-columns:1fr}}
+
+/* ---------- S6 luz ---------- */
+.luz{min-height:100svh;display:grid;place-items:center;text-align:center;padding:120px var(--gutter)}
+.luz h2{font-size:clamp(56px,10vw,168px)}
+.luz p{color:var(--stone-300);margin:18px auto 36px;max-width:44ch}
+.luz .btn{min-height:56px;padding:0 34px;font-size:16px}
+
+/* ---------- empresa ---------- */
+.empresa{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,120px)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink-800)}
+.facts div{padding:20px 0;border-bottom:1px solid var(--ink-800)}
+.facts dt{font:500 12px/1 var(--f-ui);letter-spacing:.12em;text-transform:uppercase;color:var(--stone-400);margin-bottom:10px}
+.facts dd{font-size:17px}
+@media (max-width:899px){.empresa{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+.ftr{border-top:1px solid var(--line);padding:48px var(--gutter) 40px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));font-size:14px;color:var(--fg2)}
+.ftr b{display:block;color:var(--fg);font-weight:500;margin-bottom:8px}
+.ftr a{color:var(--fg2)}
+.ftr__legal{grid-column:1/-1;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--fg3);display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* ---------- LIGHT: catálogo ---------- */
+.crumbs{font-size:13px;color:var(--fg3);display:flex;gap:8px;flex-wrap:wrap}
+.crumbs a{color:var(--fg2)}
+.cat-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px;margin:18px 0 28px}
+.cat-head h1{font-size:clamp(44px,5.4vw,88px)}
+.cat-head p{color:var(--fg2);max-width:52ch}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(150px,13vw,210px);gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;margin-bottom:36px}
+.tile{display:flex;flex-direction:column;align-self:start;scroll-snap-align:start;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--fg)}
+.tile .frame{aspect-ratio:4/5;overflow:hidden;background:var(--stone-100)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform var(--t4) var(--ease-out)}
+.tile:hover img{transform:scale(1.04)}
+.tile span{display:block;font:500 15px/1.3 var(--f-ui);margin-top:10px}
+.tile small{display:block;font:400 12px/1.4 var(--f-mono);color:var(--fg3);margin-top:2px}
+.tile[aria-pressed="true"] span{text-decoration:underline;text-decoration-color:var(--gold-700);text-underline-offset:5px}
+.filters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:28px}
+.chip{min-height:40px;padding:0 16px;border:1px solid var(--line);background:var(--white);cursor:pointer;font:500 14px/1 var(--f-ui);color:var(--fg2)}
+.chip[aria-pressed="true"]{background:var(--ink-900);color:var(--paper);border-color:var(--ink-900)}
+.filters select{min-height:40px;padding:0 12px;border:1px solid var(--stone-500);background:var(--white)}
+.filters .count{margin-left:auto;font:400 13px/1 var(--f-mono);color:var(--fg3)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px}
+@media (max-width:1199px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:767px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column}
+.card__media{display:block;position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--stone-100)}
+.card__media img{width:100%;height:100%;object-fit:cover;transform:translate(var(--mx,0),var(--my,0)) scale(var(--s,1));transition:transform var(--t4) var(--ease-out)}
+.card__media:hover img,.card__media:focus-visible img{--s:1.06}
+.card__media--pending{display:grid;place-items:center;background:var(--ink-900);color:var(--stone-300);text-decoration:none}
+.card__media--pending span{font:400 12px/1.6 var(--f-mono);text-align:center;padding:24px}
+.card__media--pending::before{content:"";position:absolute;inset:14px;border:1px solid var(--ink-700)}
+.card__body{padding-top:16px;display:grid;gap:6px}
+.card__name{font:500 17px/1.3 var(--f-ui)}
+.card__name a{text-decoration:none}
+.card__name a:hover{text-decoration:underline;text-underline-offset:4px}
+.card__meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.tag{font:500 12px/1 var(--f-ui);letter-spacing:.04em;padding:5px 8px;border:1px solid currentColor}
+.tag--ouro{color:var(--gold-700)}
+.tag--aco{color:var(--steel-600)}
+.tag--perola,.tag--zirconia,.tag--none{color:var(--stone-600)}
+.sku{color:var(--fg3)}
+.card__pvp{font-size:14px;color:var(--fg2)}
+.card__pvp b{color:var(--fg);font-weight:500}
+.price{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.price--lock{color:var(--fg2)}
+.price--lock svg{width:14px;height:14px;stroke:var(--gold-700);fill:none;stroke-width:1.6}
+.price--lock a{color:var(--gold-700);font-weight:500}
+.price strong{font:600 18px/1 var(--f-ui);font-variant-numeric:tabular-nums}
+.price .mono{color:var(--fg3)}
+.card__actions{display:flex;gap:8px;align-items:stretch}
+.qty{width:88px;min-height:44px;padding:0 10px;border:1px solid var(--stone-500);background:var(--white);font-variant-numeric:tabular-nums}
+.btn-add{flex:1;min-height:44px;border:1px solid var(--ink-900);background:transparent;cursor:pointer;font:500 14px/1 var(--f-ui);color:var(--ink-900)}
+.btn-add:hover{background:var(--ink-900);color:var(--paper)}
+.ai-note{margin-top:8px}
+
+/* ---------- LIGHT: produto ---------- */
+.pdp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:start}
+.pdp__gallery button{display:block;width:100%;border:0;padding:0;background:var(--stone-100);cursor:zoom-in;position:relative;aspect-ratio:4/5;overflow:hidden}
+.pdp__gallery img{width:100%;height:100%;object-fit:cover}
+.pdp__gallery small{display:block;margin-top:10px;color:var(--fg3);font-size:13px}
+.pdp__info{position:sticky;top:calc(var(--hdr) + 32px)}
+.pdp__info h1{font:300 clamp(36px,3.6vw,56px)/1.04 var(--f-display);font-variation-settings:"opsz" 144;margin:10px 0 14px}
+.skuline{display:flex;align-items:center;gap:10px}
+.skuline button{min-height:32px;padding:0 10px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-size:12px}
+.gate{margin:22px 0;border:1px solid var(--line);background:var(--white);padding:22px;display:grid;gap:14px}
+.gate p{color:var(--fg2)}
+.tiers{width:100%;border-collapse:collapse;margin:18px 0 12px;font-size:15px}
+.tiers th{font:500 12px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+.tiers td{padding:14px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;transition:background var(--t2) var(--ease-ui)}
+.tiers tr.on td{background:var(--stone-100)}
+.tiers tr.on td:first-child{box-shadow:inset 2px 0 0 var(--gold-700)}
+.specs{margin-top:28px;border-top:1px solid var(--line)}
+.specs div{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.specs dt{color:var(--fg3)}
+.related{margin-top:96px}
+.related h2{font:300 36px/1.1 var(--f-display);margin-bottom:28px}
+@media (max-width:899px){.pdp{grid-template-columns:1fr}.pdp__info{position:static}.specs div{grid-template-columns:1fr}}
+.lightbox{border:0;padding:0;margin:auto;width:100vw;height:100vh;max-width:none;max-height:none;background:#14120F;color:var(--paper)}
+.lightbox::backdrop{background:#14120F}
+.lightbox img{width:100%;height:100%;object-fit:contain}
+.lightbox button{position:absolute;top:16px;right:16px;min-height:44px;padding:0 18px;background:none;border:1px solid rgba(250,247,242,.5);color:var(--paper);cursor:pointer}
+
+/* ---------- LIGHT: pedido ---------- */
+.rfq{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.lines{width:100%;border-collapse:collapse;font-size:15px}
+.lines th{font:500 12px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
+.lines td{padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.lines .qty{width:96px}
+.lines button{min-height:36px;padding:0 10px;background:none;border:1px solid var(--line);cursor:pointer;font-size:13px}
+.st-ok{color:var(--ok)}.st-warn{color:var(--warn)}
+.box{border:1px solid var(--line);background:var(--white);padding:22px;display:grid;gap:14px}
+@media (max-width:1023px){.rfq{grid-template-columns:1fr}}
+
+/* ---------- M08 cursor ---------- */
+.cur{position:fixed;left:0;top:0;z-index:90;pointer-events:none;display:none}
+html.has-cursor .cur{display:block}
+.cur-dot{width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--fg)}
+.cur-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center;transition:width var(--t2) var(--ease-out),height var(--t2) var(--ease-out),margin var(--t2) var(--ease-out),background var(--t2),opacity var(--t2)}
+.cur-ring span{font:500 11px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;opacity:0;color:var(--bg)}
+.cur-ring.is-hover{width:72px;height:72px;margin:-36px 0 0 -36px;background:var(--fg)}
+.cur-ring.is-hover span{opacity:1}
+html.has-cursor.cursor-hidden .cur{opacity:0}
+html.has-cursor body,html.has-cursor a,html.has-cursor button{cursor:none}
+html.has-cursor input,html.has-cursor select,html.has-cursor textarea,html.has-cursor label{cursor:auto}
+
+/* ---------- M15 view transitions ---------- */
+::view-transition-old(root),::view-transition-new(root){animation-duration:var(--t3);animation-timing-function:var(--ease-inout)}
+html.vt-lights::view-transition-old(root){animation:none}
+html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-inout) both}
+@keyframes lights-on{from{clip-path:circle(0 at var(--vx,50%) var(--vy,50%))}to{clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%))}}
+::view-transition-group(prod-img){animation-duration:600ms;animation-timing-function:var(--ease-inout)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}
+  .slide.is-active img{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<noscript><p style="padding:90px 24px 12px;background:#14120F;color:#FAF7F2">Este protótipo precisa de JavaScript para o catálogo, a ficha de produto e o pedido de proposta. A página inicial funciona sem JavaScript.</p></noscript>
+
+<header class="hdr">
+  <a class="brand" href="#/" aria-label="LM BIJU — início">LM <em>Biju</em></a>
+  <nav class="nav" aria-label="Principal">
+    <a href="#/catalogo" data-nav="catalogo">Catálogo</a>
+    <a href="#/?s=materia" data-nav="materia">Matéria</a>
+    <a href="#/?s=montra" data-nav="montra">Para a montra</a>
+    <a href="#/?s=empresa" data-nav="empresa">Empresa</a>
+  </nav>
+  <div class="hdr__r">
+    <button class="sess" type="button" aria-pressed="false" data-session-toggle>
+      <span class="sess__sw" aria-hidden="true"></span><span class="sess__txt">Simular sessão</span><span class="sr-only"> (modo demonstração)</span>
+    </button>
+    <a class="cartlink" href="#/pedido" data-nav="pedido">Pedido <b data-rfq-count aria-label="linhas no pedido">0</b></a>
+    <details class="menu">
+      <summary>Menu</summary>
+      <div class="menu__panel">
+        <a href="#/catalogo">Catálogo</a><a href="#/?s=materia">Matéria</a><a href="#/?s=montra">Para a montra</a><a href="#/?s=empresa">Empresa</a><a href="#/?s=registo">Criar conta profissional</a>
+      </div>
+    </details>
+  </div>
+</header>
+<div class="sessbar" role="status">Modo demonstração: sessão simulada. Os preços de revenda mostrados são fictícios e estão escritos no código do protótipo. Em produção são gerados no servidor, só para contas validadas.</div>
+
+<main id="main" tabindex="-1">
+
+<!-- =========================== VIEW: INÍCIO (dark) =========================== -->
+<div data-view-section="inicio">
+
+  <!-- S1 · HERO -->
+  <section class="hero" id="hero" aria-roledescription="carrossel" aria-label="Destaques LM BIJU">
+    <div class="slides" id="slides">
+      <figure class="slide slide--portrait is-active" style="--sbg:#050505" data-ai="0" data-mobile="1" aria-roledescription="diapositivo" aria-label="1 de 4"
+        data-cap="Nº 01 · Corrente cubana · Aço 316L · LB-1013">
+        <picture>
+          <source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-600.avif 600w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-900.avif 900w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.avif 1200w" sizes="(max-aspect-ratio: 4/5) 100vw, 67vh">
+          <source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-600.webp 600w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-900.webp 900w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.webp 1200w" sizes="(max-aspect-ratio: 4/5) 100vw, 67vh">
+          <img src="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.jpg" width="1200" height="1800" alt="Corrente cubana em aço 316L sobre fundo negro" fetchpriority="high" decoding="async">
+        </picture>
+      </figure>
+      <figure class="slide slide--portrait" style="--sbg:#201D22" data-ai="0" data-mobile="1" aria-roledescription="diapositivo" aria-label="2 de 4"
+        data-cap="Nº 02 · Fio com cruz · Banho de ouro 18K · LB-1009"
+        data-avif="../_research/demo-b/assets/legacy/legacy-cat-homem-hero-600.avif 600w, ../_research/demo-b/assets/legacy/legacy-cat-homem-hero-900.avif 900w, ../_research/demo-b/assets/legacy/legacy-cat-homem-hero-1200.avif 1200w"
+        data-webp="../_research/demo-b/assets/legacy/legacy-cat-homem-hero-600.webp 600w, ../_research/demo-b/assets/legacy/legacy-cat-homem-hero-900.webp 900w, ../_research/demo-b/assets/legacy/legacy-cat-homem-hero-1200.webp 1200w"
+        data-jpg="../_research/demo-b/assets/legacy/legacy-cat-homem-hero-1200.jpg" data-w="1200" data-h="1600" data-sizes="(max-aspect-ratio: 4/5) 100vw, 75vh"
+        data-alt="Homem de casaco preto com fio dourado e pendente em cruz"></figure>
+      <figure class="slide slide--wide" style="--sbg:#14120F" data-ai="1" aria-roledescription="diapositivo" aria-label="3 de 4"
+        data-cap="Nº 03 · Corrente de elos redondos"
+        data-avif="../_research/demo-b/assets/mj/mj-g3-2-hero-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g3-2-hero-1680.avif 1680w"
+        data-webp="../_research/demo-b/assets/mj/mj-g3-2-hero-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g3-2-hero-1680.webp 1680w"
+        data-jpg="../_research/demo-b/assets/mj/mj-g3-2-hero-1680.jpg" data-w="1680" data-h="720" data-sizes="100vw"
+        data-alt="Corrente de elos redondos dourada sobre basalto escuro"></figure>
+      <figure class="slide slide--wide" style="--sbg:#14120F" data-ai="1" aria-roledescription="diapositivo" aria-label="4 de 4"
+        data-cap="Nº 04 · Corrente fina prateada"
+        data-avif="../_research/demo-b/assets/mj/mj-g4-0-hero-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g4-0-hero-1680.avif 1680w"
+        data-webp="../_research/demo-b/assets/mj/mj-g4-0-hero-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g4-0-hero-1680.webp 1680w"
+        data-jpg="../_research/demo-b/assets/mj/mj-g4-0-hero-1680.jpg" data-w="1680" data-h="720" data-sizes="100vw"
+        data-alt="Corrente fina prateada pousada sobre pedra escura"></figure>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow">Grossista · Varziela, Vila do Conde</p>
+      <h1 class="display"><span class="ln"><span>Peças que pedem</span></span><span class="ln"><span><em>a luz certa.</em></span></span></h1>
+      <p class="hero__lede">Aço 316L, banho de ouro 18K, pérola e zircónia para lojas físicas, montras e lojas online em Portugal e Espanha.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#/catalogo" data-lights>Entrar no catálogo</a>
+        <a class="link" href="#registo">Criar conta profissional</a>
+      </div>
+    </div>
+    <div class="hero__bar">
+      <span class="hero__count num" aria-hidden="true"><span data-hero-idx>01</span> / 04</span>
+      <div class="hero__dots" role="group" aria-label="Escolher destaque">
+        <button type="button" aria-current="true" aria-label="Destaque 1 de 4"></button>
+        <button type="button" aria-current="false" aria-label="Destaque 2 de 4"></button>
+        <button type="button" aria-current="false" aria-label="Destaque 3 de 4"></button>
+        <button type="button" aria-current="false" aria-label="Destaque 4 de 4"></button>
+      </div>
+      <button class="hero__pause" type="button" data-hero-pause aria-label="Pausar destaques">❚❚ <span>Pausar</span></button>
+      <p class="hero__cap" aria-live="off"><span data-hero-cap>Nº 01 · Corrente cubana · Aço 316L · LB-1013</span><span class="ai-label" data-hero-ai hidden>Imagem ilustrativa gerada por IA</span></p>
+    </div>
+  </section>
+
+  <!-- S2 · DA MATÉRIA À MONTRA -->
+  <section id="materia" aria-labelledby="materia-t">
+    <div class="chapters__intro">
+      <p class="eyebrow">Da matéria à montra</p>
+      <h2 class="display" id="materia-t" style="font-size:clamp(40px,5.2vw,84px);margin-top:14px">Quatro passos<br><em>antes do balcão.</em></h2>
+    </div>
+    <div class="chapters">
+    <div class="chapters__stage">
+      <article class="chapter" aria-labelledby="ch1">
+        <div class="chapter__media" data-reveal>
+          <picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g5-0-wide-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g5-0-wide-1680.avif 1680w" sizes="100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g5-0-wide-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g5-0-wide-1680.webp 1680w" sizes="100vw"><img src="../_research/demo-b/assets/mj/mj-g5-0-wide-1680.jpg" width="1680" height="720" alt="Macro de elos de corrente em aço com acabamento dourado" loading="lazy" decoding="async" data-parallax></picture>
+          <span class="ai-label chapter__ai">Imagem ilustrativa gerada por IA</span>
+        </div>
+        <div class="chapter__text">
+          <p class="eyebrow">Capítulo 01 · Matéria</p>
+          <h3 class="display" id="ch1">Aço inoxidável <em>316L</em></h3>
+          <p>A base de quase toda a linha: não escurece com o uso diário, aguenta água e suor e mantém o peso certo na mão.</p>
+          <p class="chapter__data"><span>Liga · 316L</span><span>Certificado do fornecedor · <span class="tbc">a confirmar</span></span></p>
+        </div>
+      </article>
+      <article class="chapter" aria-labelledby="ch2">
+        <div class="chapter__media" data-reveal>
+          <picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g5-1-wide-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g5-1-wide-1680.avif 1680w" sizes="100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g5-1-wide-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g5-1-wide-1680.webp 1680w" sizes="100vw"><img src="../_research/demo-b/assets/mj/mj-g5-1-wide-1680.jpg" width="1680" height="720" alt="Macro de corrente barbela dourada em diagonal" loading="lazy" decoding="async" data-parallax></picture>
+          <span class="ai-label chapter__ai">Imagem ilustrativa gerada por IA</span>
+        </div>
+        <div class="chapter__text">
+          <p class="eyebrow">Capítulo 02 · Banho</p>
+          <h3 class="display" id="ch2">Ouro <em>18K</em> sobre aço</h3>
+          <p>O brilho do ouro com a resistência do aço, num preço que deixa margem a quem revende.</p>
+          <p class="chapter__data"><span>Espessura do banho · <span class="tbc">a confirmar µm</span></span><span>Teste de desgaste · <span class="tbc">a confirmar</span></span></p>
+        </div>
+      </article>
+      <article class="chapter" aria-labelledby="ch3">
+        <div class="chapter__media" data-reveal>
+          <picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g2-1-wide-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g2-1-wide-1680.avif 1680w" sizes="100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g2-1-wide-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g2-1-wide-1680.webp 1680w" sizes="100vw"><img src="../_research/demo-b/assets/mj/mj-g2-1-wide-1680.jpg" width="1680" height="720" alt="Mão junto ao pescoço com anel, colar fino e pulseira dourados" loading="lazy" decoding="async" data-parallax></picture>
+          <span class="ai-label chapter__ai">Imagem ilustrativa gerada por IA</span>
+        </div>
+        <div class="chapter__text">
+          <p class="eyebrow">Capítulo 03 · Na pele</p>
+          <h3 class="display" id="ch3">Feito para <em>se usar</em></h3>
+          <p>Peças de contacto prolongado com a pele. Cada lote é verificado antes de sair de Vila do Conde.</p>
+          <p class="chapter__data"><span>Libertação de níquel (REACH, Anexo XVII) · <span class="tbc">relatório a confirmar</span></span></p>
+        </div>
+      </article>
+      <article class="chapter" aria-labelledby="ch4">
+        <div class="chapter__media" data-reveal>
+          <picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g7-3-wide-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g7-3-wide-1680.avif 1680w" sizes="100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g7-3-wide-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g7-3-wide-1680.webp 1680w" sizes="100vw"><img src="../_research/demo-b/assets/mj/mj-g7-3-wide-1680.jpg" width="1680" height="720" alt="Balcão escuro com tabuleiros de veludo, expositor em T e bloco de travertino" loading="lazy" decoding="async" data-parallax></picture>
+          <span class="ai-label chapter__ai">Imagem ilustrativa gerada por IA</span>
+        </div>
+        <div class="chapter__text">
+          <p class="eyebrow">Capítulo 04 · Montra</p>
+          <h3 class="display" id="ch4">Pronto <em>a expor</em></h3>
+          <p>Expositores, tabuleiros e embalagem na mesma encomenda que as peças. Reposição por referência, sem esperar pela próxima coleção.</p>
+          <p class="chapter__data"><span>Prazo de reposição · <span class="tbc">a confirmar</span></span></p>
+        </div>
+      </article>
+      <ol class="chapters__rail" aria-hidden="true"><li class="on">01 Matéria</li><li>02 Banho</li><li>03 Na pele</li><li>04 Montra</li></ol>
+    </div>
+    </div>
+  </section>
+
+  <!-- S4 · GESTO (scroll scrub) -->
+  <section class="gesto" id="gesto" aria-labelledby="gesto-t">
+    <div class="gesto__stage">
+      <div class="gesto__side">
+        <p class="eyebrow">Filmagem própria</p>
+        <h2 class="display" id="gesto-t" style="font-size:clamp(40px,4.6vw,76px);margin:14px 0 16px;color:var(--paper)">Um fio fino,<br><em>visto de perto.</em></h2>
+        <p style="font:400 17px/1.6 var(--f-ui);color:var(--stone-300);max-width:34ch">Colar com pendente em zircónia e banho de ouro. Percorra a página para ver o movimento.</p>
+        <div class="gesto__prog" aria-hidden="true"><i data-scrub-prog></i></div>
+      </div>
+      <div class="gesto__media">
+        <canvas width="1080" height="1920" aria-label="Sequência de vídeo: colar fino com pendente em zircónia no pescoço" role="img"></canvas>
+        <div class="gesto__fallback">
+          <picture data-gesto-poster>
+            <source type="image/avif" srcset="../_research/demo-b/assets/video/video-poster-540.avif 540w, ../_research/demo-b/assets/video/video-poster-1080.avif 1080w" sizes="(max-width: 899px) 90vw, 460px">
+            <img src="../_research/demo-b/assets/video/video-poster-1080.jpg" width="1080" height="1920" alt="Colar fino com pendente em zircónia no pescoço" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="gesto__side gesto__side--r" aria-hidden="true">
+        <p>REF · vídeo de campanha</p><p>1080 × 1920 · 48 fotogramas</p><p>Segmento 00:02 — 00:18</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONTRA -->
+  <section id="montra" aria-labelledby="montra-t" style="padding-top:clamp(64px,10vh,120px)">
+    <div class="montra__wide">
+      <picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g1-1-wide-1440.avif 1440w, ../_research/demo-b/assets/mj/mj-g1-1-wide-1680.avif 1680w" sizes="100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g1-1-wide-1440.webp 1440w, ../_research/demo-b/assets/mj/mj-g1-1-wide-1680.webp 1680w" sizes="100vw"><img src="../_research/demo-b/assets/mj/mj-g1-1-wide-1680.jpg" width="1680" height="720" alt="Montra de uma loja de bijuteria ao fim do dia, com bustos de veludo e colares dourados" loading="lazy" decoding="async" data-parallax></picture>
+      <div class="montra__copy">
+        <p class="eyebrow">Para a sua montra</p>
+        <h2 class="display" id="montra-t">A peça vende-se<br><em>pela montra.</em></h2>
+        <p>Bustos, tabuleiros, expositores e embalagem na mesma fatura que as peças.</p>
+        <p style="margin-top:22px"><a class="link" href="#/catalogo?fam=loja" style="color:var(--paper)">Ver acessórios de loja</a></p>
+      </div>
+      <span class="ai-label montra__ai">Imagem ilustrativa gerada por IA</span>
+    </div>
+    <div class="duo">
+      <figure>
+        <div class="frame" data-reveal><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g6-0-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g6-0-scene-1080.avif 1080w" sizes="(min-width: 900px) 48vw, 100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g6-0-scene-800.webp 800w, ../_research/demo-b/assets/mj/mj-g6-0-scene-1080.webp 1080w" sizes="(min-width: 900px) 48vw, 100vw"><img src="../_research/demo-b/assets/mj/mj-g6-0-scene-1080.jpg" width="1080" height="720" alt="Caixa rígida preta aberta com interior de cetim e pulseira" loading="lazy" decoding="async"></picture></div>
+        <figcaption><span>Embalagens</span><span class="ai-label">Imagem ilustrativa gerada por IA</span></figcaption>
+      </figure>
+      <figure>
+        <div class="frame" data-reveal><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g7-2-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g7-2-scene-1080.avif 1080w" sizes="(min-width: 900px) 48vw, 100vw"><source type="image/webp" srcset="../_research/demo-b/assets/mj/mj-g7-2-scene-800.webp 800w, ../_research/demo-b/assets/mj/mj-g7-2-scene-1080.webp 1080w" sizes="(min-width: 900px) 48vw, 100vw"><img src="../_research/demo-b/assets/mj/mj-g7-2-scene-1080.jpg" width="1080" height="720" alt="Tabuleiros de veludo preto com brincos e expositor metálico" loading="lazy" decoding="async"></picture></div>
+        <figcaption><span>Expositores e tabuleiros</span><span class="ai-label">Imagem ilustrativa gerada por IA</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- S5 · PERFIS + REGISTO -->
+  <section class="sec" id="registo" aria-labelledby="registo-t">
+    <div class="wrap profiles">
+      <div>
+        <p class="eyebrow">Para quem vendemos</p>
+        <h2 class="display" id="registo-t">Uma conta,<br><em>o seu tipo de loja.</em></h2>
+        <div class="tabs" role="tablist" aria-label="Tipo de negócio">
+          <button role="tab" id="tab-fisica" aria-controls="pan-fisica" aria-selected="true">Loja física</button>
+          <button role="tab" id="tab-online" aria-controls="pan-online" aria-selected="false" tabindex="-1">Loja online</button>
+          <button role="tab" id="tab-turismo" aria-controls="pan-turismo" aria-selected="false" tabindex="-1">Zona turística</button>
+          <button role="tab" id="tab-nova" aria-controls="pan-nova" aria-selected="false" tabindex="-1">Loja nova</button>
+        </div>
+        <div class="panel" role="tabpanel" id="pan-fisica" aria-labelledby="tab-fisica">
+          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g2-0-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g2-0-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g2-0-scene-1080.jpg" width="1080" height="720" alt="Mão com dois anéis finos dourados" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
+          <div><h3>Reposição sem parar a montra</h3><p style="color:var(--stone-300)">Encomende por referência, na quantidade que roda.</p>
+            <ul><li>Aço 316L e banho 18K como base</li><li>Expositores e embalagem na mesma encomenda</li><li>Visita ao showroom com marcação</li></ul></div>
+        </div>
+        <div class="panel" role="tabpanel" id="pan-online" aria-labelledby="tab-online" hidden>
+          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g3-1-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g3-1-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g3-1-scene-1080.jpg" width="1080" height="720" alt="Corrente de elos alongados dourada sobre pedra escura" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
+          <div><h3>Ficha pronta para publicar</h3><p style="color:var(--stone-300)">Referência, materiais e medidas de cada peça para a sua loja online.</p>
+            <ul><li>Fotografias de produto em alta resolução · <span class="tbc">a confirmar</span></li><li>Exportação CSV do seu pedido</li><li>Envio 24–48 h · <span class="tbc">a confirmar</span></li></ul></div>
+        </div>
+        <div class="panel" role="tabpanel" id="pan-turismo" aria-labelledby="tab-turismo" hidden>
+          <figure><div class="frame frame--45"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-cat-colares-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-cat-colares-prod-840.avif 840w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/legacy/legacy-cat-colares-prod-840.jpg" width="840" height="1050" alt="Taça com colares dourados e contas olho grego azuis" loading="lazy" decoding="async"></picture></div></figure>
+          <div><h3>O que o visitante leva</h3><p style="color:var(--stone-300)">Peças de preço acessível que rodam depressa em zonas de turismo.</p>
+            <ul><li>Olho grego e mix sortidos por caixa</li><li>Expositores de balcão compactos</li><li>Reposição rápida na época alta</li></ul></div>
+        </div>
+        <div class="panel" role="tabpanel" id="pan-nova" aria-labelledby="tab-nova" hidden>
+          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g1-0-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g1-0-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g1-0-scene-1080.jpg" width="1080" height="720" alt="Montra de rua com bustos de veludo e colares" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
+          <div><h3>Abrir com o sortido certo</h3><p style="color:var(--stone-300)">Ajudamos a montar a primeira encomenda a partir do que roda nas lojas que já fornecemos.</p>
+            <ul><li>Mínimos por referência baixos</li><li>Kit de montra inicial · <span class="tbc">a confirmar</span></li><li>Acompanhamento comercial</li></ul></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow">Acesso profissional</p>
+        <p class="lead" style="margin:14px 0 24px">Os preços de revenda só aparecem para contas validadas. Pedimos o NIF para confirmar a atividade comercial; a validação demora <span class="tbc">a confirmar</span>.</p>
+        <form class="form" id="regForm" novalidate>
+          <div class="field"><label for="r-emp">Empresa</label><input id="r-emp" name="empresa" autocomplete="organization" required></div>
+          <div class="field"><label for="r-nif">NIF</label><input id="r-nif" name="nif" inputmode="numeric" autocomplete="off" maxlength="11" required aria-describedby="r-nif-msg"><p class="msg" id="r-nif-msg" aria-live="polite"></p></div>
+          <div class="field"><label for="r-tipo">Tipo de negócio</label>
+            <select id="r-tipo" name="tipo" required><option value="">Escolher…</option><option>Loja física</option><option>Loja online</option><option>Zona turística</option><option>Loja nova</option><option>Distribuidor</option></select></div>
+          <div class="field"><label for="r-mail">E-mail profissional</label><input id="r-mail" name="email" type="email" autocomplete="email" required></div>
+          <label class="check"><input type="checkbox" name="consent" required><span>Aceito que a LM BIJU use estes dados para validar a conta, conforme a Política de Privacidade.</span></label>
+          <p class="msg" id="r-msg" aria-live="polite"></p>
+          <button class="btn" type="submit">Preparar pedido de registo</button>
+          <p class="proto-note">Protótipo: o pedido é preparado como e-mail para a equipa comercial. Em produção fica registado no servidor, em validação.</p>
+        </form>
+        <div class="result" id="regResult" hidden tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPRESA -->
+  <section class="sec" id="empresa" aria-labelledby="empresa-t" style="border-top:1px solid var(--ink-800)">
+    <div class="wrap empresa">
+      <div>
+        <p class="eyebrow">Showroom</p>
+        <h2 class="display" id="empresa-t">Varziela,<br><em>Vila do Conde.</em></h2>
+        <p class="lead" style="margin-top:22px">Visite com marcação: preparamos as famílias que lhe interessam antes de chegar.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Morada</dt><dd>Zona Industrial da Varziela, Vila do Conde</dd></div>
+        <div><dt>Horário</dt><dd><span class="tbc">a confirmar</span></dd></div>
+        <div><dt>Referências ativas</dt><dd><span class="tbc">a confirmar</span></dd></div>
+        <div><dt>Envio</dt><dd>Portugal continental · <span class="tbc">prazo a confirmar</span></dd></div>
+        <div><dt>Fundação</dt><dd><span class="tbc">a confirmar</span></dd></div>
+        <div><dt>Direções</dt><dd><a class="link" href="https://www.google.com/maps/search/?api=1&query=Zona+Industrial+da+Varziela+Vila+do+Conde" target="_blank" rel="noopener">Abrir no mapa</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- S6 · LUZ -->
+  <section class="luz" aria-labelledby="luz-t">
+    <div>
+      <p class="eyebrow">Catálogo</p>
+      <h2 class="display" id="luz-t">Acender<br><em>a luz.</em></h2>
+      <p>O catálogo abre em modo de trabalho: claro, rápido, com mínimos e escalões à vista para contas validadas.</p>
+      <a class="btn" href="#/catalogo" data-lights>Entrar no catálogo</a>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== VIEW: CATÁLOGO (light) =========================== -->
+<div data-view-section="catalogo" class="view-light" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><span>Catálogo</span></nav>
+    <div class="cat-head">
+      <h1 class="display" tabindex="-1" data-focus>Catálogo</h1>
+      <p>Preço de venda ao público recomendado em todas as fichas. Preço de revenda, mínimos e escalões para contas validadas.</p>
+    </div>
+    <div class="rail" role="group" aria-label="Famílias" id="rail"></div>
+    <div class="filters" role="group" aria-label="Filtros">
+      <span id="chips"></span>
+      <label class="sr-only" for="f-mat">Material</label>
+      <select id="f-mat"><option value="">Todos os materiais</option><option value="ouro">Banho de ouro 18K</option><option value="aco">Aço 316L</option><option value="perola">Pérola</option><option value="zirconia">Zircónia</option></select>
+      <button class="chip" type="button" id="f-clear">Limpar</button>
+      <span class="count" id="f-count" aria-live="polite"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="proto-note" style="margin:40px 0 0">Cartões "Fotografia em produção": referências sem fotografia própria. As imagens geradas por IA nunca são usadas como fotografia de uma referência.</p>
+  </div>
+</div>
+
+<!-- =========================== VIEW: PRODUTO (light) =========================== -->
+<div data-view-section="produto" class="view-light" hidden>
+  <div class="wrap" id="pdp"></div>
+</div>
+
+<!-- =========================== VIEW: PEDIDO (light) =========================== -->
+<div data-view-section="pedido" class="view-light" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><a href="#/catalogo">Catálogo</a><span aria-hidden="true">/</span><span>Pedido de proposta</span></nav>
+    <div class="cat-head"><h1 class="display" tabindex="-1" data-focus>Pedido de proposta</h1><p>Junte referências e quantidades. Validamos mínimos linha a linha e respondemos com preço e prazo.</p></div>
+    <div class="rfq">
+      <div>
+        <table class="lines" aria-describedby="rfq-live"><thead><tr><th scope="col">Referência</th><th scope="col">Produto</th><th scope="col">Mín.</th><th scope="col">Quantidade</th><th scope="col">Estado</th><th scope="col"><span class="sr-only">Remover</span></th></tr></thead><tbody id="lines"></tbody></table>
+        <p class="msg" id="rfq-live" aria-live="polite" style="margin-top:10px"></p>
+        <div class="box" style="margin-top:28px">
+          <div class="field"><label for="paste">Colar lista</label><p class="hint" id="paste-h">Uma linha por referência: <span class="mono">LB-1003;24</span></p><textarea id="paste" rows="4" aria-describedby="paste-h"></textarea></div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <button class="btn btn--sm" type="button" id="paste-add">Adicionar linhas</button>
+            <label class="btn btn--sm btn--ghost" for="csv" style="color:var(--fg)">Importar CSV</label><input id="csv" type="file" accept=".csv,text/csv" class="sr-only">
+            <a class="link" href="#/catalogo">Continuar no catálogo</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="form box" id="rfqForm" novalidate>
+          <div class="field"><label for="q-emp">Empresa</label><input id="q-emp" autocomplete="organization" required></div>
+          <div class="field"><label for="q-nif">NIF</label><input id="q-nif" inputmode="numeric" maxlength="11" required aria-describedby="q-nif-msg"><p class="msg" id="q-nif-msg" aria-live="polite"></p></div>
+          <div class="field"><label for="q-mail">E-mail</label><input id="q-mail" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="q-obs">Observações</label><textarea id="q-obs" rows="3"></textarea></div>
+          <label class="check"><input type="checkbox" id="q-consent" required><span>Aceito que a LM BIJU use estes dados para responder a este pedido.</span></label>
+          <p class="msg" id="q-msg" aria-live="polite"></p>
+          <button class="btn" type="submit">Enviar pedido de proposta</button>
+          <p class="proto-note">Protótipo: gera o ficheiro CSV do pedido, um número de pedido e um e-mail preparado para a equipa comercial. Em produção o pedido fica registado no servidor.</p>
+        </form>
+        <div class="result" id="rfqResult" hidden tabindex="-1" style="margin-top:20px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="ftr">
+  <div><b>LM BIJU, Lda.</b>Zona Industrial da Varziela<br>Vila do Conde · Portugal<br>NIF <span class="tbc">a confirmar</span></div>
+  <div><b>Área profissional</b><a href="#/?s=registo">Criar conta</a><br><a href="#/pedido">Pedido de proposta</a><br><a href="#/catalogo">Catálogo</a></div>
+  <div><b>Contacto comercial</b><span class="tbc">e-mail a confirmar</span><br><span class="tbc">WhatsApp a confirmar</span></div>
+  <div class="ftr__legal">
+    <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+    <span>Imagens marcadas "Imagem ilustrativa gerada por IA" são ilustrativas e não representam referências do catálogo.</span>
+    <span>Protótipo B "Câmara Escura" · preços e dados de demonstração.</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada"><img alt=""><button type="button" data-close>Fechar</button></dialog>
+<div class="cur cur-dot" aria-hidden="true"></div>
+<div class="cur cur-ring" aria-hidden="true"><span>Ver</span></div>
+<div class="sr-only" aria-live="polite" id="live"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{'use strict';
+/* ---------------------------------------------------------------- config */
+const A='../_research/demo-b/assets/';
+const SALES_EMAIL='geral@lmbiju.pt'; // 需要补充：真实销售邮箱（占位）
+const RM=matchMedia('(prefers-reduced-motion: reduce)');
+const reduced=()=>RM.matches;
+const conn=navigator.connection||{};
+const saveData=!!(conn.saveData||/(^|-)(2g|3g)$/.test(conn.effectiveType||''));
+const fine=matchMedia('(pointer: fine)').matches;
+const hasGSAP=!!(window.gsap&&window.ScrollTrigger);
+if(hasGSAP)gsap.registerPlugin(ScrollTrigger);
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const html=document.documentElement;
+const eur=new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR'});
+const x1=new Intl.NumberFormat('pt-PT',{minimumFractionDigits:1,maximumFractionDigits:1});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const live=msg=>{const l=$('#live');l.textContent='';setTimeout(()=>{l.textContent=msg},30)};
+
+/* ---------------------------------------------------------------- data (demo) */
+const FAM={aneis:'Anéis',brincos:'Brincos',colares:'Colares',pulseiras:'Pulseiras',relogios:'Relógios',homem:'Homem',loja:'Loja & montra'};
+const MAT={ouro:'Banho de ouro 18K',aco:'Aço 316L',perola:'Pérola',zirconia:'Zircónia',none:'Acessório'};
+const L=(id,w)=>({p:`legacy/legacy-${id}-prod`,w});
+const P=[
+ {sku:'LB-1001',name:'Anel Pavé Dourado',fam:'aneis',mat:'ouro',pvp:24.90,moq:6,img:L('hero-ouro',[480,840]),alt:'Anel pavé com banho de ouro 18K sobre pedras brancas',specs:['Banho de ouro 18K','Zircónias','Ajustável']},
+ {sku:'LB-1002',name:'Colar Corrente Fina Dourada',fam:'colares',mat:'ouro',pvp:18.00,moq:6,img:L('colar-topazio',[480,840]),alt:'Corrente fina com banho de ouro 18K sobre disco de vidro',specs:['Banho de ouro 18K','45 cm + extensor','Fecho de mosquetão']},
+ {sku:'LB-1003',name:'Argolas Largas Polidas',fam:'brincos',mat:'ouro',pvp:15.50,moq:6,img:L('argolas-pave',[480,840]),alt:'Argolas largas polidas com banho de ouro 18K',specs:['Banho de ouro 18K','Base aço 316L','Fecho de clique']},
+ {sku:'LB-1004',name:'Conjunto Brincos e Pulseira',fam:'pulseiras',mat:'ouro',pvp:29.90,moq:3,img:L('pulseira-rosa',[480,840]),alt:'Pulseiras de corrente com pendentes e argolas douradas em tabuleiro de vidro',specs:['Banho de ouro 18K','2 peças','Pendentes com zircónia']},
+ {sku:'LB-1005',name:'Colares Olho Grego — Mix',fam:'colares',mat:'ouro',pvp:12.50,moq:12,img:L('cat-colares',[480,840]),alt:'Taça com colares dourados e contas olho grego azuis',specs:['Banho de ouro','Contas olho grego','Mix sortido']},
+ {sku:'LB-1006',name:'Brincos de Pérola Clássicos',fam:'brincos',mat:'perola',pvp:9.99,moq:12,img:L('brincos-safira',[480,840,960]),alt:'Brincos de argola com pérola pendente sobre tabuleiro branco',specs:['Pérola sintética','Base aço 316L','Argola pequena']},
+ {sku:'LB-1007',name:'Anéis Zircónia Cor — Série 7',fam:'aneis',mat:'zirconia',pvp:19.90,moq:7,img:L('hero-still',[480,840]),alt:'Sete anéis dourados com zircónias de cores diferentes',specs:['Banho de ouro 18K','Zircónias de cor','Série de 7 cores']},
+ {sku:'LB-1008',name:'Relógio Bracelete Milanesa',fam:'relogios',mat:'aco',pvp:39.00,moq:3,img:L('cat-relogios',[480,840]),alt:'Relógio com bracelete milanesa em aço sobre carteira de pele',specs:['Caixa em aço','Bracelete milanesa','Quartzo']},
+ {sku:'LB-1009',name:'Fio com Cruz — Homem',fam:'homem',mat:'ouro',pvp:22.00,moq:6,img:L('cat-homem',[480,840,1200]),alt:'Fio dourado com pendente em cruz sobre t-shirt branca',specs:['Banho de ouro 18K','Pendente cruz','60 cm']},
+ {sku:'LB-1011',name:'Anéis Finos Lisos — Par',fam:'aneis',mat:'ouro',pvp:12.75,moq:6,img:L('cat-aneis',[480,840]),alt:'Dois anéis finos lisos dourados sobre seixos brancos',specs:['Banho de ouro 18K','Par','Polido']},
+ {sku:'LB-1012',name:'Anel Script “Love”',fam:'aneis',mat:'ouro',pvp:14.90,moq:6,img:L('cat-pulseiras',[480,840]),alt:'Anel dourado com a palavra love em letra manuscrita sobre malha de lã',specs:['Banho de ouro 18K','Ajustável','Letra manuscrita']},
+ {sku:'LB-1013',name:'Corrente Cubana — Homem',fam:'homem',mat:'aco',pvp:28.00,moq:6,img:L('hero-aco',[480,840,1200]),alt:'Corrente cubana em aço 316L sobre fundo preto',specs:['Aço 316L','60 cm','Elos 6 mm']},
+ {sku:'LB-1010',name:'Brincos Mármore Banho de Ouro',fam:'brincos',mat:'ouro',pvp:27.50,moq:6,img:null,why:'Fotografia existente em baixa resolução',specs:['Resina efeito mármore','Banho de ouro 18K']},
+ {sku:'LB-1016',name:'Pulseira Tennis Zircónia',fam:'pulseiras',mat:'zirconia',pvp:23.00,moq:6,img:null,specs:['Banho de ouro 18K','Zircónias','18 cm']},
+ {sku:'LB-1014',name:'Pulseira de Elos — Homem',fam:'homem',mat:'aco',pvp:21.00,moq:6,img:null,specs:['Aço 316L','21 cm']},
+ {sku:'LB-1015',name:'Anéis Aço Escovado — Pack 3',fam:'aneis',mat:'aco',pvp:12.75,moq:6,img:null,specs:['Aço 316L','Pack de 3','Escovado']},
+ {sku:'LB-2002',name:'Relógio + Braceletes Intercambiáveis',fam:'relogios',mat:'aco',pvp:34.00,moq:3,img:null,why:'Fotografia existente em baixa resolução',specs:['Caixa em aço','2 braceletes']},
+ {sku:'LB-2001',name:'Taça de Madeira para Montra',fam:'loja',mat:'none',pvp:14.00,moq:4,img:null,specs:['Madeira']},
+ {sku:'LB-2003',name:'Kit de Embalagem Kraft',fam:'loja',mat:'none',pvp:8.50,moq:10,img:null,specs:['Caixa + saco + cartão']},
+];
+const BY=Object.fromEntries(P.map(p=>[p.sku,p]));
+const r05=x=>Math.round(x*20)/20;
+const tiers=p=>{const b=r05(p.pvp/1.23/2.4);return [[p.moq,b],[p.moq*4,r05(b*.92)],[p.moq*16,r05(b*.85)]]};
+const margin=(p,price)=>(p.pvp/1.23)/price;
+const tierFor=(p,q)=>{const t=tiers(p);let cur=t[0];for(const r of t)if(q>=r[0])cur=r;return cur};
+
+/* ---------------------------------------------------------------- helpers */
+function picture(img,{alt,sizes,cls='',eager=false,vt=''}){
+  const set=ext=>img.w.map(w=>`${A}${img.p}-${w}.${ext} ${w}w`).join(', ');
+  const big=img.w[img.w.length-1];
+  return `<picture><source type="image/avif" srcset="${set('avif')}" sizes="${sizes}"><source type="image/webp" srcset="${set('webp')}" sizes="${sizes}"><img class="${cls}" src="${A}${img.p}-${big}.jpg" width="${big}" height="${Math.round(big*1.25)}" alt="${esc(alt)}" ${eager?'':'loading="lazy"'} decoding="async"${vt?` style="view-transition-name:${vt}"`:''}></picture>`;
+}
+const lockSvg='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>';
+function nifValid(v){const d=String(v).replace(/\s/g,'');if(!/^\d{9}$/.test(d))return false;
+  const ok1=['1','2','3','5','6','8','9'].includes(d[0])||['45','70','71','72','74','75','77','79','90','91','98','99'].includes(d.slice(0,2));if(!ok1)return false;
+  let s=0;for(let i=0;i<8;i++)s+=+d[i]*(9-i);const r=s%11;const c=r<2?0:11-r;return c===+d[8]}
+function bindNif(input,msg){input.addEventListener('input',()=>{const v=input.value.replace(/\D/g,'');if(v.length<9){msg.textContent='';msg.className='msg';input.removeAttribute('aria-invalid');return}
+  const ok=nifValid(v);msg.textContent=ok?'NIF válido (dígito de controlo confirmado).':'NIF inválido: o dígito de controlo não corresponde.';msg.className='msg '+(ok?'ok':'err');input.setAttribute('aria-invalid',ok?'false':'true')})}
+function fixQty(p,q){q=parseInt(q,10);if(!Number.isFinite(q)||q<p.moq)q=p.moq;return Math.ceil(q/p.moq)*p.moq}
+
+/* ---------------------------------------------------------------- state */
+const S={session:false,rfq:store.get('lmb-rfq',[])};
+try{S.session=sessionStorage.getItem('lmb-session')==='1'}catch(e){}
+function saveRFQ(){store.set('lmb-rfq',S.rfq);$('[data-rfq-count]').textContent=S.rfq.length}
+function setSession(on){S.session=on;html.classList.toggle('session',on);$('[data-session-toggle]').setAttribute('aria-pressed',String(on));try{sessionStorage.setItem('lmb-session',on?'1':'0')}catch(e){}
+  live(on?'Sessão simulada ativa: preços de revenda fictícios visíveis.':'Sessão simulada terminada.');rerender()}
+$('[data-session-toggle]').addEventListener('click',()=>setSession(!S.session));
+function addRFQ(sku,qty){const p=BY[sku];if(!p)return false;qty=fixQty(p,qty);const l=S.rfq.find(x=>x.sku===sku);if(l)l.qty=fixQty(p,l.qty+qty);else S.rfq.push({sku,qty});saveRFQ();live(`${p.name}: ${qty} unidades adicionadas ao pedido.`);return true}
+
+/* ---------------------------------------------------------------- M08 cursor */
+let cursorOn=false;
+if(fine&&!reduced()){cursorOn=true;html.classList.add('has-cursor');
+  const dot=$('.cur-dot'),ring=$('.cur-ring'),lab=ring.querySelector('span');let mx=-100,my=-100,rx=-100,ry=-100;
+  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;html.classList.remove('cursor-hidden')},{passive:true});
+  addEventListener('keydown',e=>{if(e.key==='Tab')html.classList.add('cursor-hidden')});
+  document.addEventListener('pointerover',e=>{const f=e.target.closest('input,select,textarea,label.check');if(f){html.classList.add('cursor-hidden');return}
+    const t=e.target.closest('[data-cursor]');ring.classList.toggle('is-hover',!!t);if(t)lab.textContent=t.dataset.cursor});
+  document.addEventListener('pointerout',e=>{if(e.target.closest('input,select,textarea,label.check'))html.classList.remove('cursor-hidden')});
+  (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;dot.style.transform=`translate(${mx}px,${my}px)`;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop)})();
+}
+/* M09 card push-in toward pointer (≤8px) */
+if(fine&&!reduced()){document.addEventListener('pointermove',e=>{const m=e.target.closest('.card__media');if(!m||m.classList.contains('card__media--pending'))return;const r=m.getBoundingClientRect();
+  m.style.setProperty('--mx',(((e.clientX-r.left)/r.width-.5)*16).toFixed(1)+'px');m.style.setProperty('--my',(((e.clientY-r.top)/r.height-.5)*16).toFixed(1)+'px')},{passive:true});
+  document.addEventListener('pointerout',e=>{const m=e.target.closest('.card__media');if(m&&!m.contains(e.relatedTarget)){m.style.removeProperty('--mx');m.style.removeProperty('--my')}});}
+
+/* ---------------------------------------------------------------- HERO carousel */
+const Hero=(()=>{const hero=$('#hero'),slides=$$('.slide',hero),dots=$$('.hero__dots button',hero),pauseBtn=$('[data-hero-pause]'),capEl=$('[data-hero-cap]'),aiEl=$('[data-hero-ai]'),idxEl=$('[data-hero-idx]');
+  const mobile=()=>matchMedia('(max-aspect-ratio: 4/5)').matches;
+  const pool=()=>slides.filter(s=>!mobile()||s.dataset.mobile==='1');
+  let cur=0,timer=null,paused=false,hoverPause=false,busy=false,loaded=new Set([0]),running=false;
+  const staticMode=reduced()||saveData;
+  if(staticMode)hero.classList.add('static');
+  function hydrate(i){const s=slides[i];if(loaded.has(i)||!s.dataset.jpg)return Promise.resolve();loaded.add(i);
+    s.innerHTML=`<picture><source type="image/avif" srcset="${s.dataset.avif}" sizes="${s.dataset.sizes}"><source type="image/webp" srcset="${s.dataset.webp}" sizes="${s.dataset.sizes}"><img src="${s.dataset.jpg}" width="${s.dataset.w}" height="${s.dataset.h}" alt="${esc(s.dataset.alt)}" decoding="async"></picture>`;
+    const img=s.querySelector('img');return (img.decode?img.decode():Promise.resolve()).catch(()=>{})}
+  function ui(i){const s=slides[i];dots.forEach((d,k)=>d.setAttribute('aria-current',String(k===i)));idxEl.textContent=String(i+1).padStart(2,'0');capEl.textContent=s.dataset.cap;aiEl.hidden=s.dataset.ai!=='1'}
+  async function go(i){if(busy||i===cur)return;const next=slides[i],prev=slides[cur];busy=true;await hydrate(i);
+    next.classList.add('is-entering');void next.offsetWidth;next.classList.add('go');prev.classList.add('is-leaving');ui(i);
+    setTimeout(()=>{prev.classList.remove('is-active','is-leaving');next.classList.remove('is-entering','go');next.classList.add('is-active');cur=i;busy=false},1250)}
+  function nextIdx(){const p=pool().map(s=>slides.indexOf(s));const k=p.indexOf(cur);return p[(k+1)%p.length]}
+  function tick(){if(!paused&&!hoverPause&&!document.hidden)go(nextIdx());schedule()}
+  function schedule(){clearTimeout(timer);if(running&&!staticMode)timer=setTimeout(tick,cur===0?5500:5000)}
+  dots.forEach((d,k)=>d.addEventListener('click',()=>{go(k);schedule()}));
+  pauseBtn.addEventListener('click',()=>{paused=!paused;pauseBtn.setAttribute('aria-label',paused?'Retomar destaques':'Pausar destaques');pauseBtn.innerHTML=paused?'▶ <span>Retomar</span>':'❚❚ <span>Pausar</span>'});
+  hero.addEventListener('pointerenter',()=>{hoverPause=true});hero.addEventListener('pointerleave',()=>{hoverPause=false});
+  hero.addEventListener('focusin',()=>{hoverPause=true});hero.addEventListener('focusout',()=>{hoverPause=false});
+  hero.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){go(nextIdx());schedule()}if(e.key==='ArrowLeft'){const p=pool().map(s=>slides.indexOf(s));const k=p.indexOf(cur);go(p[(k-1+p.length)%p.length]);schedule()}});
+  function preload(){if(staticMode)return;const idle=window.requestIdleCallback||(f=>setTimeout(f,400));idle(async()=>{for(const i of [1,2,3]){if(pool().includes(slides[i]))await hydrate(i)}})}
+  if(document.readyState==='complete')preload();else addEventListener('load',preload,{once:true});
+  return {start(){running=true;schedule()},stop(){running=false;clearTimeout(timer)}};
+})();
+
+/* ---------------------------------------------------------------- tabs (S5) */
+(()=>{const tabs=$$('[role="tab"]');const sel=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});t.focus()};
+  tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight')sel(tabs[(i+1)%tabs.length]);if(e.key==='ArrowLeft')sel(tabs[(i-1+tabs.length)%tabs.length])})})})();
+
+/* ---------------------------------------------------------------- registration (real NIF check, mailto) */
+bindNif($('#r-nif'),$('#r-nif-msg'));
+$('#regForm').addEventListener('submit',e=>{e.preventDefault();const f=e.target,msg=$('#r-msg');const d=Object.fromEntries(new FormData(f));const errs=[];
+  if(!d.empresa.trim())errs.push('empresa');if(!nifValid(d.nif))errs.push('NIF válido');if(!d.tipo)errs.push('tipo de negócio');if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email))errs.push('e-mail');if(!d.consent)errs.push('consentimento');
+  if(errs.length){msg.className='msg err';msg.textContent='Falta preencher: '+errs.join(', ')+'.';return}
+  const body=`Pedido de registo profissional\n\nEmpresa: ${d.empresa}\nNIF: ${d.nif}\nTipo: ${d.tipo}\nE-mail: ${d.email}\n\n(gerado pelo protótipo B)`;
+  const href=`mailto:${SALES_EMAIL}?subject=${encodeURIComponent('Registo profissional — '+d.empresa)}&body=${encodeURIComponent(body)}`;
+  const r=$('#regResult');r.hidden=false;r.innerHTML=`<p class="eyebrow">Pedido preparado</p><p>O e-mail para a equipa comercial foi aberto no seu programa de correio. Se não abriu, <a class="link" href="${href}">abra-o aqui</a>.</p><p class="proto-note">Protótipo: nada foi enviado automaticamente. Em produção o registo fica gravado e em validação.</p>`;
+  f.hidden=true;r.focus();location.href=href});
+
+/* ---------------------------------------------------------------- CATALOG */
+const Cat={fam:new Set(),mat:''};
+function readQ(q){Cat.fam=new Set((q.get('fam')||'').split(',').filter(k=>FAM[k]));Cat.mat=MAT[q.get('mat')]?q.get('mat'):''}
+function writeQ(){const q=new URLSearchParams();if(Cat.fam.size)q.set('fam',[...Cat.fam].join(','));if(Cat.mat)q.set('mat',Cat.mat);history.replaceState(null,'','#/catalogo'+(q.toString()?'?'+q:''))}
+const TILES=[['aneis','Anéis',{p:'legacy/legacy-hero-ouro-prod',w:[480]}],['brincos','Brincos',{p:'legacy/legacy-argolas-pave-prod',w:[480]}],['colares','Colares',{p:'legacy/legacy-colar-topazio-prod',w:[480]}],['pulseiras','Pulseiras',{p:'legacy/legacy-pulseira-rosa-prod',w:[480]}],['relogios','Relógios',{p:'legacy/legacy-cat-relogios-prod',w:[480]}],['homem','Homem',{p:'legacy/legacy-cat-homem-prod',w:[480]}],['loja','Embalagens',{p:'mj/mj-g6-0-tile',w:[480,576]},1],['loja','Expositores',{p:'mj/mj-g7-3-tile',w:[480,576]},1]];
+function renderRail(){$('#rail').innerHTML=TILES.map(([k,label,img,ai])=>`<button class="tile" type="button" data-fam="${k}" aria-pressed="${Cat.fam.has(k)}"><div class="frame">${picture(img,{alt:'',sizes:'210px'})}</div><span>${label}</span>${ai?'<small>Imagem ilustrativa gerada por IA · temporária</small>':''}</button>`).join('')}
+function renderChips(){$('#chips').innerHTML=Object.entries(FAM).map(([k,v])=>`<button class="chip" type="button" data-chip="${k}" aria-pressed="${Cat.fam.has(k)}">${v}</button>`).join(' ');$('#f-mat').value=Cat.mat}
+function priceHTML(p,ctx='card'){
+  if(!S.session)return `<div class="price price--lock">${lockSvg}<span>Preço de revenda</span><a href="#/?s=registo">Criar conta</a><span aria-hidden="true">·</span><button type="button" class="link" data-demo-login style="background:none;border:0;padding:0;cursor:pointer;font:inherit;color:var(--gold-700)">Simular sessão</button></div>`;
+  const t=tiers(p);return `<div class="price"><span>desde</span><strong>${eur.format(t[t.length-1][1])}</strong><span class="mono">MOQ ${p.moq} · ×${p.moq}</span><span class="mono">margem até ×${x1.format(margin(p,t[t.length-1][1]))}</span></div>`}
+function cardHTML(p,h='h2'){const tag=`<span class="tag tag--${p.mat}">${MAT[p.mat]}</span>`;
+  const media=p.img?`<a class="card__media" href="#/produto/${p.sku}" data-cursor="Ver" data-vt-src aria-label="${esc(p.name)}">${picture(p.img,{alt:p.alt,sizes:'(min-width: 1200px) 30vw, (min-width: 768px) 46vw, 92vw'})}</a>`
+   :`<a class="card__media card__media--pending" href="#/produto/${p.sku}" aria-label="${esc(p.name)} — fotografia em produção"><span>Fotografia em produção<br>${p.sku}${p.why?'<br>'+esc(p.why):''}</span></a>`;
+  return `<article class="card" data-sku="${p.sku}">${media}<div class="card__body"><${h} class="card__name"><a href="#/produto/${p.sku}">${esc(p.name)}</a></${h}><p class="card__meta">${tag}<span class="mono sku">${p.sku}</span></p><p class="card__pvp">PVP recomendado <b class="num">${eur.format(p.pvp)}</b></p>${priceHTML(p)}<div class="card__actions"><label class="sr-only" for="q-${p.sku}">Quantidade de ${esc(p.name)} (múltiplos de ${p.moq})</label><input class="qty" id="q-${p.sku}" type="number" inputmode="numeric" min="${p.moq}" step="${p.moq}" value="${p.moq}" data-moq-for="${p.sku}"><button class="btn-add" type="button" data-add="${p.sku}">+ Pedido de proposta</button></div></div></article>`}
+function renderGrid(){let list=P.filter(p=>(!Cat.fam.size||Cat.fam.has(p.fam))&&(!Cat.mat||p.mat===Cat.mat));list=[...list.filter(p=>p.img),...list.filter(p=>!p.img)];
+  $('#grid').innerHTML=list.map(cardHTML).join('')||'<p>Nenhuma referência com estes filtros.</p>';$('#f-count').textContent=`${list.length} referência${list.length===1?'':'s'}`}
+function renderCatalog(q){readQ(q);renderRail();renderChips();renderGrid()}
+document.addEventListener('click',e=>{
+  const fam=e.target.closest('[data-fam],[data-chip]');if(fam){const k=fam.dataset.fam||fam.dataset.chip;Cat.fam.has(k)?Cat.fam.delete(k):Cat.fam.add(k);writeQ();renderRail();renderChips();renderGrid();return}
+  if(e.target.closest('#f-clear')){Cat.fam.clear();Cat.mat='';writeQ();renderRail();renderChips();renderGrid();return}
+  const add=e.target.closest('[data-add]');if(add){const sku=add.dataset.add;const inp=add.closest('.card__actions').querySelector('input');addRFQ(sku,inp?inp.value:BY[sku].moq);add.textContent='Adicionado ✓';setTimeout(()=>{add.textContent=add.dataset.label||'+ Pedido de proposta'},1600);return}
+  if(e.target.closest('[data-demo-login]')){setSession(true);return}
+  const vt=e.target.closest('[data-vt-src]');if(vt){$$('[style*="view-transition-name"]').forEach(el=>{el.style.viewTransitionName=''});const img=vt.querySelector('img');if(img)img.style.viewTransitionName='prod-img'}
+});
+$('#f-mat').addEventListener('change',e=>{Cat.mat=e.target.value;writeQ();renderGrid()});
+document.addEventListener('change',e=>{const i=e.target.closest('[data-moq-for]');if(!i)return;const p=BY[i.dataset.moqFor];const q=fixQty(p,i.value);if(String(q)!==i.value){i.value=q;live(`Quantidade ajustada para ${q} (mínimo ${p.moq}, múltiplos de ${p.moq}).`)}
+  if(i.id==='pdp-qty')updateTiers(p,q)});
+
+/* ---------------------------------------------------------------- PDP */
+function updateTiers(p,q){const t=tierFor(p,q);$$('.tiers tbody tr').forEach(tr=>tr.classList.toggle('on',+tr.dataset.min===t[0]));const tot=$('#pdp-total');if(tot)tot.textContent=`${q} × ${eur.format(t[1])} = ${eur.format(q*t[1])} (s/ IVA)`}
+function renderPDP(sku){const p=BY[sku];const box=$('#pdp');if(!p){box.innerHTML='<h1 class="display" tabindex="-1" data-focus>Referência não encontrada</h1><p><a class="link" href="#/catalogo">Voltar ao catálogo</a></p>';return}
+  const t=tiers(p);
+  const gallery=p.img?`<button type="button" data-lightbox="${A}${p.img.p}-${p.img.w[p.img.w.length-1]}.jpg" data-alt="${esc(p.alt)}" data-cursor="Ampliar" aria-label="Ampliar imagem de ${esc(p.name)}">${picture(p.img,{alt:p.alt,sizes:'(min-width: 900px) 55vw, 100vw',eager:true,vt:'prod-img'})}</button><small>Clique para ver em câmara escura.</small>`
+   :`<div class="card__media card__media--pending" style="aspect-ratio:4/5"><span>Fotografia em produção<br>${p.sku}</span></div>`;
+  const price=S.session?`<table class="tiers"><caption class="sr-only">Escalões de preço de revenda (demonstração)</caption><thead><tr><th scope="col">Quantidade</th><th scope="col">Preço / un. s/ IVA</th><th scope="col">Margem</th></tr></thead><tbody>${t.map((r,i)=>`<tr data-min="${r[0]}" class="${i===0?'on':''}"><td>${r[0]}${i<t.length-1?'–'+(t[i+1][0]-1):'+'}</td><td>${eur.format(r[1])}</td><td>×${x1.format(margin(p,r[1]))}</td></tr>`).join('')}</tbody></table>
+     <p class="mono" style="color:var(--fg3)">Margem = PVP sem IVA ÷ preço de revenda · valores de demonstração</p>
+     <div class="card__actions" style="margin-top:16px"><label class="sr-only" for="pdp-qty">Quantidade (múltiplos de ${p.moq})</label><input class="qty" id="pdp-qty" type="number" inputmode="numeric" min="${p.moq}" step="${p.moq}" value="${p.moq}" data-moq-for="${p.sku}"><button class="btn-add" type="button" data-add="${p.sku}">+ Pedido de proposta</button></div>
+     <p class="mono" id="pdp-total" style="margin-top:10px;color:var(--fg2)"></p><p style="margin-top:6px;font-size:14px;color:var(--ok)">● Em stock (demonstração)</p>`
+   :`<div class="gate"><p><strong>Preço de revenda, escalões e stock</strong> aparecem para contas profissionais validadas.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--sm" href="#/?s=registo">Criar conta profissional</a><button class="btn btn--sm btn--ghost" type="button" data-demo-login>Simular sessão (demo)</button></div><p style="font-size:14px">Pode pedir proposta sem conta:</p><div class="card__actions"><label class="sr-only" for="pdp-qty">Quantidade (múltiplos de ${p.moq})</label><input class="qty" id="pdp-qty" type="number" inputmode="numeric" min="${p.moq}" step="${p.moq}" value="${p.moq}" data-moq-for="${p.sku}"><button class="btn-add" type="button" data-add="${p.sku}">+ Pedido de proposta</button></div></div>`;
+  const rel=P.filter(x=>x.sku!==p.sku&&x.img&&x.fam===p.fam).concat(P.filter(x=>x.sku!==p.sku&&x.img&&x.fam!==p.fam)).slice(0,3);
+  box.innerHTML=`<nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><a href="#/catalogo">Catálogo</a><span aria-hidden="true">/</span><a href="#/catalogo?fam=${p.fam}">${FAM[p.fam]}</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
+   <div class="pdp" style="margin-top:24px"><div class="pdp__gallery">${gallery}</div><div class="pdp__info"><p class="eyebrow">${FAM[p.fam]} · ${MAT[p.mat]}</p><h1 tabindex="-1" data-focus>${esc(p.name)}</h1>
+   <div class="skuline"><span class="mono">REF ${p.sku}</span><button type="button" data-copy="${p.sku}">Copiar referência</button></div>
+   <p style="margin-top:14px;font-size:15px;color:var(--fg2)">PVP recomendado <b class="num" style="color:var(--fg);font-size:20px;font-weight:500">${eur.format(p.pvp)}</b> <span class="mono">c/ IVA</span></p>
+   <p class="mono" style="margin-top:6px;color:var(--fg3)">Mínimo ${p.moq} un. · múltiplos de ${p.moq}</p>${price}
+   <dl class="specs">${p.specs.map((s,i)=>`<div><dt>${['Material','Detalhe','Medida'][i]||'Detalhe'}</dt><dd>${esc(s)}</dd></div>`).join('')}<div><dt>Libertação de níquel</dt><dd><span class="tbc">relatório REACH a confirmar</span></dd></div><div><dt>Unidade de venda</dt><dd>Unidade · <span class="tbc">embalagem a confirmar</span></dd></div></dl></div></div>
+   <section class="related" aria-labelledby="rel-t"><h2 id="rel-t">Da mesma família</h2><div class="grid">${rel.map(x=>cardHTML(x,'h3')).join('')}</div></section>`;
+  if(S.session)updateTiers(p,p.moq)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b){(navigator.clipboard?navigator.clipboard.writeText(b.dataset.copy):Promise.reject()).then(()=>{b.textContent='Copiada ✓';live('Referência copiada.')},()=>{b.textContent=b.dataset.copy});return}
+  const lb=e.target.closest('[data-lightbox]');if(lb){const d=$('#lightbox');const im=d.querySelector('img');im.src=lb.dataset.lightbox;im.alt=lb.dataset.alt;d.showModal()}});
+$('#lightbox').addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===e.currentTarget)e.currentTarget.close()});
+
+/* ---------------------------------------------------------------- RFQ */
+function renderRFQ(){const tb=$('#lines');if(!S.rfq.length){tb.innerHTML=`<tr><td colspan="6" style="color:var(--fg3)">Ainda sem linhas. Adicione a partir do catálogo, cole uma lista ou importe um CSV.</td></tr>`;return}
+  tb.innerHTML=S.rfq.map((l,i)=>{const p=BY[l.sku];const ok=l.qty>=p.moq&&l.qty%p.moq===0;return `<tr><td class="mono">${p.sku}</td><td>${esc(p.name)}</td><td class="num">${p.moq}</td><td><label class="sr-only" for="l-${i}">Quantidade ${p.sku}</label><input class="qty" id="l-${i}" type="number" min="${p.moq}" step="${p.moq}" value="${l.qty}" data-line="${i}"></td><td class="${ok?'st-ok':'st-warn'}">${ok?'OK':'Ajustar'}</td><td><button type="button" data-del="${i}" aria-label="Remover ${p.sku}">Remover</button></td></tr>`}).join('')}
+document.addEventListener('change',e=>{const i=e.target.closest('[data-line]');if(!i)return;const l=S.rfq[+i.dataset.line];const p=BY[l.sku];const q=fixQty(p,i.value);if(String(q)!==i.value)$('#rfq-live').textContent=`${p.sku}: quantidade ajustada para ${q} (mínimo ${p.moq}, múltiplos de ${p.moq}).`;l.qty=q;saveRFQ();renderRFQ()});
+document.addEventListener('click',e=>{const d=e.target.closest('[data-del]');if(!d)return;const l=S.rfq.splice(+d.dataset.del,1)[0];saveRFQ();renderRFQ();$('#rfq-live').textContent=`${l.sku} removida.`});
+function ingest(text){const rows=text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);let ok=0,bad=[],adj=[];
+  for(const r of rows){const [skuRaw,qRaw]=r.split(/[;,\t]/);const sku=(skuRaw||'').trim().toUpperCase();if(!BY[sku]){if(!/sku|refer/i.test(skuRaw||''))bad.push(skuRaw);continue}
+    const want=parseInt(qRaw,10)||BY[sku].moq;const q=fixQty(BY[sku],want);if(q!==want)adj.push(`${sku}→${q}`);const l=S.rfq.find(x=>x.sku===sku);if(l)l.qty=fixQty(BY[sku],l.qty+q);else S.rfq.push({sku,qty:q});ok++}
+  saveRFQ();renderRFQ();$('#rfq-live').textContent=`${ok} linha(s) adicionada(s).`+(adj.length?` Ajustadas ao mínimo: ${adj.join(', ')}.`:'')+(bad.length?` Referências desconhecidas: ${bad.join(', ')}.`:'')}
+$('#paste-add').addEventListener('click',()=>{ingest($('#paste').value);$('#paste').value=''});
+$('#csv').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>ingest(String(r.result));r.readAsText(f);e.target.value=''});
+bindNif($('#q-nif'),$('#q-nif-msg'));
+$('#rfqForm').addEventListener('submit',e=>{e.preventDefault();const msg=$('#q-msg');const d={emp:$('#q-emp').value.trim(),nif:$('#q-nif').value.replace(/\D/g,''),mail:$('#q-mail').value.trim(),obs:$('#q-obs').value.trim(),consent:$('#q-consent').checked};const errs=[];
+  if(!S.rfq.length)errs.push('pelo menos uma linha');if(!d.emp)errs.push('empresa');if(!nifValid(d.nif))errs.push('NIF válido');if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.mail))errs.push('e-mail');if(!d.consent)errs.push('consentimento');
+  if(errs.length){msg.className='msg err';msg.textContent='Falta: '+errs.join(', ')+'.';return}
+  const now=new Date();const id=`RFQ-${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
+  const head=`pedido;${id}\nempresa;${d.emp}\nnif;${d.nif}\nemail;${d.mail}\ndata;${now.toISOString()}\n\nreferencia;produto;quantidade;minimo;pvp_recomendado\n`;
+  const csv='﻿'+head+S.rfq.map(l=>{const p=BY[l.sku];return `${p.sku};${p.name.replace(/;/g,',')};${l.qty};${p.moq};${p.pvp.toFixed(2).replace('.',',')}`}).join('\n')+(d.obs?`\n\nobservacoes;${d.obs.replace(/[\r\n;]+/g,' ')}`:'');
+  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=id+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);
+  let lines=S.rfq.map(l=>`${l.sku} × ${l.qty}`).join('\n');if(lines.length>1500)lines=lines.slice(0,1500)+'\n… (lista completa no CSV)';
+  const body=`Pedido de proposta ${id}\nEmpresa: ${d.emp}\nNIF: ${d.nif}\nE-mail: ${d.mail}\n\n${lines}\n\n${d.obs?'Observações: '+d.obs+'\n\n':''}Anexe o ficheiro ${id}.csv descarregado.`;
+  const href=`mailto:${SALES_EMAIL}?subject=${encodeURIComponent('Pedido de proposta '+id)}&body=${encodeURIComponent(body)}`;
+  const r=$('#rfqResult');r.hidden=false;r.innerHTML=`<p class="eyebrow">Pedido ${id}</p><p>Foi descarregado o ficheiro <span class="mono">${id}.csv</span> e preparado um e-mail para a equipa comercial. Anexe o CSV e envie. <a class="link" href="${href}">Abrir o e-mail outra vez</a>.</p><p class="proto-note">Protótipo: nada foi enviado automaticamente.</p>`;
+  msg.className='msg ok';msg.textContent='Pedido preparado.';store.set('lmb-rfq-last',{id,at:now.toISOString(),lines:S.rfq.length});r.focus();location.href=href});
+
+/* ---------------------------------------------------------------- VIDEO scrub (M02) */
+const Scrub=(()=>{const sec=$('#gesto'),cv=$('canvas',sec),ctx=cv.getContext('2d'),prog=$('[data-scrub-prog]'),N=48;const frames=new Array(N);let active=false,started=false,io=null,raf=0,last=-1;
+  const src=i=>`${A}video/frame-${String(i+1).padStart(3,'0')}-1080.avif`;
+  function load(i){if(frames[i])return;const im=new Image();im.decoding='async';im.onload=()=>{frames[i]=im;if(last<0||Math.abs(i-last)<2)draw(last<0?i:last)};im.src=src(i);frames[i]=null}
+  function loadAll(){if(started)return;started=true;[0,12,24,36,47].forEach(load);let k=0;const next=()=>{while(k<N&&frames[k]!==undefined)k++;if(k>=N)return;load(k);setTimeout(next,40)};setTimeout(next,200)}
+  function nearest(i){for(let d=0;d<N;d++){if(frames[i-d])return frames[i-d];if(frames[i+d])return frames[i+d]}return null}
+  function draw(i){const im=nearest(i);if(!im)return;ctx.drawImage(im,0,0,cv.width,cv.height)}
+  function onScroll(){cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const r=sec.getBoundingClientRect();const tot=sec.offsetHeight-innerHeight;const p=Math.min(1,Math.max(0,-r.top/tot));const i=Math.round(p*(N-1));prog.style.width=(p*100).toFixed(1)+'%';if(i!==last){last=i;draw(i)}})}
+  function mobileVideo(){const fb=$('.gesto__fallback',sec);if(saveData||reduced())return;const v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='none';v.poster=`${A}video/video-poster-540.jpg`;v.setAttribute('aria-label','Colar fino com pendente em zircónia no pescoço');
+    v.innerHTML=`<source src="${A}video/video-mobile-540.mp4" type="video/mp4">`;fb.innerHTML='';fb.appendChild(v);
+    io=new IntersectionObserver(([e])=>{if(e.isIntersecting)v.play().catch(()=>{});else v.pause()},{threshold:.25});io.observe(v)}
+  return {enter(){const desk=matchMedia('(min-width: 900px)').matches;if(reduced()||saveData)return;if(!desk){if(!io)mobileVideo();return}
+      active=true;sec.classList.add('is-scrub');io=io||new IntersectionObserver(([e])=>{if(e.isIntersecting)loadAll()},{rootMargin:'1200px 0px'});io.observe(sec);addEventListener('scroll',onScroll,{passive:true});onScroll()},
+    leave(){active=false;removeEventListener('scroll',onScroll);sec.classList.remove('is-scrub')}};
+})();
+
+/* ---------------------------------------------------------------- HOME motion (M01 M02 M03) + Lenis */
+let mm=null,lenis=null,lenisTick=null;
+function homeMotion(){if(!hasGSAP||reduced())return;
+  mm=gsap.matchMedia();
+  mm.add({desk:'(min-width: 900px)',any:'(min-width: 0px)'},c=>{const {desk}=c.conditions;
+    // M01 hero title (line reveal)
+    gsap.from('.hero h1 .ln > span',{yPercent:110,duration:.9,ease:'expo.out',stagger:.09,delay:.12});
+    gsap.from('.hero__lede,.hero__cta,.hero .eyebrow',{opacity:0,y:14,duration:.9,ease:'expo.out',delay:.42,stagger:.07});
+    // M02 hero parallax
+    gsap.to('#slides',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+    // M03 mask reveal (non-sticky images)
+    $$('[data-reveal]').forEach(el=>{if(desk&&el.closest('.chapters'))return;const img=el.querySelector('img');
+      gsap.fromTo(el,{clipPath:'inset(100% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:1.2,ease:'power4.inOut',scrollTrigger:{trigger:el,start:'top 80%',once:true}});
+      if(img)gsap.fromTo(img,{scale:1.15},{scale:1,duration:1.2,ease:'power4.inOut',scrollTrigger:{trigger:el,start:'top 80%',once:true}})});
+    // M02 parallax (montra wide)
+    $$('#montra [data-parallax]').forEach(img=>gsap.fromTo(img,{yPercent:-6,scale:1.12},{yPercent:6,scale:1.12,ease:'none',scrollTrigger:{trigger:img.closest('.montra__wide'),start:'top bottom',end:'bottom top',scrub:true}}));
+    if(desk){// S2 sticky chapters — crossfade, scrubbed
+      const wrap=$('.chapters');wrap.classList.add('is-sticky');const ch=$$('.chapter',wrap),rail=$$('.chapters__rail li',wrap);
+      gsap.set(ch.slice(1),{autoAlpha:0});
+      const tl=gsap.timeline({scrollTrigger:{trigger:wrap,start:'top top',end:'bottom bottom',scrub:.6,onUpdate:s=>{const k=Math.min(3,Math.floor(s.progress*4));rail.forEach((li,i)=>li.classList.toggle('on',i===k))}}});
+      tl.fromTo(ch[0].querySelector('img'),{scale:1.08,yPercent:-3},{scale:1,yPercent:3,duration:1,ease:'none'},0);
+      for(let i=1;i<4;i++){tl.to(ch[i-1],{autoAlpha:0,duration:.3,ease:'power2.inOut'},i-.15).fromTo(ch[i],{autoAlpha:0},{autoAlpha:1,duration:.3,ease:'power2.inOut'},i-.15)
+        .fromTo(ch[i].querySelector('img'),{scale:1.08,yPercent:-3},{scale:1,yPercent:3,duration:1,ease:'none'},i-.15)
+        .from(ch[i].querySelector('.chapter__text'),{y:28,duration:.4,ease:'expo.out'},i-.05)}
+      return ()=>{wrap.classList.remove('is-sticky');gsap.set(ch,{clearProps:'all'})}}
+  });
+  if(fine&&window.Lenis){lenis=new Lenis({lerp:.1,anchors:true});lenis.on('scroll',ScrollTrigger.update);lenisTick=t=>lenis.raf(t*1000);gsap.ticker.add(lenisTick);gsap.ticker.lagSmoothing(0)}
+  ScrollTrigger.refresh()}
+function homeMotionOff(){if(mm){mm.revert();mm=null}if(lenis){gsap.ticker.remove(lenisTick);lenis.destroy();lenis=null}}
+
+/* ---------------------------------------------------------------- ROUTER + M15 */
+const TITLES={inicio:'LM BIJU — Câmara Escura · Protótipo B',catalogo:'Catálogo — LM BIJU',produto:'Produto — LM BIJU',pedido:'Pedido de proposta — LM BIJU'};
+let current=null,first=true,pendingLights=false;
+function parse(){const h=location.hash;if(!h.startsWith('#/'))return null;const [path,q]=h.slice(2).split('?');const parts=path.split('/').filter(Boolean);return {view:parts[0]||'inicio',id:parts[1]?decodeURIComponent(parts[1]):'',q:new URLSearchParams(q||'')}}
+function apply(r){
+  if(current==='inicio'&&r.view!=='inicio'){Hero.stop();Scrub.leave();homeMotionOff()}
+  $$('[data-view-section]').forEach(s=>{s.hidden=s.dataset.viewSection!==r.view});
+  html.dataset.view=r.view;html.dataset.theme=r.view==='inicio'?'dark':'light';
+  $('meta[name="theme-color"]').content=r.view==='inicio'?'#14120F':'#FBFBF9';
+  $$('[data-nav]').forEach(a=>a.removeAttribute('aria-current'));const n=$(`[data-nav="${r.view}"]`);if(n)n.setAttribute('aria-current','page');
+  document.title=TITLES[r.view]||TITLES.inicio;
+  if(r.view==='catalogo')renderCatalog(r.q);if(r.view==='produto')renderPDP(r.id);if(r.view==='pedido')renderRFQ();
+  const target=r.q.get('s');
+  if(r.view==='inicio'){if(current!=='inicio'){Hero.start();Scrub.enter();homeMotion()}}
+  window.scrollTo(0,0);
+  if(target){const el=document.getElementById(target);if(el)requestAnimationFrame(()=>{lenis?lenis.scrollTo(el,{immediate:true}):el.scrollIntoView()})}
+  if(!first){const f=$(`[data-view-section="${r.view}"] [data-focus]`)||$('#main');f.focus({preventScroll:true})}
+  current=r.view;first=false}
+function route(){let r=parse();if(!r){const id=location.hash.slice(1);if(current==='inicio')return;if(id&&document.getElementById(id))r={view:'inicio',id:'',q:new URLSearchParams('s='+id)};else if(current)return;else r={view:'inicio',id:'',q:new URLSearchParams()}}
+  const known=['inicio','catalogo','produto','pedido'];if(!known.includes(r.view))r.view='inicio';
+  if(r.view==='inicio'&&current==='inicio'){const el=r.q.get('s')&&document.getElementById(r.q.get('s'));if(el){lenis?lenis.scrollTo(el):el.scrollIntoView({behavior:reduced()?'auto':'smooth'})}return}
+  const lights=pendingLights&&current==='inicio'&&r.view!=='inicio';pendingLights=false;
+  if(!first&&document.startViewTransition&&!reduced()){html.classList.toggle('vt-lights',lights);const t=document.startViewTransition(()=>apply(r));
+    t.finished.finally(()=>{html.classList.remove('vt-lights');$$('[style*="view-transition-name"]').forEach(el=>{if(!el.closest('#pdp'))el.style.viewTransitionName=''})})}
+  else apply(r)}
+document.addEventListener('click',e=>{const l=e.target.closest('[data-lights]');if(!l)return;const r=l.getBoundingClientRect();html.style.setProperty('--vx',(r.left+r.width/2)+'px');html.style.setProperty('--vy',(r.top+r.height/2)+'px');pendingLights=true});
+function rerender(){if(current==='catalogo')renderGrid();if(current==='produto')renderPDP(parse().id)}
+addEventListener('hashchange',route);
+RM.addEventListener&&RM.addEventListener('change',()=>location.reload());
+html.classList.toggle('session',S.session);$('[data-session-toggle]').setAttribute('aria-pressed',String(S.session));saveRFQ();
+route();
+});
+</script>
+</body>
+</html>
