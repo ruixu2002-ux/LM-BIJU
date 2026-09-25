@@ -1,3 +1,5 @@
+> **已被取代**：Demo B（v1/v2）已由 v3 的两个版本取代，见 `_research/demo-v3/STATUS.md`。下文仅作存档。
+
 # Demo B "Câmara Escura" · 交付状态 v2（2026-09-25）
 
 ## 文件

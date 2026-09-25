@@ -1,0 +1,3994 @@
+{
+ "generated": "2026-09-25T11:28:49.165Z",
+ "pipeline": "sRGB · metadados removidos · AVIF + WebP em todas as larguras · 1 JPEG de recurso",
+ "count": 55,
+ "assets": [
+  {
+   "id": "legacy/hero-aco-v",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/hero-aco.jpg",
+   "sourceSize": "1200x1800",
+   "kind": "v",
+   "ratio": "original",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "1200x1800",
+   "widths": [
+    600,
+    900,
+    1200
+   ],
+   "jpg": 900,
+   "variants": [
+    {
+     "file": "img/legacy/hero-aco-v-600.avif",
+     "width": 600,
+     "height": 900,
+     "format": "avif",
+     "bytes": 7571
+    },
+    {
+     "file": "img/legacy/hero-aco-v-600.webp",
+     "width": 600,
+     "height": 900,
+     "format": "webp",
+     "bytes": 10662
+    },
+    {
+     "file": "img/legacy/hero-aco-v-900.avif",
+     "width": 900,
+     "height": 1350,
+     "format": "avif",
+     "bytes": 12370
+    },
+    {
+     "file": "img/legacy/hero-aco-v-900.webp",
+     "width": 900,
+     "height": 1350,
+     "format": "webp",
+     "bytes": 19440
+    },
+    {
+     "file": "img/legacy/hero-aco-v-900.jpg",
+     "width": 900,
+     "height": 1350,
+     "format": "jpg",
+     "bytes": 23253
+    },
+    {
+     "file": "img/legacy/hero-aco-v-1200.avif",
+     "width": 1200,
+     "height": 1800,
+     "format": "avif",
+     "bytes": 18183
+    },
+    {
+     "file": "img/legacy/hero-aco-v-1200.webp",
+     "width": 1200,
+     "height": 1800,
+     "format": "webp",
+     "bytes": 29422
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "legacy/hero-aco-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/hero-aco.jpg",
+   "sourceSize": "1200x1800",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "1200x1500",
+   "widths": [
+    480,
+    800,
+    1200
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/hero-aco-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 4556
+    },
+    {
+     "file": "img/legacy/hero-aco-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 6684
+    },
+    {
+     "file": "img/legacy/hero-aco-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 8564
+    },
+    {
+     "file": "img/legacy/hero-aco-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 14280
+    },
+    {
+     "file": "img/legacy/hero-aco-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 16805
+    },
+    {
+     "file": "img/legacy/hero-aco-p-1200.avif",
+     "width": 1200,
+     "height": 1500,
+     "format": "avif",
+     "bytes": 14499
+    },
+    {
+     "file": "img/legacy/hero-aco-p-1200.webp",
+     "width": 1200,
+     "height": 1500,
+     "format": "webp",
+     "bytes": 26010
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/hero-aco-p2",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/hero-aco.jpg",
+   "sourceSize": "1200x1800",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "bottom",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "1200x1500",
+   "widths": [
+    480,
+    800,
+    1200
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/hero-aco-p2-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 4803
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 6428
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 8041
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 13394
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 15870
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-1200.avif",
+     "width": 1200,
+     "height": 1500,
+     "format": "avif",
+     "bytes": 13393
+    },
+    {
+     "file": "img/legacy/hero-aco-p2-1200.webp",
+     "width": 1200,
+     "height": 1500,
+     "format": "webp",
+     "bytes": 24124
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-homem-v",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-homem.jpg",
+   "sourceSize": "1200x1600",
+   "kind": "v",
+   "ratio": "original",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "1200x1600",
+   "widths": [
+    600,
+    900,
+    1200
+   ],
+   "jpg": 900,
+   "variants": [
+    {
+     "file": "img/legacy/cat-homem-v-600.avif",
+     "width": 600,
+     "height": 800,
+     "format": "avif",
+     "bytes": 9149
+    },
+    {
+     "file": "img/legacy/cat-homem-v-600.webp",
+     "width": 600,
+     "height": 800,
+     "format": "webp",
+     "bytes": 9896
+    },
+    {
+     "file": "img/legacy/cat-homem-v-900.avif",
+     "width": 900,
+     "height": 1200,
+     "format": "avif",
+     "bytes": 17025
+    },
+    {
+     "file": "img/legacy/cat-homem-v-900.webp",
+     "width": 900,
+     "height": 1200,
+     "format": "webp",
+     "bytes": 20028
+    },
+    {
+     "file": "img/legacy/cat-homem-v-900.jpg",
+     "width": 900,
+     "height": 1200,
+     "format": "jpg",
+     "bytes": 35095
+    },
+    {
+     "file": "img/legacy/cat-homem-v-1200.avif",
+     "width": 1200,
+     "height": 1600,
+     "format": "avif",
+     "bytes": 34091
+    },
+    {
+     "file": "img/legacy/cat-homem-v-1200.webp",
+     "width": 1200,
+     "height": 1600,
+     "format": "webp",
+     "bytes": 35696
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-homem-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-homem.jpg",
+   "sourceSize": "1200x1600",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "1200x1500",
+   "widths": [
+    480,
+    800,
+    1200
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-homem-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 5744
+    },
+    {
+     "file": "img/legacy/cat-homem-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 6996
+    },
+    {
+     "file": "img/legacy/cat-homem-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 12288
+    },
+    {
+     "file": "img/legacy/cat-homem-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 15546
+    },
+    {
+     "file": "img/legacy/cat-homem-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 27344
+    },
+    {
+     "file": "img/legacy/cat-homem-p-1200.avif",
+     "width": 1200,
+     "height": 1500,
+     "format": "avif",
+     "bytes": 28293
+    },
+    {
+     "file": "img/legacy/cat-homem-p-1200.webp",
+     "width": 1200,
+     "height": 1500,
+     "format": "webp",
+     "bytes": 34780
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/hero-ouro-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/hero-ouro.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/hero-ouro-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 8198
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 11214
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 15241
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 21598
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 35799
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 18385
+    },
+    {
+     "file": "img/legacy/hero-ouro-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 25640
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/colar-topazio-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/colar-topazio.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/colar-topazio-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 7416
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 9724
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 14618
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 21248
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 34365
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 17778
+    },
+    {
+     "file": "img/legacy/colar-topazio-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 26358
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/argolas-pave-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/argolas-pave.jpg",
+   "sourceSize": "900x1200",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/argolas-pave-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 8488
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 12938
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 19676
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 29240
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 45214
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 23737
+    },
+    {
+     "file": "img/legacy/argolas-pave-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 35404
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/pulseira-rosa-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/pulseira-rosa.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/pulseira-rosa-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 23550
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 39178
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 58897
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 98420
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 111992
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 82946
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 124514
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/pulseira-rosa-p2",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/pulseira-rosa.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "top",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/pulseira-rosa-p2-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 23550
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 39178
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 58897
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 98420
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 111992
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 82946
+    },
+    {
+     "file": "img/legacy/pulseira-rosa-p2-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 124514
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-colares-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-colares.jpg",
+   "sourceSize": "900x1200",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-colares-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 28476
+    },
+    {
+     "file": "img/legacy/cat-colares-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 52404
+    },
+    {
+     "file": "img/legacy/cat-colares-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 64851
+    },
+    {
+     "file": "img/legacy/cat-colares-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 111840
+    },
+    {
+     "file": "img/legacy/cat-colares-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 125512
+    },
+    {
+     "file": "img/legacy/cat-colares-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 76239
+    },
+    {
+     "file": "img/legacy/cat-colares-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 131092
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/brincos-safira-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/brincos-safira.jpg",
+   "sourceSize": "1200x1200",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "960x1200",
+   "widths": [
+    480,
+    800,
+    960
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/brincos-safira-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 6305
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 10562
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 19811
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 35802
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 42585
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-960.avif",
+     "width": 960,
+     "height": 1200,
+     "format": "avif",
+     "bytes": 33322
+    },
+    {
+     "file": "img/legacy/brincos-safira-p-960.webp",
+     "width": 960,
+     "height": 1200,
+     "format": "webp",
+     "bytes": 56006
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/hero-still-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/hero-still.jpg",
+   "sourceSize": "900x1125",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/hero-still-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 5668
+    },
+    {
+     "file": "img/legacy/hero-still-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 7430
+    },
+    {
+     "file": "img/legacy/hero-still-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 11300
+    },
+    {
+     "file": "img/legacy/hero-still-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 15936
+    },
+    {
+     "file": "img/legacy/hero-still-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 23379
+    },
+    {
+     "file": "img/legacy/hero-still-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 13861
+    },
+    {
+     "file": "img/legacy/hero-still-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 19760
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-relogios-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-relogios.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-relogios-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 18657
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 30620
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 42513
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 69476
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 81125
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 55305
+    },
+    {
+     "file": "img/legacy/cat-relogios-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 85184
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-aneis-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-aneis.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-aneis-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 21840
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 36544
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 46793
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 75268
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 95376
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 58953
+    },
+    {
+     "file": "img/legacy/cat-aneis-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 90326
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-aneis-p2",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-aneis.jpg",
+   "sourceSize": "900x1350",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "bottom",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-aneis-p2-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 24671
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 41868
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 54000
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 88896
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 106162
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 66077
+    },
+    {
+     "file": "img/legacy/cat-aneis-p2-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 105782
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-pulseiras-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-pulseiras.jpg",
+   "sourceSize": "900x1109",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "887x1109",
+   "widths": [
+    480,
+    800,
+    887
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/cat-pulseiras-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 27013
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 50644
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 68699
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 115526
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 124826
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-887.avif",
+     "width": 887,
+     "height": 1109,
+     "format": "avif",
+     "bytes": 92290
+    },
+    {
+     "file": "img/legacy/cat-pulseiras-p-887.webp",
+     "width": 887,
+     "height": 1109,
+     "format": "webp",
+     "bytes": 141206
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-brincos-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-brincos.jpg",
+   "sourceSize": "900x675",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "540x675",
+   "widths": [
+    480
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/legacy/cat-brincos-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 13768
+    },
+    {
+     "file": "img/legacy/cat-brincos-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 19240
+    },
+    {
+     "file": "img/legacy/cat-brincos-p-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 28635
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-brincos-l",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-brincos.jpg",
+   "sourceSize": "900x675",
+   "kind": "l",
+   "ratio": "3:2",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x600",
+   "widths": [
+    600,
+    900
+   ],
+   "jpg": 900,
+   "variants": [
+    {
+     "file": "img/legacy/cat-brincos-l-600.avif",
+     "width": 600,
+     "height": 400,
+     "format": "avif",
+     "bytes": 13202
+    },
+    {
+     "file": "img/legacy/cat-brincos-l-600.webp",
+     "width": 600,
+     "height": 400,
+     "format": "webp",
+     "bytes": 19662
+    },
+    {
+     "file": "img/legacy/cat-brincos-l-900.avif",
+     "width": 900,
+     "height": 600,
+     "format": "avif",
+     "bytes": 24839
+    },
+    {
+     "file": "img/legacy/cat-brincos-l-900.webp",
+     "width": 900,
+     "height": 600,
+     "format": "webp",
+     "bytes": 33540
+    },
+    {
+     "file": "img/legacy/cat-brincos-l-900.jpg",
+     "width": 900,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 54102
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-loja-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-loja.jpg",
+   "sourceSize": "900x600",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "480x600",
+   "widths": [
+    480
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/legacy/cat-loja-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 19382
+    },
+    {
+     "file": "img/legacy/cat-loja-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 30472
+    },
+    {
+     "file": "img/legacy/cat-loja-p-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 37530
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-loja-p2",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-loja.jpg",
+   "sourceSize": "900x600",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "right",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "480x600",
+   "widths": [
+    480
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/legacy/cat-loja-p2-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 13226
+    },
+    {
+     "file": "img/legacy/cat-loja-p2-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 19812
+    },
+    {
+     "file": "img/legacy/cat-loja-p2-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 26101
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-loja-l",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-loja.jpg",
+   "sourceSize": "900x600",
+   "kind": "l",
+   "ratio": "3:2",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x600",
+   "widths": [
+    600,
+    900
+   ],
+   "jpg": 900,
+   "variants": [
+    {
+     "file": "img/legacy/cat-loja-l-600.avif",
+     "width": 600,
+     "height": 400,
+     "format": "avif",
+     "bytes": 15797
+    },
+    {
+     "file": "img/legacy/cat-loja-l-600.webp",
+     "width": 600,
+     "height": 400,
+     "format": "webp",
+     "bytes": 26226
+    },
+    {
+     "file": "img/legacy/cat-loja-l-900.avif",
+     "width": 900,
+     "height": 600,
+     "format": "avif",
+     "bytes": 33847
+    },
+    {
+     "file": "img/legacy/cat-loja-l-900.webp",
+     "width": 900,
+     "height": 600,
+     "format": "webp",
+     "bytes": 50366
+    },
+    {
+     "file": "img/legacy/cat-loja-l-900.jpg",
+     "width": 900,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 67223
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-moda-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-moda.jpg",
+   "sourceSize": "900x506",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "405x506",
+   "widths": [
+    405
+   ],
+   "jpg": 405,
+   "variants": [
+    {
+     "file": "img/legacy/cat-moda-p-405.avif",
+     "width": 405,
+     "height": 506,
+     "format": "avif",
+     "bytes": 6894
+    },
+    {
+     "file": "img/legacy/cat-moda-p-405.webp",
+     "width": 405,
+     "height": 506,
+     "format": "webp",
+     "bytes": 8270
+    },
+    {
+     "file": "img/legacy/cat-moda-p-405.jpg",
+     "width": 405,
+     "height": 506,
+     "format": "jpg",
+     "bytes": 15684
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/cat-moda-l",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/cat-moda.jpg",
+   "sourceSize": "900x506",
+   "kind": "l",
+   "ratio": "3:2",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "759x506",
+   "widths": [
+    600,
+    759
+   ],
+   "jpg": 759,
+   "variants": [
+    {
+     "file": "img/legacy/cat-moda-l-600.avif",
+     "width": 600,
+     "height": 400,
+     "format": "avif",
+     "bytes": 7939
+    },
+    {
+     "file": "img/legacy/cat-moda-l-600.webp",
+     "width": 600,
+     "height": 400,
+     "format": "webp",
+     "bytes": 9170
+    },
+    {
+     "file": "img/legacy/cat-moda-l-759.avif",
+     "width": 759,
+     "height": 506,
+     "format": "avif",
+     "bytes": 11394
+    },
+    {
+     "file": "img/legacy/cat-moda-l-759.webp",
+     "width": 759,
+     "height": 506,
+     "format": "webp",
+     "bytes": 13432
+    },
+    {
+     "file": "img/legacy/cat-moda-l-759.jpg",
+     "width": 759,
+     "height": 506,
+     "format": "jpg",
+     "bytes": 26352
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/anel-solitario-v",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/anel-solitario.jpg",
+   "sourceSize": "900x1600",
+   "kind": "v",
+   "ratio": "original",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1600",
+   "widths": [
+    600,
+    900
+   ],
+   "jpg": 900,
+   "variants": [
+    {
+     "file": "img/legacy/anel-solitario-v-600.avif",
+     "width": 600,
+     "height": 1067,
+     "format": "avif",
+     "bytes": 12124
+    },
+    {
+     "file": "img/legacy/anel-solitario-v-600.webp",
+     "width": 600,
+     "height": 1067,
+     "format": "webp",
+     "bytes": 13542
+    },
+    {
+     "file": "img/legacy/anel-solitario-v-900.avif",
+     "width": 900,
+     "height": 1600,
+     "format": "avif",
+     "bytes": 26316
+    },
+    {
+     "file": "img/legacy/anel-solitario-v-900.webp",
+     "width": 900,
+     "height": 1600,
+     "format": "webp",
+     "bytes": 28150
+    },
+    {
+     "file": "img/legacy/anel-solitario-v-900.jpg",
+     "width": 900,
+     "height": 1600,
+     "format": "jpg",
+     "bytes": 60338
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "legacy/anel-solitario-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/anel-solitario.jpg",
+   "sourceSize": "900x1600",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": null,
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/anel-solitario-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 6684
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 7476
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 14163
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 18136
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 33536
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 17977
+    },
+    {
+     "file": "img/legacy/anel-solitario-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 22910
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "legacy/pendente-halo-p",
+   "source": "LM BIJU (v17 images/)",
+   "sourceFile": "images/pendente-halo.jpg",
+   "sourceSize": "900x1125",
+   "kind": "p",
+   "ratio": "4:5",
+   "cropPosition": "attention",
+   "ai": false,
+   "thirdParty": "Caixa com a marca \"Emiza Jewellery\" (terceiros) — só como imagem editorial temporária",
+   "crop": "900x1125",
+   "widths": [
+    480,
+    800,
+    900
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/legacy/pendente-halo-p-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 10806
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 17262
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-800.avif",
+     "width": 800,
+     "height": 1000,
+     "format": "avif",
+     "bytes": 28549
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-800.webp",
+     "width": 800,
+     "height": 1000,
+     "format": "webp",
+     "bytes": 44052
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-800.jpg",
+     "width": 800,
+     "height": 1000,
+     "format": "jpg",
+     "bytes": 63709
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-900.avif",
+     "width": 900,
+     "height": 1125,
+     "format": "avif",
+     "bytes": 42344
+    },
+    {
+     "file": "img/legacy/pendente-halo-p-900.webp",
+     "width": 900,
+     "height": 1125,
+     "format": "webp",
+     "bytes": 54442
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g3-2-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_2.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#222324"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g3-2-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 36268
+    },
+    {
+     "file": "img/mj/mj-g3-2-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 56018
+    },
+    {
+     "file": "img/mj/mj-g3-2-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 57861
+    },
+    {
+     "file": "img/mj/mj-g3-2-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 80316
+    },
+    {
+     "file": "img/mj/mj-g3-2-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 129516
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g3-2-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_2.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#222324"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g3-2-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 37278
+    },
+    {
+     "file": "img/mj/mj-g3-2-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 64892
+    },
+    {
+     "file": "img/mj/mj-g3-2-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 67585
+    },
+    {
+     "file": "img/mj/mj-g3-2-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 56754
+    },
+    {
+     "file": "img/mj/mj-g3-2-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 102504
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g4-0-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_2df68861-d2bb-4493-87d0-90fc7d20c13f_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#22201c"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g4-0-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 42224
+    },
+    {
+     "file": "img/mj/mj-g4-0-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 63262
+    },
+    {
+     "file": "img/mj/mj-g4-0-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 62568
+    },
+    {
+     "file": "img/mj/mj-g4-0-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 103544
+    },
+    {
+     "file": "img/mj/mj-g4-0-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 156742
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g5-0-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#332c22"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g5-0-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 20722
+    },
+    {
+     "file": "img/mj/mj-g5-0-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 31980
+    },
+    {
+     "file": "img/mj/mj-g5-0-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 38691
+    },
+    {
+     "file": "img/mj/mj-g5-0-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 45075
+    },
+    {
+     "file": "img/mj/mj-g5-0-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 70920
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g5-0-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#332c22"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g5-0-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 7858
+    },
+    {
+     "file": "img/mj/mj-g5-0-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 12118
+    },
+    {
+     "file": "img/mj/mj-g5-0-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 19030
+    },
+    {
+     "file": "img/mj/mj-g5-0-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 9859
+    },
+    {
+     "file": "img/mj/mj-g5-0-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 14832
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g5-1-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#392f22"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g5-1-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 15628
+    },
+    {
+     "file": "img/mj/mj-g5-1-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 22494
+    },
+    {
+     "file": "img/mj/mj-g5-1-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 31939
+    },
+    {
+     "file": "img/mj/mj-g5-1-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 31795
+    },
+    {
+     "file": "img/mj/mj-g5-1-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 46508
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g5-1-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/extreme_macro_photograph_of_gold-tone_316L_stainless_steel_ch_b0ae1130-cfb3-4f8c-94a2-afa49e38a24e_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#392f22"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g5-1-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 6907
+    },
+    {
+     "file": "img/mj/mj-g5-1-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 10346
+    },
+    {
+     "file": "img/mj/mj-g5-1-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 17297
+    },
+    {
+     "file": "img/mj/mj-g5-1-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 8499
+    },
+    {
+     "file": "img/mj/mj-g5-1-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 12972
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g2-1-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#251710"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g2-1-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 19048
+    },
+    {
+     "file": "img/mj/mj-g2-1-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 23330
+    },
+    {
+     "file": "img/mj/mj-g2-1-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 28655
+    },
+    {
+     "file": "img/mj/mj-g2-1-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 58965
+    },
+    {
+     "file": "img/mj/mj-g2-1-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 72516
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g2-1-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#251710"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g2-1-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 15293
+    },
+    {
+     "file": "img/mj/mj-g2-1-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 24528
+    },
+    {
+     "file": "img/mj/mj-g2-1-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 29264
+    },
+    {
+     "file": "img/mj/mj-g2-1-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 21906
+    },
+    {
+     "file": "img/mj/mj-g2-1-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 34728
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g2-0-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#261a13"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g2-0-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 21346
+    },
+    {
+     "file": "img/mj/mj-g2-0-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 32948
+    },
+    {
+     "file": "img/mj/mj-g2-0-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 38607
+    },
+    {
+     "file": "img/mj/mj-g2-0-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 37431
+    },
+    {
+     "file": "img/mj/mj-g2-0-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 60152
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g3-1-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#1c1d1f"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g3-1-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 35263
+    },
+    {
+     "file": "img/mj/mj-g3-1-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 63736
+    },
+    {
+     "file": "img/mj/mj-g3-1-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 66083
+    },
+    {
+     "file": "img/mj/mj-g3-1-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 54611
+    },
+    {
+     "file": "img/mj/mj-g3-1-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 102136
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g3-1-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/editorial_jewelry_campaign_photograph_a_single_gold-tone_stai_019548e8-51df-4bc2-a15e-8cfbaec14ada_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#1c1d1f"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g3-1-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 28461
+    },
+    {
+     "file": "img/mj/mj-g3-1-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 51104
+    },
+    {
+     "file": "img/mj/mj-g3-1-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 53096
+    },
+    {
+     "file": "img/mj/mj-g3-1-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 37169
+    },
+    {
+     "file": "img/mj/mj-g3-1-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 67778
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g1-1-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#3a4943"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g1-1-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 27828
+    },
+    {
+     "file": "img/mj/mj-g1-1-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 41396
+    },
+    {
+     "file": "img/mj/mj-g1-1-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 55102
+    },
+    {
+     "file": "img/mj/mj-g1-1-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 70737
+    },
+    {
+     "file": "img/mj/mj-g1-1-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 108466
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g1-0-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#344648"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g1-0-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 24555
+    },
+    {
+     "file": "img/mj/mj-g1-0-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 39958
+    },
+    {
+     "file": "img/mj/mj-g1-0-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 56455
+    },
+    {
+     "file": "img/mj/mj-g1-0-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 37056
+    },
+    {
+     "file": "img/mj/mj-g1-0-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 59966
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g6-0-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#463b33"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g6-0-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 44182
+    },
+    {
+     "file": "img/mj/mj-g6-0-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 82638
+    },
+    {
+     "file": "img/mj/mj-g6-0-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 78013
+    },
+    {
+     "file": "img/mj/mj-g6-0-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 72576
+    },
+    {
+     "file": "img/mj/mj-g6-0-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 137984
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g6-0-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#463b33"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g6-0-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 25733
+    },
+    {
+     "file": "img/mj/mj-g6-0-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 49370
+    },
+    {
+     "file": "img/mj/mj-g6-0-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 47509
+    },
+    {
+     "file": "img/mj/mj-g6-0-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 32304
+    },
+    {
+     "file": "img/mj/mj-g6-0-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 61666
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g7-3-w",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_3.jpg",
+   "sourceSize": "1680x720",
+   "kind": "w",
+   "ratio": "21:9",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#292520"
+   },
+   "crop": "1680x720",
+   "widths": [
+    960,
+    1680
+   ],
+   "jpg": 960,
+   "variants": [
+    {
+     "file": "img/mj/mj-g7-3-w-960.avif",
+     "width": 960,
+     "height": 411,
+     "format": "avif",
+     "bytes": 25901
+    },
+    {
+     "file": "img/mj/mj-g7-3-w-960.webp",
+     "width": 960,
+     "height": 411,
+     "format": "webp",
+     "bytes": 38268
+    },
+    {
+     "file": "img/mj/mj-g7-3-w-960.jpg",
+     "width": 960,
+     "height": 411,
+     "format": "jpg",
+     "bytes": 46401
+    },
+    {
+     "file": "img/mj/mj-g7-3-w-1680.avif",
+     "width": 1680,
+     "height": 720,
+     "format": "avif",
+     "bytes": 56345
+    },
+    {
+     "file": "img/mj/mj-g7-3-w-1680.webp",
+     "width": 1680,
+     "height": 720,
+     "format": "webp",
+     "bytes": 82662
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g7-3-t",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_3.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#292520"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g7-3-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 15613
+    },
+    {
+     "file": "img/mj/mj-g7-3-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 24754
+    },
+    {
+     "file": "img/mj/mj-g7-3-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 29199
+    },
+    {
+     "file": "img/mj/mj-g7-3-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 20147
+    },
+    {
+     "file": "img/mj/mj-g7-3-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 32442
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g7-2-s",
+   "source": "Midjourney (12 retidas)",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_2.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#211e1d"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g7-2-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 22453
+    },
+    {
+     "file": "img/mj/mj-g7-2-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 38292
+    },
+    {
+     "file": "img/mj/mj-g7-2-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 45924
+    },
+    {
+     "file": "img/mj/mj-g7-2-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 38272
+    },
+    {
+     "file": "img/mj/mj-g7-2-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 67300
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g2-3-s",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/close-up_editorial_photograph_of_a_womans_hand_and_wrist_in_d_0ba8b142-004e-4240-aa08-8fcb4e6432ed_3.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#1e140f"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g2-3-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 19054
+    },
+    {
+     "file": "img/mj/mj-g2-3-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 29442
+    },
+    {
+     "file": "img/mj/mj-g2-3-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 34207
+    },
+    {
+     "file": "img/mj/mj-g2-3-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 34097
+    },
+    {
+     "file": "img/mj/mj-g2-3-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 53000
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html",
+    "demo-showcase-dark.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g1-2-s",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_2.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#3b494c"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g1-2-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 18243
+    },
+    {
+     "file": "img/mj/mj-g1-2-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 31740
+    },
+    {
+     "file": "img/mj/mj-g1-2-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 45239
+    },
+    {
+     "file": "img/mj/mj-g1-2-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 34412
+    },
+    {
+     "file": "img/mj/mj-g1-2-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 60616
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g1-3-s",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/boutique_jewelry_shop_window_at_blue_hour_on_a_quiet_old-town_f8a529de-c52a-4a26-a214-6afaec8a09f9_3.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#36575b"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g1-3-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 24438
+    },
+    {
+     "file": "img/mj/mj-g1-3-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 43680
+    },
+    {
+     "file": "img/mj/mj-g1-3-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 56956
+    },
+    {
+     "file": "img/mj/mj-g1-3-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 41761
+    },
+    {
+     "file": "img/mj/mj-g1-3-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 78128
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g6-1-s",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#504337"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g6-1-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 18035
+    },
+    {
+     "file": "img/mj/mj-g6-1-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 30490
+    },
+    {
+     "file": "img/mj/mj-g6-1-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 36190
+    },
+    {
+     "file": "img/mj/mj-g6-1-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 32118
+    },
+    {
+     "file": "img/mj/mj-g6-1-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 59284
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g6-3-t",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/product_photograph_of_an_open_rigid_jewelry_gift_box_matte_ch_d2be353e-eea3-4d3a-acea-efda47bd6918_3.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#45474c"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g6-3-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 19481
+    },
+    {
+     "file": "img/mj/mj-g6-3-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 37542
+    },
+    {
+     "file": "img/mj/mj-g6-3-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 41400
+    },
+    {
+     "file": "img/mj/mj-g6-3-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 27927
+    },
+    {
+     "file": "img/mj/mj-g6-3-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 52668
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g7-0-s",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_0.jpg",
+   "sourceSize": "1680x720",
+   "kind": "s",
+   "ratio": "3:2",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#302923"
+   },
+   "crop": "1080x720",
+   "widths": [
+    800,
+    1080
+   ],
+   "jpg": 800,
+   "variants": [
+    {
+     "file": "img/mj/mj-g7-0-s-800.avif",
+     "width": 800,
+     "height": 533,
+     "format": "avif",
+     "bytes": 26900
+    },
+    {
+     "file": "img/mj/mj-g7-0-s-800.webp",
+     "width": 800,
+     "height": 533,
+     "format": "webp",
+     "bytes": 48040
+    },
+    {
+     "file": "img/mj/mj-g7-0-s-800.jpg",
+     "width": 800,
+     "height": 533,
+     "format": "jpg",
+     "bytes": 54800
+    },
+    {
+     "file": "img/mj/mj-g7-0-s-1080.avif",
+     "width": 1080,
+     "height": 720,
+     "format": "avif",
+     "bytes": 45437
+    },
+    {
+     "file": "img/mj/mj-g7-0-s-1080.webp",
+     "width": 1080,
+     "height": 720,
+     "format": "webp",
+     "bytes": 82648
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "mj/mj-g7-1-t",
+   "source": "Midjourney (aceitáveis, não retidas na 1.ª triagem)",
+   "sourceFile": "_research/mj-uploads/retail_jewelry_display_still_life_brushed_champagne-metal_T-b_80a9bf07-69ed-4c84-95f5-7b04aa69b55d_1.jpg",
+   "sourceSize": "1680x720",
+   "kind": "t",
+   "ratio": "4:5",
+   "ai": true,
+   "label": "Imagem ilustrativa gerada por IA",
+   "blackPoint": {
+    "target": "#14120F",
+    "strength": 0.7,
+    "cornerBefore": "#362b24"
+   },
+   "crop": "576x720",
+   "widths": [
+    480,
+    576
+   ],
+   "jpg": 480,
+   "variants": [
+    {
+     "file": "img/mj/mj-g7-1-t-480.avif",
+     "width": 480,
+     "height": 600,
+     "format": "avif",
+     "bytes": 13873
+    },
+    {
+     "file": "img/mj/mj-g7-1-t-480.webp",
+     "width": 480,
+     "height": 600,
+     "format": "webp",
+     "bytes": 24026
+    },
+    {
+     "file": "img/mj/mj-g7-1-t-480.jpg",
+     "width": 480,
+     "height": 600,
+     "format": "jpg",
+     "bytes": 30403
+    },
+    {
+     "file": "img/mj/mj-g7-1-t-576.avif",
+     "width": 576,
+     "height": 720,
+     "format": "avif",
+     "bytes": 19322
+    },
+    {
+     "file": "img/mj/mj-g7-1-t-576.webp",
+     "width": 576,
+     "height": 720,
+     "format": "webp",
+     "bytes": 32694
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html",
+    "demo-light.html"
+   ]
+  },
+  {
+   "id": "video/frames",
+   "source": "hero.mp4 (filmagem própria) → 48 fotogramas",
+   "ai": false,
+   "variants": [
+    {
+     "file": "video/frame-001-1080.avif",
+     "bytes": 22817
+    },
+    {
+     "file": "video/frame-001-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23360
+    },
+    {
+     "file": "video/frame-002-1080.avif",
+     "bytes": 21935
+    },
+    {
+     "file": "video/frame-002-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23223
+    },
+    {
+     "file": "video/frame-003-1080.avif",
+     "bytes": 22407
+    },
+    {
+     "file": "video/frame-003-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23478
+    },
+    {
+     "file": "video/frame-004-1080.avif",
+     "bytes": 23630
+    },
+    {
+     "file": "video/frame-004-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24505
+    },
+    {
+     "file": "video/frame-005-1080.avif",
+     "bytes": 23034
+    },
+    {
+     "file": "video/frame-005-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24285
+    },
+    {
+     "file": "video/frame-006-1080.avif",
+     "bytes": 22824
+    },
+    {
+     "file": "video/frame-006-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24206
+    },
+    {
+     "file": "video/frame-007-1080.avif",
+     "bytes": 24201
+    },
+    {
+     "file": "video/frame-007-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24553
+    },
+    {
+     "file": "video/frame-008-1080.avif",
+     "bytes": 21767
+    },
+    {
+     "file": "video/frame-008-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23865
+    },
+    {
+     "file": "video/frame-009-1080.avif",
+     "bytes": 23342
+    },
+    {
+     "file": "video/frame-009-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24790
+    },
+    {
+     "file": "video/frame-010-1080.avif",
+     "bytes": 22346
+    },
+    {
+     "file": "video/frame-010-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24315
+    },
+    {
+     "file": "video/frame-011-1080.avif",
+     "bytes": 20897
+    },
+    {
+     "file": "video/frame-011-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23914
+    },
+    {
+     "file": "video/frame-012-1080.avif",
+     "bytes": 21360
+    },
+    {
+     "file": "video/frame-012-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23218
+    },
+    {
+     "file": "video/frame-013-1080.avif",
+     "bytes": 20510
+    },
+    {
+     "file": "video/frame-013-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23389
+    },
+    {
+     "file": "video/frame-014-1080.avif",
+     "bytes": 23191
+    },
+    {
+     "file": "video/frame-014-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24435
+    },
+    {
+     "file": "video/frame-015-1080.avif",
+     "bytes": 22613
+    },
+    {
+     "file": "video/frame-015-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24165
+    },
+    {
+     "file": "video/frame-016-1080.avif",
+     "bytes": 22761
+    },
+    {
+     "file": "video/frame-016-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23756
+    },
+    {
+     "file": "video/frame-017-1080.avif",
+     "bytes": 23001
+    },
+    {
+     "file": "video/frame-017-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23654
+    },
+    {
+     "file": "video/frame-018-1080.avif",
+     "bytes": 22877
+    },
+    {
+     "file": "video/frame-018-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23739
+    },
+    {
+     "file": "video/frame-019-1080.avif",
+     "bytes": 23206
+    },
+    {
+     "file": "video/frame-019-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23760
+    },
+    {
+     "file": "video/frame-020-1080.avif",
+     "bytes": 22056
+    },
+    {
+     "file": "video/frame-020-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23294
+    },
+    {
+     "file": "video/frame-021-1080.avif",
+     "bytes": 23916
+    },
+    {
+     "file": "video/frame-021-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23982
+    },
+    {
+     "file": "video/frame-022-1080.avif",
+     "bytes": 22860
+    },
+    {
+     "file": "video/frame-022-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23459
+    },
+    {
+     "file": "video/frame-023-1080.avif",
+     "bytes": 22852
+    },
+    {
+     "file": "video/frame-023-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23226
+    },
+    {
+     "file": "video/frame-024-1080.avif",
+     "bytes": 24233
+    },
+    {
+     "file": "video/frame-024-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23894
+    },
+    {
+     "file": "video/frame-025-1080.avif",
+     "bytes": 24290
+    },
+    {
+     "file": "video/frame-025-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24085
+    },
+    {
+     "file": "video/frame-026-1080.avif",
+     "bytes": 21238
+    },
+    {
+     "file": "video/frame-026-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 22842
+    },
+    {
+     "file": "video/frame-027-1080.avif",
+     "bytes": 25022
+    },
+    {
+     "file": "video/frame-027-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 25160
+    },
+    {
+     "file": "video/frame-028-1080.avif",
+     "bytes": 24481
+    },
+    {
+     "file": "video/frame-028-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 25303
+    },
+    {
+     "file": "video/frame-029-1080.avif",
+     "bytes": 22008
+    },
+    {
+     "file": "video/frame-029-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23876
+    },
+    {
+     "file": "video/frame-030-1080.avif",
+     "bytes": 21966
+    },
+    {
+     "file": "video/frame-030-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23766
+    },
+    {
+     "file": "video/frame-031-1080.avif",
+     "bytes": 22453
+    },
+    {
+     "file": "video/frame-031-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23949
+    },
+    {
+     "file": "video/frame-032-1080.avif",
+     "bytes": 23774
+    },
+    {
+     "file": "video/frame-032-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24912
+    },
+    {
+     "file": "video/frame-033-1080.avif",
+     "bytes": 24415
+    },
+    {
+     "file": "video/frame-033-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 25153
+    },
+    {
+     "file": "video/frame-034-1080.avif",
+     "bytes": 23863
+    },
+    {
+     "file": "video/frame-034-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24908
+    },
+    {
+     "file": "video/frame-035-1080.avif",
+     "bytes": 23709
+    },
+    {
+     "file": "video/frame-035-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24857
+    },
+    {
+     "file": "video/frame-036-1080.avif",
+     "bytes": 22223
+    },
+    {
+     "file": "video/frame-036-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24455
+    },
+    {
+     "file": "video/frame-037-1080.avif",
+     "bytes": 22322
+    },
+    {
+     "file": "video/frame-037-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24684
+    },
+    {
+     "file": "video/frame-038-1080.avif",
+     "bytes": 21472
+    },
+    {
+     "file": "video/frame-038-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24489
+    },
+    {
+     "file": "video/frame-039-1080.avif",
+     "bytes": 21934
+    },
+    {
+     "file": "video/frame-039-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 24554
+    },
+    {
+     "file": "video/frame-040-1080.avif",
+     "bytes": 22407
+    },
+    {
+     "file": "video/frame-040-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23709
+    },
+    {
+     "file": "video/frame-041-1080.avif",
+     "bytes": 19091
+    },
+    {
+     "file": "video/frame-041-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 22233
+    },
+    {
+     "file": "video/frame-042-1080.avif",
+     "bytes": 22094
+    },
+    {
+     "file": "video/frame-042-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23283
+    },
+    {
+     "file": "video/frame-043-1080.avif",
+     "bytes": 21604
+    },
+    {
+     "file": "video/frame-043-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 22857
+    },
+    {
+     "file": "video/frame-044-1080.avif",
+     "bytes": 19037
+    },
+    {
+     "file": "video/frame-044-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 21969
+    },
+    {
+     "file": "video/frame-045-1080.avif",
+     "bytes": 21083
+    },
+    {
+     "file": "video/frame-045-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23005
+    },
+    {
+     "file": "video/frame-046-1080.avif",
+     "bytes": 19029
+    },
+    {
+     "file": "video/frame-046-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 22266
+    },
+    {
+     "file": "video/frame-047-1080.avif",
+     "bytes": 20507
+    },
+    {
+     "file": "video/frame-047-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23708
+    },
+    {
+     "file": "video/frame-048-1080.avif",
+     "bytes": 21891
+    },
+    {
+     "file": "video/frame-048-720.jpg",
+     "width": 720,
+     "height": 1280,
+     "bytes": 23975
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html (scroll, 48 fotogramas)",
+    "demo-light.html (controlo deslizante, 48 fotogramas)",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  },
+  {
+   "id": "video/loop",
+   "source": "hero.mp4 (filmagem própria)",
+   "ai": false,
+   "variants": [
+    {
+     "file": "video/video-mobile-540.mp4",
+     "bytes": 549257
+    },
+    {
+     "file": "video/video-poster-1080.avif",
+     "bytes": 26333
+    },
+    {
+     "file": "video/video-poster-1080.webp",
+     "bytes": 29806
+    },
+    {
+     "file": "video/video-poster-1080.jpg",
+     "bytes": 62504
+    },
+    {
+     "file": "video/video-poster-540.avif",
+     "bytes": 9688
+    },
+    {
+     "file": "video/video-poster-540.jpg",
+     "bytes": 21752
+    }
+   ],
+   "usedIn": [
+    "demo-dark.html (scroll, 48 fotogramas)",
+    "demo-light.html (controlo deslizante, 48 fotogramas)",
+    "demo-showcase-dark.html",
+    "demo-showcase-light.html"
+   ]
+  }
+ ]
+}

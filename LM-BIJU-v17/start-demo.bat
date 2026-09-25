@@ -11,12 +11,12 @@ if not defined PY python --version >nul 2>&1 && set "PY=python"
 if not defined PY python3 --version >nul 2>&1 && set "PY=python3"
 if not defined PY goto nopy
 
-set "URL=http://localhost:%PORT%/proposals/demo-b.html"
+set "URL=http://localhost:%PORT%/proposals/index.html"
 echo.
 echo  LM BIJU - demo
 echo  Servidor: http://localhost:%PORT%/
-echo  Demo completa:  %URL%
-echo  Apresentacao:   http://localhost:%PORT%/proposals/demo-showcase.html
+echo  Escolher versão: %URL%
+echo  Demos:          http://localhost:%PORT%/proposals/demo-dark.html e proposals/demo-light.html
 echo.
 echo  Para terminar, feche esta janela (ou Ctrl+C).
 echo  关闭本窗口即可停止演示服务器。
@@ -35,11 +35,11 @@ goto :eof
 :nopy
 echo.
 echo  Python nao encontrado neste computador.
-echo  Sem Python: extraia demo-showcase-offline.zip e faca duplo clique em
-echo  LM-BIJU-demo\demo-showcase.html  (funciona sem servidor e sem internet).
+echo  Sem Python: extraia lm-biju-demo-offline.zip e faca duplo clique em
+echo  LM-BIJU-demo\index.html  (funciona sem servidor e sem internet).
 echo.
-echo  未找到 Python。可以直接解压 demo-showcase-offline.zip，
-echo  双击 LM-BIJU-demo\demo-showcase.html 打开（不需要服务器和网络）。
+echo  未找到 Python。可以直接解压 lm-biju-demo-offline.zip，
+echo  双击 LM-BIJU-demo\index.html 打开（不需要服务器和网络）。
 echo  如需安装 Python：https://www.python.org/downloads/
 echo.
 pause

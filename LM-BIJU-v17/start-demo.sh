@@ -5,15 +5,15 @@ PORT="${1:-8080}"
 if command -v python3 >/dev/null 2>&1; then PY=python3
 elif command -v python >/dev/null 2>&1; then PY=python
 else
-  echo "Python não encontrado. Sem Python: extraia demo-showcase-offline.zip e abra LM-BIJU-demo/demo-showcase.html."
-  echo "未找到 Python。可以解压 demo-showcase-offline.zip，直接打开 LM-BIJU-demo/demo-showcase.html。"
+  echo "Python não encontrado. Sem Python: extraia lm-biju-demo-offline.zip e abra LM-BIJU-demo/index.html."
+  echo "未找到 Python。可以解压 lm-biju-demo-offline.zip，直接打开 LM-BIJU-demo/index.html。"
   exit 1
 fi
-URL="http://localhost:$PORT/proposals/demo-b.html"
+URL="http://localhost:$PORT/proposals/index.html"
 echo ""
 echo "  LM BIJU - demo"
-echo "  Demo completa:  $URL"
-echo "  Apresentação:   http://localhost:$PORT/proposals/demo-showcase.html"
+echo "  Escolher versão: $URL"
+echo "  Demos:          http://localhost:$PORT/proposals/demo-dark.html  |  proposals/demo-light.html"
 echo "  Ctrl+C para terminar / 按 Ctrl+C 停止"
 echo ""
 (
