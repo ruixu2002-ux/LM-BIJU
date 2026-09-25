@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-PT" data-theme="dark">
+<html lang="pt-PT" data-theme="dark" data-view="inicio">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>LM BIJU — Bijuteria por grosso, à luz certa</title>
-<meta name="description" content="LM BIJU, grossista de bijuteria em Vila do Conde: aço 316L, banho de ouro 18K, pérola e zircónia para lojas físicas, montras e lojas online.">
+<title>LM BIJU — Apresentação</title>
+<meta name="description" content="LM BIJU, grossista de bijuteria em Vila do Conde: aço 316L, banho de ouro 18K, pérola e zircónia. Apresentação numa só página.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14120F">
 <meta property="og:type" content="website">
@@ -14,9 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%2314120F%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Georgia,serif%27 font-size=%2716%27 fill=%27%23FAF7F2%27 text-anchor=%27middle%27%3ELM%3C/text%3E%3C/svg%3E">
 <link rel="preload" as="font" type="font/woff2" href="fonts/Fraunces-normal-latin.woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" fetchpriority="high"
-  imagesrcset="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-600.avif 600w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-900.avif 900w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.avif 1200w"
-  imagesizes="(max-aspect-ratio: 4/5) 100vw, 67vh">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="../_research/demo-b/assets/legacy/legacy-hero-aco-hero-600.avif 600w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-900.avif 900w, ../_research/demo-b/assets/legacy/legacy-hero-aco-hero-1200.avif 1200w" imagesizes="(max-aspect-ratio: 4/5) 100vw, 67vh">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Organization","@id":"#org","name":"LM BIJU","email":"geral@lmbiju.pt","description":"Grossista de bijuteria: aço 316L, banho de ouro 18K, pérola e zircónia.","address":{"@type":"PostalAddress","streetAddress":"Zona Industrial da Varziela","addressLocality":"Vila do Conde","addressCountry":"PT"}},
@@ -29,9 +27,8 @@
  ]}
 ]}
 </script>
-<!-- JSON-LD sem "offers": preços de revenda nunca são publicados para visitantes; em produção são gerados no servidor por perfil. -->
 <style>
-/*__FONTS__*/
+
 /* latin-ext */
 @font-face {
   font-family: 'Fraunces';
@@ -104,13 +101,9 @@
   src: url(fonts/JetBrainsMono-normal-latin.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/*__FONTS_END__*/
-/* ==========================================================================
-   LM BIJU · Protótipo B "Câmara Escura" · v2
-   Motion (10): M01 título · M02 paralaxe/scrub · M03 máscara · M04 carregamento · M05 números
-                M06 brilho · M07 numeração de capítulo · M08 cursor · M09 hover · M15 transição
-   ========================================================================== */
-/*__CSS_START__*/
+
+/* Gerado por _build/build.py a partir de demo-b.html — não editar à mão */
+
 :root{
   --ink-950:#14120F; --ink-900:#1C1915; --ink-800:#2A2621; --ink-700:#3D3832;
   --paper:#FAF7F2; --stone-100:#F1ECE4; --stone-200:#E4DED4; --stone-300:#CFC8BD; --stone-400:#A39B90;
@@ -399,179 +392,60 @@ html:not(.has-cursor) .cur{display:none}
 html.has-cursor.cursor-hidden .cur{opacity:0}
 html.has-cursor body,html.has-cursor a,html.has-cursor button,html.has-cursor summary{cursor:none}
 html.has-cursor input,html.has-cursor select,html.has-cursor textarea,html.has-cursor label{cursor:auto}
-/*__CSS_END__*/
-/* LIGHT: catálogo */
-.crumbs{font-size:13px;color:var(--fg3);display:flex;gap:8px;flex-wrap:wrap}
-.crumbs a{color:var(--fg2)}
-.cat-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px;margin:18px 0 28px}
-.cat-head h1{font-size:clamp(44px,5.4vw,88px)}
-.cat-head p{color:var(--fg2);max-width:52ch}
-.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(150px,13vw,210px);gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;margin-bottom:32px}
-.tile{display:flex;flex-direction:column;align-self:start;scroll-snap-align:start;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:var(--fg)}
-.tile .frame{aspect-ratio:4/5;overflow:hidden;background:var(--stone-100)}
-.tile img{width:100%;height:100%;object-fit:cover;transition:transform var(--t4) var(--ease-out)}
-.tile:hover img{transform:scale(1.04)}
-.tile span{display:block;font:500 15px/1.3 var(--f-ui);margin-top:10px}
-.tile small{display:block;font:400 12px/1.4 var(--f-mono);color:var(--fg3);margin-top:2px}
-.tile[aria-pressed="true"] span{text-decoration:underline;text-decoration-color:var(--gold-700);text-underline-offset:5px}
-.filters{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:28px}
-.filters__lab{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 var(--f-ui);min-height:40px}
-.filters__lab svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5}
-.sel{display:grid;gap:4px}
-.sel span{font:500 11px/1 var(--f-ui);letter-spacing:.1em;text-transform:uppercase;color:var(--fg3)}
-.sel select{min-height:40px;padding:0 12px;border:1px solid var(--stone-500);background:var(--white);min-width:170px}
-.viewtog{display:inline-flex;border:1px solid var(--stone-500)}
-.viewtog button{min-height:40px;padding:0 14px;background:var(--white);border:0;cursor:pointer;font:500 13px/1 var(--f-ui);display:inline-flex;gap:8px;align-items:center}
-.viewtog button svg{width:14px;height:14px;fill:currentColor}
-.viewtog button[aria-pressed="true"]{background:var(--ink-900);color:var(--paper)}
-.filters .count{margin-left:auto;font:400 13px/1 var(--f-mono);color:var(--fg3);align-self:center}
-@media (max-width:599px){.filters{display:grid;grid-template-columns:1fr 1fr;align-items:end}.filters__lab{grid-column:1/-1;min-height:auto}.sel select{min-width:0;width:100%}.sel:nth-of-type(3){grid-column:1/-1}.filters .count{margin-left:0;grid-column:1/-1}}
-.chip{min-height:40px;padding:0 16px;border:1px solid var(--stone-500);background:var(--white);cursor:pointer;font:500 14px/1 var(--f-ui);color:var(--fg2)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px}
-@media (max-width:1199px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:767px){.grid{grid-template-columns:1fr}}
-.card{display:flex;flex-direction:column}
-.card__media{display:block;position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--stone-100)}
-.card__media img{width:100%;height:100%;object-fit:cover;transform:translate(var(--mx,0),var(--my,0)) scale(var(--s,1));transition:transform var(--t4) var(--ease-out)}
-.card__media:hover img,.card__media:focus-visible img{--s:1.06}
-.card__media--pending{display:grid;place-items:center;background:var(--ink-900);color:var(--stone-300);text-decoration:none}
-.card__media--pending span{font:400 12px/1.7 var(--f-mono);text-align:center;padding:24px}
-.card__media--pending span b{display:block;font:300 22px/1.2 var(--f-display);font-style:italic;color:var(--paper);margin-bottom:8px}
-.card__media--pending::before{content:"";position:absolute;inset:14px;border:1px solid var(--ink-700)}
-.card__body{padding-top:16px;display:grid;gap:6px}
-.card__name{font:500 17px/1.3 var(--f-ui)}
-.card__name a{text-decoration:none}
-.card__name a:hover{text-decoration:underline;text-underline-offset:4px}
-.card__meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
-.tag{font:500 12px/1 var(--f-ui);letter-spacing:.04em;padding:5px 8px;border:1px solid currentColor}
-.tag--ouro{color:var(--gold-700)}.tag--aco{color:var(--steel-600)}
-.tag--perola,.tag--zirconia,.tag--none{color:var(--stone-600)}
-.sku{color:var(--fg3)}
-.card__pvp{font-size:14px;color:var(--fg2)}
-.card__pvp b{color:var(--fg);font-weight:500}
-.price{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
-.price--lock{color:var(--fg2)}
-.price--lock svg{width:14px;height:14px;stroke:var(--gold-700);fill:none;stroke-width:1.6}
-.price--lock a{color:var(--gold-700);font-weight:500}
-.price strong{font:600 18px/1 var(--f-ui);font-variant-numeric:tabular-nums}
-.price .mono{color:var(--fg3)}
-.card__actions{display:flex;gap:8px;align-items:stretch}
-.qty{width:88px;min-height:44px;padding:0 10px;border:1px solid var(--stone-500);background:var(--white);font-variant-numeric:tabular-nums}
-.btn-add{flex:1;min-height:44px;border:1px solid var(--ink-900);background:transparent;cursor:pointer;font:500 14px/1 var(--f-ui);color:var(--ink-900)}
-.btn-add:hover{background:var(--ink-900);color:var(--paper)}
-.linkbtn{background:none;border:0;padding:0;cursor:pointer;font:inherit;color:var(--gold-700);text-decoration:underline;text-underline-offset:3px}
-.grid.is-list{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
-.grid.is-list .card{display:grid;grid-template-columns:88px minmax(0,1fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
-.grid.is-list .card__media{width:88px}
-.grid.is-list .card__body{padding:0;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr) minmax(0,2fr) minmax(0,1.9fr);align-items:center;gap:8px 20px}
-.grid.is-list .card__meta{grid-row:2;grid-column:1}
-.grid.is-list .price{border:0;padding:0}
-.grid.is-list .card__media--pending span{font-size:0;padding:0}
-.grid.is-list .card__media--pending span b{font-size:12px;margin:0}
-@media (max-width:899px){.grid.is-list .card__body{grid-template-columns:1fr}.grid.is-list .card__meta{grid-row:auto}}
-/* LIGHT: produto */
-.pdp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,96px);align-items:start}
-.pdp__gallery button{display:block;width:100%;border:0;padding:0;background:var(--stone-100);cursor:zoom-in;position:relative;aspect-ratio:4/5;overflow:hidden}
-.pdp__gallery img{width:100%;height:100%;object-fit:cover}
-.pdp__gallery small{display:block;margin-top:10px;color:var(--fg3);font-size:13px}
-.pdp__info{position:sticky;top:calc(var(--hdr) + 32px)}
-.pdp__info h1{font:300 clamp(36px,3.6vw,56px)/1.04 var(--f-display);font-variation-settings:"opsz" 144;margin:10px 0 14px}
-.skuline{display:flex;align-items:center;gap:10px}
-.skuline button{min-height:32px;padding:0 10px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-size:12px}
-.gate{margin:22px 0;border:1px solid var(--line);background:var(--white);padding:22px;display:grid;gap:14px}
-.gate p{color:var(--fg2)}
-.tiers{width:100%;border-collapse:collapse;margin:18px 0 12px;font-size:15px}
-.tiers th{font:500 12px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-.tiers td{padding:14px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;transition:background var(--t2) var(--ease-ui)}
-.tiers tr.on td{background:var(--stone-100)}
-.tiers tr.on td:first-child{box-shadow:inset 2px 0 0 var(--gold-700)}
-.acc{margin-top:24px;border-top:1px solid var(--line)}
-.acc details{border-bottom:1px solid var(--line)}
-.acc summary{cursor:pointer;min-height:52px;display:flex;align-items:center;justify-content:space-between;font:500 15px/1.3 var(--f-ui);list-style:none}
-.acc summary::-webkit-details-marker{display:none}
-.acc summary::after{content:"+";font:300 22px/1 var(--f-ui);color:var(--fg3);transition:transform var(--t2) var(--ease-out)}
-.acc details[open] summary::after{transform:rotate(45deg)}
-.acc .acc__body{padding:0 0 18px;color:var(--fg2);font-size:15px}
-.specs div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
-.specs div:first-child{border-top:0}
-.specs dt{color:var(--fg3)}
-.related{margin-top:96px}
-.related h2{font:300 36px/1.1 var(--f-display);margin-bottom:28px}
-@media (max-width:899px){.pdp{grid-template-columns:1fr}.pdp__info{position:static}.specs div{grid-template-columns:1fr}}
-.lightbox{border:0;padding:0;margin:auto;width:100vw;height:100vh;max-width:none;max-height:none;background:#14120F;color:var(--paper)}
-.lightbox::backdrop{background:#14120F}
-.lightbox img{width:100%;height:100%;object-fit:contain}
-.lightbox button{position:absolute;top:16px;right:16px;min-height:44px;padding:0 18px;background:none;border:1px solid rgba(250,247,242,.5);color:var(--paper);cursor:pointer}
-/* LIGHT: pedido */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 36px;counter-reset:st}
-.steps li{position:relative;padding:14px 12px 0 0;border-top:2px solid var(--line);font:500 14px/1.3 var(--f-ui);color:var(--fg3);counter-increment:st}
-.steps li::before{content:"0" counter(st);display:block;font:400 12px/1 var(--f-mono);margin-bottom:6px}
-.steps li.done{border-top-color:var(--ink-900);color:var(--fg)}
-.steps li[aria-current="step"]{border-top-color:var(--gold-700);color:var(--fg)}
-@media (max-width:640px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:16px}}
-.rfq{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
-.lines{width:100%;border-collapse:collapse;font-size:15px}
-.lines th{font:500 12px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
-.lines td{padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
-.lines .qty{width:96px}
-.lines button{min-height:36px;padding:0 10px;background:none;border:1px solid var(--line);cursor:pointer;font-size:13px}
-.st-ok{color:var(--ok)}.st-warn{color:var(--warn)}
-.box{border:1px solid var(--line);background:var(--white);padding:22px;display:grid;gap:14px}
-.refprev{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--fg2)}
-.filepick{position:relative;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.filepick__input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
-.filepick__btn{pointer-events:none}
-.filepick__input:focus-visible+.filepick__btn{outline:2px solid var(--focus,currentColor);outline-offset:3px}
-.filepick__name{font-size:14px;color:var(--fg2)}
-[data-focus]:focus:not(:focus-visible),main:focus{outline:none}
-[data-focus]:focus{outline:none}
-.refprev img{width:64px;height:64px;object-fit:cover;border:1px solid var(--line)}
-@media (max-width:1023px){.rfq{grid-template-columns:1fr}}
-/* M15 view transitions */
-::view-transition-old(root),::view-transition-new(root){animation-duration:var(--t3);animation-timing-function:var(--ease-inout)}
-html.vt-lights::view-transition-old(root){animation:none}
-html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-inout) both}
-@keyframes lights-on{from{clip-path:circle(0 at var(--vx,50%) var(--vy,50%))}to{clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%))}}
-::view-transition-group(prod-img){animation-duration:600ms;animation-timing-function:var(--ease-inout)}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}
-  .slide.is-active img{animation:none}
-  .hero__glow,.hero__hint i::after{display:none}
-}
+
+
+.sc-hdr{position:fixed;inset:0 0 auto;height:var(--hdr);z-index:60;display:flex;align-items:center;gap:24px;padding:0 var(--gutter);background:linear-gradient(rgba(20,18,15,.72),rgba(20,18,15,0))}
+.sc-hdr nav{margin-left:auto;display:flex;gap:24px;align-items:center}
+.sc-hdr nav a{font:500 14px/1 var(--f-ui);text-decoration:none;color:var(--stone-300);padding:14px 0}
+.sc-hdr nav a:hover{color:var(--paper)}
+.sc-hdr nav .btn{color:var(--ink-950);padding:0 18px;min-height:40px}
+.sc-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;margin-bottom:48px}
+@media (max-width:899px){.sc-head{grid-template-columns:1fr}}
+.sc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 24px}
+@media (max-width:1099px){.sc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:699px){.sc-grid{grid-template-columns:1fr}}
+.sc-card__media{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--ink-900);border:1px solid var(--ink-800)}
+.sc-card__media img{width:100%;height:100%;object-fit:cover;transition:transform var(--t4) var(--ease-out)}
+.sc-card__media:hover img,.sc-card__media:focus-visible img{transform:scale(1.06)}
+.sc-card__name{font:500 17px/1.3 var(--f-ui);margin-top:16px}
+.sc-card__name a{text-decoration:none}
+.sc-card__meta{display:flex;gap:12px;align-items:center;margin-top:8px;color:var(--stone-400)}
+.sc-tag{font:500 12px/1 var(--f-ui);padding:5px 8px;border:1px solid currentColor}
+.sc-tag--ouro{color:var(--gold-300)}.sc-tag--aco{color:#C9CCD0}.sc-tag--zirconia,.sc-tag--perola{color:var(--stone-300)}
+.sc-card__pvp{margin-top:8px;color:var(--stone-300);font-size:14px}.sc-card__pvp b{color:var(--paper);font-weight:500}
+.sc-card__lock{display:flex;gap:8px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--ink-800);font-size:14px;color:var(--stone-300)}
+.sc-card__lock svg{width:14px;height:14px;stroke:var(--gold-decor);fill:none;stroke-width:1.6}
+.sc-b2b{border-top:1px solid var(--ink-800)}
+.sc-b2b__in{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,6vw,112px);align-items:start}
+@media (max-width:999px){.sc-b2b__in{grid-template-columns:1fr}}
+.sc-feat{margin-top:36px;border-top:1px solid var(--ink-800)}
+.sc-feat li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--ink-800)}
+.sc-feat .mono{color:var(--gold-decor);padding-top:4px}
+.sc-feat b{font:400 24px/1.2 var(--f-display);display:block;margin-bottom:6px}
+.sc-feat p{color:var(--stone-300)}
+.sc-tier{border:1px solid var(--ink-800);background:var(--ink-900);padding:28px;position:sticky;top:96px}
+.sc-tier__pvp{margin:12px 0 18px;color:var(--stone-300)}.sc-tier__pvp b{color:var(--paper);font-weight:500}
+.sc-tier__q{display:grid;gap:6px;font:500 14px/1.3 var(--f-ui);max-width:160px}
+.sc-tier__q input{min-height:48px;padding:0 12px;background:transparent;border:1px solid #8A8278;color:var(--paper);font-variant-numeric:tabular-nums}
+.sc-tiers{width:100%;border-collapse:collapse;margin:18px 0 12px;font-size:15px}
+.sc-tiers th{font:500 12px/1 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--stone-400);text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink-800)}
+.sc-tiers td{padding:14px 12px;border-bottom:1px solid var(--ink-800);font-variant-numeric:tabular-nums;transition:background var(--t2) var(--ease-ui)}
+.sc-tiers tr.on td{background:var(--ink-800)}
+.sc-tiers tr.on td:first-child{box-shadow:inset 2px 0 0 var(--gold-decor)}
+#sc-total{color:var(--stone-300);min-height:1.5em}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}.slide.is-active img{animation:none}.hero__glow,.hero__hint i::after{display:none}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Saltar para o conteúdo</a>
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader__in"><p class="loader__brand">LM <em>Biju</em></p><div class="loader__line"></div><p class="loader__tag">Bijuteria por grosso · Vila do Conde</p></div>
-</div>
-
-<header class="hdr">
-  <a class="brand" href="#/" aria-label="LM BIJU — início">LM <em>Biju</em></a>
-  <nav class="nav" aria-label="Principal">
-    <a href="#/catalogo" data-nav="catalogo">Catálogo</a>
-    <a href="#/?s=materia" data-nav="materia">Matéria</a>
-    <a href="#/?s=montra" data-nav="montra">Para a montra</a>
-    <a href="#/?s=empresa" data-nav="empresa">Showroom</a>
-  </nav>
-  <div class="hdr__r">
-    <button class="sess" type="button" aria-pressed="false" data-session-toggle>
-      <span class="sess__sw" aria-hidden="true"></span><span class="sess__txt">Ver como cliente</span><span class="sr-only"> (simulação de sessão profissional)</span>
-    </button>
-    <a class="cartlink" href="#/pedido" data-nav="pedido">Pedido <b data-rfq-count aria-label="linhas no pedido">0</b></a>
-    <details class="menu">
-      <summary>Menu</summary>
-      <div class="menu__panel">
-        <a href="#/catalogo">Catálogo</a><a href="#/?s=materia">Matéria</a><a href="#/?s=montra">Para a montra</a><a href="#/?s=empresa">Showroom</a><a href="#/?s=registo">Criar conta profissional</a><a href="#/pedido">Pedido de proposta</a>
-      </div>
-    </details>
-  </div>
+<div class="loader" id="loader" aria-hidden="true"><div class="loader__in"><p class="loader__brand">LM <em>Biju</em></p><div class="loader__line"></div><p class="loader__tag">Bijuteria por grosso · Vila do Conde</p></div></div>
+<header class="sc-hdr">
+  <a class="brand" href="#hero" aria-label="LM BIJU — topo">LM <em>Biju</em></a>
+  <nav aria-label="Principal"><a href="#materia">Matéria</a><a href="#selecao">Seleção</a><a href="#empresa">Showroom</a><a class="btn" href="demo-b.html#/catalogo">Catálogo</a></nav>
 </header>
-<div class="sessbar" role="status">Está a ver o catálogo como cliente profissional validado. Nesta demonstração os preços de revenda são exemplos; no site final são calculados no servidor para cada conta.</div>
-
 <main id="main" tabindex="-1">
-<div data-view-section="inicio">
-  <!--__HOME_START__-->
+
   <section class="hero" id="hero" aria-roledescription="carrossel" aria-label="Destaques LM BIJU">
     <div class="slides" id="slides">
       <figure class="slide slide--portrait is-active" style="--sbg:#050505" data-ai="0" data-mobile="1" aria-roledescription="diapositivo" aria-label="1 de 4"
@@ -608,8 +482,8 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
       <h1 class="display"><span class="ln"><span>Peças que pedem</span></span><span class="ln"><span><em>a luz certa.</em></span></span></h1>
       <p class="hero__sub" aria-live="off"><span data-hero-sub>Corrente cubana em aço 316L. Não escurece, não perde o brilho — a peça que a sua montra repõe todos os meses.</span></p>
       <div class="hero__cta">
-        <a class="btn" href="#/catalogo" data-lights data-primary-cta>Entrar no catálogo <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="link" href="#registo">Criar conta profissional</a>
+        <a class="btn" href="demo-b.html#/catalogo" data-primary-cta>Entrar no catálogo <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link" href="demo-b.html#/?s=registo">Criar conta profissional</a>
       </div>
     </div>
     <p class="hero__hint" aria-hidden="true">Deslize<i></i></p>
@@ -698,7 +572,7 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
         <h2 class="display" id="gesto-t" style="font-size:clamp(40px,4.6vw,76px);margin:14px 0 22px;color:var(--paper)">Um fio fino,<br><em>visto de perto.</em></h2>
         <p class="gesto__cap" aria-live="off"><span data-gcap>A luz corre pelo fio.</span></p>
         <div class="gesto__prog" aria-hidden="true"><i data-scrub-prog></i></div>
-        <a class="gesto__cta" href="#/catalogo" data-lights>Ver a coleção completa <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="gesto__cta" href="demo-b.html#/catalogo">Ver a coleção completa <span class="arrow" aria-hidden="true">→</span></a>
       </div>
       <div class="gesto__media">
         <canvas width="1080" height="1920" role="img" aria-label="Sequência de vídeo: colar fino com pendente em zircónia no pescoço"></canvas>
@@ -722,7 +596,7 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
         <p class="eyebrow">Para a sua montra</p>
         <h2 class="display" id="montra-t">A peça vende-se<br><em>pela montra.</em></h2>
         <p>Bustos, tabuleiros, expositores e embalagem na mesma fatura que as peças.</p>
-        <p style="margin-top:22px"><a class="link" href="#/catalogo?fam=loja" style="color:var(--paper)">Ver acessórios de loja <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p style="margin-top:22px"><a class="link" href="demo-b.html#/catalogo?fam=loja" style="color:var(--paper)">Ver acessórios de loja <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
       <span class="ai-label montra__ai">Imagem ilustrativa gerada por IA</span>
     </div>
@@ -741,54 +615,59 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
       </figure>
     </div>
   </section>
-  <!--__HOME_BREAK__-->
+  
 
-  <section class="sec" id="registo" aria-labelledby="registo-t">
-    <div class="wrap profiles">
+  <section class="sc-sel sec" id="selecao" aria-labelledby="sel-t">
+    <div class="wrap">
+      <div class="sc-head"><div><p class="eyebrow">Seleção</p><h2 class="display" id="sel-t">Peças que <em>rodam.</em></h2></div>
+      <p class="lead">Fotografias de produto próprias. O preço de venda ao público aparece a todos; o preço de revenda, só a contas profissionais validadas.</p></div>
+      <div class="sc-grid"><article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1013" data-cursor="Ver" aria-label="Corrente Cubana — Homem"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-hero-aco-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-hero-aco-prod-840.avif 840w, ../_research/demo-b/assets/legacy/legacy-hero-aco-prod-1200.avif 1200w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-hero-aco-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-hero-aco-prod-840.webp 840w, ../_research/demo-b/assets/legacy/legacy-hero-aco-prod-1200.webp 1200w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-hero-aco-prod-1200.jpg" width="1200" height="1500" alt="Corrente cubana em aço 316L sobre fundo preto" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1013">Corrente Cubana — Homem</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--aco">Aço 316L</span><span class="mono">LB-1013</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>28,00 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article>
+<article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1001" data-cursor="Ver" aria-label="Anel Pavé Dourado"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-840.avif 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-hero-ouro-prod-840.jpg" width="840" height="1050" alt="Anel pavé com banho de ouro 18K sobre pedras brancas" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1001">Anel Pavé Dourado</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--ouro">Banho de ouro 18K</span><span class="mono">LB-1001</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>24,90 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article>
+<article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1003" data-cursor="Ver" aria-label="Argolas Largas Polidas"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-840.avif 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-argolas-pave-prod-840.jpg" width="840" height="1050" alt="Argolas largas polidas com banho de ouro 18K" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1003">Argolas Largas Polidas</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--ouro">Banho de ouro 18K</span><span class="mono">LB-1003</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>15,50 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article>
+<article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1007" data-cursor="Ver" aria-label="Anéis Zircónia Cor — Série 7"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-hero-still-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-hero-still-prod-840.avif 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-hero-still-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-hero-still-prod-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-hero-still-prod-840.jpg" width="840" height="1050" alt="Sete anéis dourados com zircónias de cores diferentes" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1007">Anéis Zircónia Cor — Série 7</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--zirconia">Zircónia</span><span class="mono">LB-1007</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>19,90 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article>
+<article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1008" data-cursor="Ver" aria-label="Relógio Bracelete Milanesa"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-cat-relogios-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-cat-relogios-prod-840.avif 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-cat-relogios-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-cat-relogios-prod-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-cat-relogios-prod-840.jpg" width="840" height="1050" alt="Relógio com bracelete milanesa em aço sobre carteira de pele" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1008">Relógio Bracelete Milanesa</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--aco">Aço 316L</span><span class="mono">LB-1008</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>39,00 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article>
+<article class="sc-card"><a class="sc-card__media" href="demo-b.html#/produto/LB-1006" data-cursor="Ver" aria-label="Brincos de Pérola Clássicos"><picture><source type="image/avif" srcset="../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-480.avif 480w, ../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-840.avif 840w, ../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-960.avif 960w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><source type="image/webp" srcset="../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-480.webp 480w, ../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-840.webp 840w, ../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-960.webp 960w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 46vw, 92vw"><img src="../_research/demo-b/assets/legacy/legacy-brincos-safira-prod-960.jpg" width="960" height="1200" alt="Brincos de argola com pérola pendente sobre tabuleiro branco" loading="lazy" decoding="async"></picture></a>
+  <h3 class="sc-card__name"><a href="demo-b.html#/produto/LB-1006">Brincos de Pérola Clássicos</a></h3><p class="sc-card__meta"><span class="sc-tag sc-tag--perola">Pérola</span><span class="mono">LB-1006</span></p>
+  <p class="sc-card__pvp">PVP recomendado <b>9,99 €</b></p><p class="sc-card__lock"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>Preço de revenda para contas validadas</p></article></div>
+      <p style="margin-top:40px"><a class="btn" href="demo-b.html#/catalogo">Ver o catálogo completo <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <section class="sc-b2b sec" aria-labelledby="b2b-t">
+    <div class="wrap sc-b2b__in">
       <div>
-        <p class="eyebrow">Para quem vendemos</p>
-        <h2 class="display" id="registo-t">Uma conta,<br><em>o seu tipo de loja.</em></h2>
-        <div class="tabs" role="tablist" aria-label="Tipo de negócio">
-          <button role="tab" id="tab-online" aria-controls="pan-online" aria-selected="true">Revendedor online</button>
-          <button role="tab" id="tab-fisica" aria-controls="pan-fisica" aria-selected="false" tabindex="-1">Loja física</button>
-          <button role="tab" id="tab-nova" aria-controls="pan-nova" aria-selected="false" tabindex="-1">Novo negócio</button>
-        </div>
-        <div class="panel" role="tabpanel" id="pan-online" aria-labelledby="tab-online">
-          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g3-1-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g3-1-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g3-1-scene-1080.jpg" width="1080" height="720" alt="Corrente de elos alongados dourada sobre pedra escura" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
-          <div><h3>Ficha pronta para publicar</h3><p style="color:var(--stone-300)">Referência, materiais e medidas de cada peça, prontos para a sua loja online ou Instagram.</p>
-            <ul><li>Exportação CSV de cada pedido</li><li>Mínimos por referência, não por encomenda</li><li>Reposição das referências que mais vendem</li></ul></div>
-        </div>
-        <div class="panel" role="tabpanel" id="pan-fisica" aria-labelledby="tab-fisica" hidden>
-          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g2-0-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g2-0-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g2-0-scene-1080.jpg" width="1080" height="720" alt="Mão com dois anéis finos dourados" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
-          <div><h3>Reposição sem parar a montra</h3><p style="color:var(--stone-300)">Encomende por referência, na quantidade que roda — também em zonas de turismo.</p>
-            <ul><li>Aço 316L e banho 18K como base</li><li>Expositores e embalagem na mesma encomenda</li><li>Visita ao showroom com marcação</li></ul></div>
-        </div>
-        <div class="panel" role="tabpanel" id="pan-nova" aria-labelledby="tab-nova" hidden>
-          <figure><div class="frame"><picture><source type="image/avif" srcset="../_research/demo-b/assets/mj/mj-g1-0-scene-800.avif 800w, ../_research/demo-b/assets/mj/mj-g1-0-scene-1080.avif 1080w" sizes="(min-width: 1100px) 28vw, 90vw"><img src="../_research/demo-b/assets/mj/mj-g1-0-scene-1080.jpg" width="1080" height="720" alt="Montra de rua com bustos de veludo e colares" loading="lazy" decoding="async"></picture></div><figcaption class="ai-label" style="margin-top:8px">Imagem ilustrativa gerada por IA</figcaption></figure>
-          <div><h3>Abrir com o sortido certo</h3><p style="color:var(--stone-300)">Ajudamos a montar a primeira encomenda a partir do que roda nas lojas que já fornecemos.</p>
-            <ul><li>Mínimos baixos por referência</li><li>Kit de montra para começar</li><li>Acompanhamento comercial dedicado</li></ul></div>
-        </div>
+        <p class="eyebrow">Feito para comprar por grosso</p>
+        <h2 class="display" id="b2b-t">Um catálogo<br><em>que trabalha.</em></h2>
+        <ol class="sc-feat">
+          <li><span class="mono">01</span><div><b>Conta com NIF</b><p>Registo com validação do NIF português. A conta abre os preços de revenda da sua empresa.</p></div></li>
+          <li><span class="mono">02</span><div><b>Mínimos por referência</b><p>Cada peça tem o seu mínimo e múltiplo. As quantidades ajustam-se sozinhas.</p></div></li>
+          <li><span class="mono">03</span><div><b>Escalões com margem à vista</b><p>Quanto mais encomenda, melhor o preço — com a margem sobre o PVP calculada linha a linha.</p></div></li>
+          <li><span class="mono">04</span><div><b>Pedido de proposta</b><p>Cole uma lista de referências ou importe um CSV. Recebe o pedido numerado e o ficheiro para arquivo.</p></div></li>
+        </ol>
       </div>
-      <div>
-        <p class="eyebrow">Acesso profissional</p>
-        <p class="lead" style="margin:14px 0 24px">Os preços de revenda só aparecem para contas validadas. Pedimos o NIF para confirmar a atividade comercial e respondemos por e-mail.</p>
-        <form class="form" id="regForm" novalidate>
-          <div class="field"><label for="r-emp">Empresa</label><input id="r-emp" name="empresa" autocomplete="organization" required></div>
-          <div class="field"><label for="r-nif">NIF</label><input id="r-nif" name="nif" inputmode="numeric" autocomplete="off" maxlength="11" required aria-describedby="r-nif-msg"><p class="msg" id="r-nif-msg" aria-live="polite"></p></div>
-          <div class="field"><label for="r-tipo">Tipo de negócio</label>
-            <select id="r-tipo" name="tipo" required><option value="">Escolher…</option><option>Revendedor online</option><option>Loja física</option><option>Novo negócio</option><option>Distribuidor</option></select></div>
-          <div class="field"><label for="r-mail">E-mail profissional</label><input id="r-mail" name="email" type="email" autocomplete="email" required></div>
-          <label class="check"><input type="checkbox" name="consent" required><span>Aceito que a LM BIJU use estes dados para validar a conta, conforme a Política de Privacidade.</span></label>
-          <p class="msg" id="r-msg" aria-live="polite"></p>
-          <button class="btn" type="submit">Pedir acesso profissional</button>
-          <p class="note">O pedido segue por e-mail para a equipa comercial. Na versão final fica registado no sistema e recebe a confirmação por e-mail.</p>
-        </form>
-        <div class="result" id="regResult" hidden tabindex="-1"></div>
+      <div class="sc-tier" aria-labelledby="tier-t">
+        <p class="eyebrow" id="tier-t">Exemplo · LB-1003 Argolas Largas Polidas</p>
+        <p class="sc-tier__pvp">PVP recomendado <b>15,50 €</b> · mínimo 6 · múltiplos de 6</p>
+        <label class="sc-tier__q" for="sc-qty">Quantidade<input id="sc-qty" type="number" inputmode="numeric" min="6" step="6" value="24"></label>
+        <table class="sc-tiers"><caption class="sr-only">Escalões de preço de revenda (exemplo)</caption><thead><tr><th scope="col">Quantidade</th><th scope="col">Preço / un. sem IVA</th><th scope="col">Margem</th></tr></thead>
+          <tbody><tr data-min="6"><td>6–23</td><td>5,25 €</td><td>×2,4</td></tr><tr data-min="24"><td>24–95</td><td>4,85 €</td><td>×2,6</td></tr><tr data-min="96"><td>96+</td><td>4,45 €</td><td>×2,8</td></tr></tbody></table>
+        <p class="mono" id="sc-total" aria-live="polite"></p>
+        <p class="note">Valores de exemplo. No site final, os preços são calculados no servidor para cada conta.</p>
       </div>
     </div>
   </section>
 
-  <!--__HOME_RESUME__-->
+
   <section class="sec" id="empresa" aria-labelledby="empresa-t" style="border-top:1px solid var(--ink-800)">
     <div class="wrap showroom">
       <div class="showroom__img" data-reveal>
@@ -816,7 +695,7 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
       <p class="eyebrow">Catálogo profissional</p>
       <h2 class="display" style="margin-top:18px">Acender<br><em>a luz.</em></h2>
       <p>O catálogo abre em modo de trabalho: claro, rápido, com mínimos e escalões à vista para contas validadas.</p>
-      <a class="btn btn--xl" href="#/catalogo" data-lights>Entrar no catálogo <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn--xl" href="demo-b.html#/catalogo">Entrar no catálogo <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -828,101 +707,28 @@ html.vt-lights::view-transition-new(root){animation:lights-on 700ms var(--ease-i
       <h2 class="display" id="final-t" style="margin-top:16px">Pronto para ver<br><em>os preços?</em></h2>
       <p>Crie a conta profissional com o NIF da sua empresa. Validamos a atividade e abrimos o catálogo com os seus preços de revenda.</p>
       <div class="final__cta">
-        <a class="btn btn--xl" href="#registo" data-final-primary>Criar conta profissional</a>
+        <a class="btn btn--xl" href="demo-b.html#/?s=registo" data-final-primary>Criar conta profissional</a>
         <a class="btn btn--xl btn--ghost" data-mailto="contacto" href="mailto:geral@lmbiju.pt">Falar com a equipa</a>
       </div>
     </div>
   </section>
-  <!--__HOME_END__-->
-</div>
-
-<div data-view-section="catalogo" class="view-light" hidden>
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><span>Catálogo</span></nav>
-    <div class="cat-head">
-      <h1 class="display" tabindex="-1" data-focus>Catálogo</h1>
-      <p>Preço de venda ao público recomendado em todas as fichas. Preço de revenda, mínimos e escalões para contas validadas.</p>
-    </div>
-    <div class="rail" role="group" aria-label="Famílias" id="rail"></div>
-    <div class="filters" role="group" aria-label="Filtrar e ordenar">
-      <span class="filters__lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg>Filtrar</span>
-      <label class="sel"><span>Família</span><select id="f-fam"><option value="">Todas</option></select></label>
-      <label class="sel"><span>Material</span><select id="f-mat"><option value="">Todos</option><option value="ouro">Banho de ouro 18K</option><option value="aco">Aço 316L</option><option value="perola">Pérola</option><option value="zirconia">Zircónia</option></select></label>
-      <label class="sel"><span>Ordenar</span><select id="f-ord"><option value="">Destaques</option><option value="pvp-asc">PVP: mais baixo</option><option value="pvp-desc">PVP: mais alto</option><option value="ref">Referência</option></select></label>
-      <div class="viewtog" role="group" aria-label="Vista">
-        <button type="button" data-view="grid" aria-pressed="true"><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="0" y="0" width="6" height="6"/><rect x="8" y="0" width="6" height="6"/><rect x="0" y="8" width="6" height="6"/><rect x="8" y="8" width="6" height="6"/></svg>Grelha</button>
-        <button type="button" data-view="list" aria-pressed="false"><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="0" y="1" width="14" height="2"/><rect x="0" y="6" width="14" height="2"/><rect x="0" y="11" width="14" height="2"/></svg>Lista</button>
-      </div>
-      <button class="chip" type="button" id="f-clear">Limpar</button>
-      <span class="count" id="f-count" aria-live="polite"></span>
-    </div>
-    <div class="grid" id="grid"></div>
-  </div>
-</div>
-
-<div data-view-section="produto" class="view-light" hidden>
-  <div class="wrap" id="pdp"></div>
-</div>
-
-<div data-view-section="pedido" class="view-light" hidden>
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><a href="#/catalogo">Catálogo</a><span aria-hidden="true">/</span><span>Pedido de proposta</span></nav>
-    <div class="cat-head"><h1 class="display" tabindex="-1" data-focus>Pedido de proposta</h1><p>Junte referências e quantidades. Validamos os mínimos linha a linha e respondemos com preço e prazo.</p></div>
-    <ol class="steps" id="steps" aria-label="Progresso do pedido"><li>Produtos</li><li>Os seus dados</li><li>Confirmar</li><li>Enviado</li></ol>
-    <div class="rfq">
-      <div>
-        <table class="lines" aria-describedby="rfq-live"><thead><tr><th scope="col">Referência</th><th scope="col">Produto</th><th scope="col">Mín.</th><th scope="col">Quantidade</th><th scope="col">Estado</th><th scope="col"><span class="sr-only">Remover</span></th></tr></thead><tbody id="lines"></tbody></table>
-        <p class="msg" id="rfq-live" aria-live="polite" style="margin-top:10px"></p>
-        <div class="box" style="margin-top:28px">
-          <div class="field"><label for="paste">Colar lista de referências</label><p class="hint" id="paste-h">Uma linha por referência: <span class="mono">LB-1003;24</span></p><textarea id="paste" rows="4" aria-describedby="paste-h"></textarea></div>
-          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-            <button class="btn btn--sm" type="button" id="paste-add">Adicionar linhas</button>
-            <label class="btn btn--sm btn--ghost" for="csv" style="color:var(--fg)">Importar CSV</label><input id="csv" type="file" accept=".csv,text/csv" class="sr-only">
-            <a class="link" href="#/catalogo">Continuar no catálogo</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <form class="form box" id="rfqForm" novalidate>
-          <div class="field"><label for="q-emp">Empresa</label><input id="q-emp" autocomplete="organization" required></div>
-          <div class="field"><label for="q-nif">NIF</label><input id="q-nif" inputmode="numeric" maxlength="11" required aria-describedby="q-nif-msg"><p class="msg" id="q-nif-msg" aria-live="polite"></p></div>
-          <div class="field"><label for="q-mail">E-mail</label><input id="q-mail" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="q-obs">Observações</label><textarea id="q-obs" rows="3"></textarea></div>
-          <div class="field"><label for="q-ref">Imagem de referência (opcional)</label><p class="hint" id="q-ref-h">Por exemplo, uma peça que um cliente pediu. A imagem fica apenas no seu dispositivo: anexe-a ao e-mail do pedido.</p><div class="filepick"><input id="q-ref" class="filepick__input" type="file" accept="image/*" aria-describedby="q-ref-h q-ref-name"><span class="btn btn--ghost filepick__btn" aria-hidden="true">Escolher imagem</span><span class="filepick__name" id="q-ref-name">Nenhuma imagem escolhida</span></div><div class="refprev" id="q-ref-prev" hidden></div></div>
-          <label class="check"><input type="checkbox" id="q-consent" required><span>Aceito que a LM BIJU use estes dados para responder a este pedido.</span></label>
-          <p class="msg" id="q-msg" aria-live="polite"></p>
-          <button class="btn" type="submit">Enviar pedido de proposta</button>
-          <p class="note">Ao enviar, descarregamos o ficheiro CSV do pedido e preparamos o e-mail para a equipa comercial com o número do pedido.</p>
-        </form>
-        <div class="result" id="rfqResult" hidden tabindex="-1" style="margin-top:20px"></div>
-      </div>
-    </div>
-  </div>
-</div>
+  
 </main>
-
 <footer class="ftr">
   <div><b>LM BIJU, Lda.</b>Zona Industrial da Varziela<br>Vila do Conde · Portugal</div>
-  <div><b>Área profissional</b><a href="#/?s=registo">Criar conta</a><br><a href="#/pedido">Pedido de proposta</a><br><a href="#/catalogo">Catálogo</a></div>
+  <div><b>Área profissional</b><a href="demo-b.html#/?s=registo">Criar conta</a><br><a href="demo-b.html#/pedido">Pedido de proposta</a><br><a href="demo-b.html#/catalogo">Catálogo</a></div>
   <div><b>Contacto comercial</b><a href="mailto:geral@lmbiju.pt">geral@lmbiju.pt</a><br>WhatsApp +351 000 000 000</div>
-  <div class="ftr__legal">
-    <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações <span class="sr-only">(abre noutra janela)</span></a>
-    <span>Imagens marcadas "Imagem ilustrativa gerada por IA" são ilustrativas e não representam referências do catálogo.</span>
-    <span>© LM BIJU · Demonstração de design</span>
-  </div>
+  <div class="ftr__legal"><a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações <span class="sr-only">(abre noutra janela)</span></a><span>Imagens marcadas "Imagem ilustrativa gerada por IA" são ilustrativas e não representam referências do catálogo.</span><span>© LM BIJU · Demonstração de design</span></div>
 </footer>
-
-<dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada"><img alt=""><button type="button" data-close>Fechar</button></dialog>
 <div class="cur cur-dot" aria-hidden="true"></div>
 <div class="cur cur-ring" aria-hidden="true"><span>Ver</span></div>
 <div class="sr-only" aria-live="polite" id="live"></div>
-
 <script src="vendor/gsap.min.js" defer></script>
 <script src="vendor/ScrollTrigger.min.js" defer></script>
 <script src="vendor/lenis.min.js" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{'use strict';
-/*__JS_CORE_START__*/
+
 const A='../_research/demo-b/assets/';
 const SALES_EMAIL='geral@lmbiju.pt';
 const RM=matchMedia('(prefers-reduced-motion: reduce)');
@@ -1043,201 +849,14 @@ function homeMotion(){if(!hasGSAP||reduced())return;
   if(fine&&window.Lenis){lenis=new Lenis({lerp:.1,anchors:true});lenis.on('scroll',ScrollTrigger.update);lenisTick=t=>lenis.raf(t*1000);gsap.ticker.add(lenisTick);gsap.ticker.lagSmoothing(0)}
   ScrollTrigger.refresh()}
 function homeMotionOff(){if(mm){mm.revert();mm=null}if(lenis){gsap.ticker.remove(lenisTick);lenis.destroy();lenis=null}}
-/*__JS_CORE_END__*/
 
-/* data (demonstração) */
-const eur=new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR'});
-const x1=new Intl.NumberFormat('pt-PT',{minimumFractionDigits:1,maximumFractionDigits:1});
-const FAM={aneis:'Anéis',brincos:'Brincos',colares:'Colares',pulseiras:'Pulseiras',relogios:'Relógios',homem:'Homem',loja:'Loja & montra'};
-const MAT={ouro:'Banho de ouro 18K',aco:'Aço 316L',perola:'Pérola',zirconia:'Zircónia',none:'Acessório de loja'};
-const MATINFO={
-  ouro:'Camada de ouro 18K aplicada sobre base de aço inoxidável 316L: a cor e o brilho do ouro com a resistência do aço. Para conservar o brilho, evite perfume e produtos de limpeza diretamente na peça e guarde-a em bolsa individual.',
-  aco:'Aço inoxidável AISI 316L, a liga usada em caixas de relógio. Não escurece com o uso diário e resiste à água e ao suor. Limpe com um pano macio.',
-  perola:'Pérola sintética montada em base de aço 316L. Evite o contacto com perfume e cremes; limpe com um pano seco.',
-  zirconia:'Zircónias cúbicas lapidadas, montadas em base com banho de ouro 18K. Limpe com uma escova macia e água morna.',
-  none:'Acessório de loja para balcão e montra. Dimensões e composição na ficha técnica, enviada a pedido.'};
-const L=(id,w)=>({p:`legacy/legacy-${id}-prod`,w});
-const P=[
- {sku:'LB-1001',name:'Anel Pavé Dourado',fam:'aneis',mat:'ouro',pvp:24.90,moq:6,img:L('hero-ouro',[480,840]),alt:'Anel pavé com banho de ouro 18K sobre pedras brancas',specs:['Banho de ouro 18K','Zircónias em pavé','Ajustável']},
- {sku:'LB-1002',name:'Colar Corrente Fina Dourada',fam:'colares',mat:'ouro',pvp:18.00,moq:6,img:L('colar-topazio',[480,840]),alt:'Corrente fina com banho de ouro 18K sobre disco de vidro',specs:['Banho de ouro 18K','45 cm + extensor','Fecho de mosquetão']},
- {sku:'LB-1003',name:'Argolas Largas Polidas',fam:'brincos',mat:'ouro',pvp:15.50,moq:6,img:L('argolas-pave',[480,840]),alt:'Argolas largas polidas com banho de ouro 18K',specs:['Banho de ouro 18K','Base aço 316L','Fecho de clique']},
- {sku:'LB-1004',name:'Conjunto Brincos e Pulseira',fam:'pulseiras',mat:'ouro',pvp:29.90,moq:3,img:L('pulseira-rosa',[480,840]),alt:'Pulseiras de corrente com pendentes e argolas douradas em tabuleiro de vidro',specs:['Banho de ouro 18K','2 peças','Pendentes com zircónia']},
- {sku:'LB-1005',name:'Colares Olho Grego — Mix',fam:'colares',mat:'ouro',pvp:12.50,moq:12,img:L('cat-colares',[480,840]),alt:'Taça com colares dourados e contas olho grego azuis',specs:['Banho de ouro','Contas olho grego','Sortido por caixa']},
- {sku:'LB-1006',name:'Brincos de Pérola Clássicos',fam:'brincos',mat:'perola',pvp:9.99,moq:12,img:L('brincos-safira',[480,840,960]),alt:'Brincos de argola com pérola pendente sobre tabuleiro branco',specs:['Pérola sintética','Base aço 316L','Argola pequena']},
- {sku:'LB-1007',name:'Anéis Zircónia Cor — Série 7',fam:'aneis',mat:'zirconia',pvp:19.90,moq:7,img:L('hero-still',[480,840]),alt:'Sete anéis dourados com zircónias de cores diferentes',specs:['Banho de ouro 18K','Zircónias de cor','Série de 7 cores']},
- {sku:'LB-1008',name:'Relógio Bracelete Milanesa',fam:'relogios',mat:'aco',pvp:39.00,moq:3,img:L('cat-relogios',[480,840]),alt:'Relógio com bracelete milanesa em aço sobre carteira de pele',specs:['Caixa em aço','Bracelete milanesa','Quartzo']},
- {sku:'LB-1009',name:'Fio com Cruz — Homem',fam:'homem',mat:'ouro',pvp:22.00,moq:6,img:L('cat-homem',[480,840,1200]),alt:'Fio dourado com pendente em cruz sobre t-shirt branca',specs:['Banho de ouro 18K','Pendente cruz','60 cm']},
- {sku:'LB-1011',name:'Anéis Finos Lisos — Par',fam:'aneis',mat:'ouro',pvp:12.75,moq:6,img:L('cat-aneis',[480,840]),alt:'Dois anéis finos lisos dourados sobre seixos brancos',specs:['Banho de ouro 18K','Par','Polido']},
- {sku:'LB-1012',name:'Anel Script “Love”',fam:'aneis',mat:'ouro',pvp:14.90,moq:6,img:L('cat-pulseiras',[480,840]),alt:'Anel dourado com a palavra love em letra manuscrita sobre malha de lã',specs:['Banho de ouro 18K','Ajustável','Letra manuscrita']},
- {sku:'LB-1013',name:'Corrente Cubana — Homem',fam:'homem',mat:'aco',pvp:28.00,moq:6,img:L('hero-aco',[480,840,1200]),alt:'Corrente cubana em aço 316L sobre fundo preto',specs:['Aço 316L','60 cm','Elos 6 mm']},
- {sku:'LB-1010',name:'Brincos Mármore Banho de Ouro',fam:'brincos',mat:'ouro',pvp:27.50,moq:6,img:null,desc:'Discos em resina efeito mármore com banho de ouro 18K. Leves para uso diário.',specs:['Resina efeito mármore','Banho de ouro 18K']},
- {sku:'LB-1016',name:'Pulseira Tennis Zircónia',fam:'pulseiras',mat:'zirconia',pvp:23.00,moq:6,img:null,desc:'Fiada contínua de zircónias em base com banho de ouro 18K, 18 cm.',specs:['Banho de ouro 18K','Zircónias','18 cm']},
- {sku:'LB-1014',name:'Pulseira de Elos — Homem',fam:'homem',mat:'aco',pvp:21.00,moq:6,img:null,desc:'Elos planos em aço 316L escovado, fecho dobrável polido, 21 cm.',specs:['Aço 316L','21 cm']},
- {sku:'LB-1015',name:'Anéis Aço Escovado — Pack 3',fam:'aneis',mat:'aco',pvp:12.75,moq:6,img:null,desc:'Três aros lisos em aço 316L com acabamento escovado, larguras diferentes.',specs:['Aço 316L','Pack de 3','Escovado']},
- {sku:'LB-2002',name:'Relógio + Braceletes Intercambiáveis',fam:'relogios',mat:'aco',pvp:34.00,moq:3,img:null,desc:'Caixa em aço com duas braceletes de troca rápida.',specs:['Caixa em aço','2 braceletes']},
- {sku:'LB-2001',name:'Taça de Madeira para Montra',fam:'loja',mat:'none',pvp:14.00,moq:4,img:null,desc:'Taça em madeira para expor anéis e brincos ao balcão.',specs:['Madeira']},
- {sku:'LB-2003',name:'Kit de Embalagem Kraft',fam:'loja',mat:'none',pvp:8.50,moq:10,img:null,desc:'Caixa, saco e cartão em papel kraft, sem impressão.',specs:['Caixa + saco + cartão']},
-];
-const BY=Object.fromEntries(P.map(p=>[p.sku,p]));
-const r05=x=>Math.round(x*20)/20;
-const tiers=p=>{const b=r05(p.pvp/1.23/2.4);return [[p.moq,b],[p.moq*4,r05(b*.92)],[p.moq*16,r05(b*.85)]]};
-const margin=(p,price)=>(p.pvp/1.23)/price;
-const tierFor=(p,q)=>{const t=tiers(p);let cur=t[0];for(const r of t)if(q>=r[0])cur=r;return cur};
-function picture(img,{alt,sizes,eager=false,vt=''}){
-  const set=ext=>img.w.map(w=>`${A}${img.p}-${w}.${ext} ${w}w`).join(', ');const big=img.w[img.w.length-1];
-  return `<picture><source type="image/avif" srcset="${set('avif')}" sizes="${sizes}"><source type="image/webp" srcset="${set('webp')}" sizes="${sizes}"><img src="${A}${img.p}-${big}.jpg" width="${big}" height="${Math.round(big*1.25)}" alt="${esc(alt)}" ${eager?'':'loading="lazy"'} decoding="async"${vt?` style="view-transition-name:${vt}"`:''}></picture>`}
-const lockSvg='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>';
-function nifValid(v){const d=String(v).replace(/\s/g,'');if(!/^\d{9}$/.test(d))return false;
-  const ok1=['1','2','3','5','6','8','9'].includes(d[0])||['45','70','71','72','74','75','77','79','90','91','98','99'].includes(d.slice(0,2));if(!ok1)return false;
-  let s=0;for(let i=0;i<8;i++)s+=+d[i]*(9-i);const r=s%11;const c=r<2?0:11-r;return c===+d[8]}
-function bindNif(input,msg,cb){input.addEventListener('input',()=>{const v=input.value.replace(/\D/g,'');if(v.length<9){msg.textContent='';msg.className='msg';input.removeAttribute('aria-invalid');cb&&cb();return}
-  const ok=nifValid(v);msg.textContent=ok?'NIF válido.':'NIF inválido: verifique os 9 dígitos.';msg.className='msg '+(ok?'ok':'err');input.setAttribute('aria-invalid',ok?'false':'true');cb&&cb()})}
-const emailOk=v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
-function fixQty(p,q){q=parseInt(q,10);if(!Number.isFinite(q)||q<p.moq)q=p.moq;return Math.ceil(q/p.moq)*p.moq}
 
-const S={session:ss.get('lmb-session')==='1',rfq:store.get('lmb-rfq',[]),sent:false};
-function saveRFQ(){store.set('lmb-rfq',S.rfq);$('[data-rfq-count]').textContent=S.rfq.length;steps()}
-function setSession(on){S.session=on;html.classList.toggle('session',on);$('[data-session-toggle]').setAttribute('aria-pressed',String(on));ss.set('lmb-session',on?'1':'0');
-  live(on?'Vista de cliente profissional ativa: preços de revenda de exemplo visíveis.':'Vista de visitante.');rerender()}
-$('[data-session-toggle]').addEventListener('click',()=>setSession(!S.session));
-function addRFQ(sku,qty){const p=BY[sku];if(!p)return;qty=fixQty(p,qty);const l=S.rfq.find(x=>x.sku===sku);if(l)l.qty=fixQty(p,l.qty+qty);else S.rfq.push({sku,qty});saveRFQ();live(`${p.name}: ${qty} unidades adicionadas ao pedido.`)}
+/* showcase: mini tier widget (MOQ + escalões) */
+(()=>{const q=$('#sc-qty');if(!q)return;const rows=$$('.sc-tiers tbody tr');const price={6:5.25,24:4.85,96:4.45};const eur=new Intl.NumberFormat('pt-PT',{style:'currency',currency:'EUR'});
+  const upd=()=>{let v=parseInt(q.value,10);if(!Number.isFinite(v)||v<6)v=6;v=Math.ceil(v/6)*6;if(String(v)!==q.value)q.value=v;let t=6;rows.forEach(r=>{if(v>=+r.dataset.min)t=+r.dataset.min});rows.forEach(r=>r.classList.toggle('on',+r.dataset.min===t));$('#sc-total').textContent=`${v} × ${eur.format(price[t])} = ${eur.format(v*price[t])} sem IVA`};
+  q.addEventListener('change',upd);upd()})();
+Hero.start();Scrub.enter();homeMotion();
 
-/* tabs */
-(()=>{const tabs=$$('[role="tab"]');const sel=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});t.focus()};
-  tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight')sel(tabs[(i+1)%tabs.length]);if(e.key==='ArrowLeft')sel(tabs[(i-1+tabs.length)%tabs.length])})})})();
-
-/* registo */
-bindNif($('#r-nif'),$('#r-nif-msg'));
-$('#regForm').addEventListener('submit',e=>{e.preventDefault();const f=e.target,msg=$('#r-msg');const d=Object.fromEntries(new FormData(f));const errs=[];
-  if(!d.empresa.trim())errs.push('empresa');if(!nifValid(d.nif))errs.push('NIF válido');if(!d.tipo)errs.push('tipo de negócio');if(!emailOk(d.email))errs.push('e-mail');if(!d.consent)errs.push('consentimento');
-  if(errs.length){msg.className='msg err';msg.textContent='Falta preencher: '+errs.join(', ')+'.';return}
-  const href=mailto('Pedido de acesso profissional — '+d.empresa,`Pedido de acesso profissional\n\nEmpresa: ${d.empresa}\nNIF: ${d.nif}\nTipo de negócio: ${d.tipo}\nE-mail: ${d.email}\n`);
-  const r=$('#regResult');r.hidden=false;r.innerHTML=`<p class="eyebrow">Pedido preparado</p><p>Abrimos o e-mail para a equipa comercial no seu programa de correio. Basta enviar. Se não abriu, <a class="link" href="${href}">abra-o aqui</a>.</p>`;
-  f.hidden=true;r.focus();location.href=href});
-
-/* catálogo */
-const Cat={fam:'',mat:'',ord:'',view:store.get('lmb-view','grid')};
-function readQ(q){Cat.fam=FAM[q.get('fam')]?q.get('fam'):'';Cat.mat=MAT[q.get('mat')]?q.get('mat'):'';Cat.ord=['pvp-asc','pvp-desc','ref'].includes(q.get('ord'))?q.get('ord'):''}
-function writeQ(){const q=new URLSearchParams();if(Cat.fam)q.set('fam',Cat.fam);if(Cat.mat)q.set('mat',Cat.mat);if(Cat.ord)q.set('ord',Cat.ord);history.replaceState(null,'','#/catalogo'+(q.toString()?'?'+q:''))}
-$('#f-fam').insertAdjacentHTML('beforeend',Object.entries(FAM).map(([k,v])=>`<option value="${k}">${v}</option>`).join(''));
-const TILES=[['aneis','Anéis',{p:'legacy/legacy-hero-ouro-prod',w:[480]}],['brincos','Brincos',{p:'legacy/legacy-argolas-pave-prod',w:[480]}],['colares','Colares',{p:'legacy/legacy-colar-topazio-prod',w:[480]}],['pulseiras','Pulseiras',{p:'legacy/legacy-pulseira-rosa-prod',w:[480]}],['relogios','Relógios',{p:'legacy/legacy-cat-relogios-prod',w:[480]}],['homem','Homem',{p:'legacy/legacy-cat-homem-prod',w:[480]}],['loja','Embalagens',{p:'mj/mj-g6-0-tile',w:[480,576]},1],['loja','Expositores',{p:'mj/mj-g7-3-tile',w:[480,576]},1]];
-function renderRail(){$('#rail').innerHTML=TILES.map(([k,label,img,ai])=>`<button class="tile" type="button" data-fam="${k}" aria-pressed="${Cat.fam===k}"><div class="frame">${picture(img,{alt:'',sizes:'210px'})}</div><span>${label}</span>${ai?'<small>Imagem ilustrativa gerada por IA</small>':''}</button>`).join('')}
-function syncControls(){$('#f-fam').value=Cat.fam;$('#f-mat').value=Cat.mat;$('#f-ord').value=Cat.ord;$$('.viewtog button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===Cat.view)))}
-function priceHTML(p){
-  if(!S.session)return `<div class="price price--lock">${lockSvg}<span>Preço de revenda</span><a href="#/?s=registo">Criar conta</a><span aria-hidden="true">·</span><button type="button" class="linkbtn" data-demo-login>Ver como cliente</button></div>`;
-  const t=tiers(p);return `<div class="price"><span>desde</span><strong>${eur.format(t[t.length-1][1])}</strong><span class="mono">mín. ${p.moq} · múltiplos de ${p.moq}</span><span class="mono">margem até ×${x1.format(margin(p,t[t.length-1][1]))}</span></div>`}
-function cardHTML(p,h='h2'){const tag=`<span class="tag tag--${p.mat}">${MAT[p.mat]}</span>`;
-  const media=p.img?`<a class="card__media" href="#/produto/${p.sku}" data-cursor="Ver" data-vt-src aria-label="${esc(p.name)}">${picture(p.img,{alt:p.alt,sizes:'(min-width: 1200px) 30vw, (min-width: 768px) 46vw, 92vw'})}</a>`
-   :`<a class="card__media card__media--pending" href="#/produto/${p.sku}" aria-label="${esc(p.name)} — fotografia em preparação"><span><b>Fotografia em preparação</b>${p.sku}</span></a>`;
-  return `<article class="card" data-sku="${p.sku}">${media}<div class="card__body"><${h} class="card__name"><a href="#/produto/${p.sku}">${esc(p.name)}</a></${h}><p class="card__meta">${tag}<span class="mono sku">${p.sku}</span></p><p class="card__pvp">PVP recomendado <b class="num">${eur.format(p.pvp)}</b></p>${priceHTML(p)}<div class="card__actions"><label class="sr-only" for="q-${h}-${p.sku}">Quantidade de ${esc(p.name)} (múltiplos de ${p.moq})</label><input class="qty" id="q-${h}-${p.sku}" type="number" inputmode="numeric" min="${p.moq}" step="${p.moq}" value="${p.moq}" data-moq-for="${p.sku}"><button class="btn-add" type="button" data-add="${p.sku}">+ Pedido de proposta</button></div></div></article>`}
-function renderGrid(){let list=P.filter(p=>(!Cat.fam||p.fam===Cat.fam)&&(!Cat.mat||p.mat===Cat.mat));
-  if(Cat.ord==='pvp-asc')list.sort((a,b)=>a.pvp-b.pvp);else if(Cat.ord==='pvp-desc')list.sort((a,b)=>b.pvp-a.pvp);else if(Cat.ord==='ref')list.sort((a,b)=>a.sku.localeCompare(b.sku));else list=[...list.filter(p=>p.img),...list.filter(p=>!p.img)];
-  const g=$('#grid');g.classList.toggle('is-list',Cat.view==='list');g.innerHTML=list.map(p=>cardHTML(p)).join('')||'<p>Nenhuma referência com estes filtros.</p>';$('#f-count').textContent=`${list.length} referência${list.length===1?'':'s'}`}
-function renderCatalog(q){readQ(q);renderRail();syncControls();renderGrid()}
-function refilter(){writeQ();renderRail();syncControls();renderGrid()}
-$('#f-fam').addEventListener('change',e=>{Cat.fam=e.target.value;refilter()});
-$('#f-mat').addEventListener('change',e=>{Cat.mat=e.target.value;refilter()});
-$('#f-ord').addEventListener('change',e=>{Cat.ord=e.target.value;refilter()});
-$('#f-clear').addEventListener('click',()=>{Cat.fam='';Cat.mat='';Cat.ord='';refilter()});
-document.addEventListener('click',e=>{
-  const v=e.target.closest('.viewtog [data-view]');if(v){Cat.view=v.dataset.view;store.set('lmb-view',Cat.view);syncControls();renderGrid();return}
-  const fam=e.target.closest('[data-fam]');if(fam){Cat.fam=Cat.fam===fam.dataset.fam?'':fam.dataset.fam;refilter();return}
-  const add=e.target.closest('[data-add]');if(add){const inp=add.closest('.card__actions').querySelector('input');addRFQ(add.dataset.add,inp?inp.value:BY[add.dataset.add].moq);add.textContent='Adicionado ✓';setTimeout(()=>{add.textContent='+ Pedido de proposta'},1600);return}
-  if(e.target.closest('[data-demo-login]')){setSession(true);return}
-  const vt=e.target.closest('[data-vt-src]');if(vt){$$('[style*="view-transition-name"]').forEach(el=>{el.style.viewTransitionName=''});const img=vt.querySelector('img');if(img)img.style.viewTransitionName='prod-img'}
-});
-document.addEventListener('change',e=>{const i=e.target.closest('[data-moq-for]');if(!i)return;const p=BY[i.dataset.moqFor];const q=fixQty(p,i.value);if(String(q)!==i.value){i.value=q;live(`Quantidade ajustada para ${q} (mínimo ${p.moq}, múltiplos de ${p.moq}).`)}
-  if(i.id==='pdp-qty')updateTiers(p,q)});
-
-/* produto */
-function updateTiers(p,q){const t=tierFor(p,q);$$('.tiers tbody tr').forEach(tr=>tr.classList.toggle('on',+tr.dataset.min===t[0]));const tot=$('#pdp-total');if(tot)tot.textContent=`${q} × ${eur.format(t[1])} = ${eur.format(q*t[1])} sem IVA`}
-function renderPDP(sku){const p=BY[sku];const box=$('#pdp');if(!p){box.innerHTML='<h1 class="display" tabindex="-1" data-focus>Referência não encontrada</h1><p><a class="link" href="#/catalogo">Voltar ao catálogo</a></p>';return}
-  const t=tiers(p);
-  const gallery=p.img?`<button type="button" data-lightbox="${A}${p.img.p}-${p.img.w[p.img.w.length-1]}.jpg" data-alt="${esc(p.alt)}" data-cursor="Ampliar" aria-label="Ampliar imagem de ${esc(p.name)}">${picture(p.img,{alt:p.alt,sizes:'(min-width: 900px) 55vw, 100vw',eager:true,vt:'prod-img'})}</button><small>Clique para ver em câmara escura.</small>`
-   :`<div class="card__media card__media--pending" style="aspect-ratio:4/5"><span><b>Fotografia em preparação</b>${p.sku}</span></div>`;
-  const qtyRow=`<div class="card__actions" style="margin-top:16px"><label class="sr-only" for="pdp-qty">Quantidade (múltiplos de ${p.moq})</label><input class="qty" id="pdp-qty" type="number" inputmode="numeric" min="${p.moq}" step="${p.moq}" value="${p.moq}" data-moq-for="${p.sku}"><button class="btn-add" type="button" data-add="${p.sku}">+ Pedido de proposta</button></div>`;
-  const price=S.session?`<table class="tiers"><caption class="sr-only">Escalões de preço de revenda (exemplo)</caption><thead><tr><th scope="col">Quantidade</th><th scope="col">Preço / un. sem IVA</th><th scope="col">Margem</th></tr></thead><tbody>${t.map((r,i)=>`<tr data-min="${r[0]}" class="${i===0?'on':''}"><td>${r[0]}${i<t.length-1?'–'+(t[i+1][0]-1):'+'}</td><td>${eur.format(r[1])}</td><td>×${x1.format(margin(p,r[1]))}</td></tr>`).join('')}</tbody></table>
-     <p class="mono" style="color:var(--fg3)">Margem = PVP sem IVA ÷ preço de revenda · valores de exemplo</p>${qtyRow}<p class="mono" id="pdp-total" style="margin-top:10px;color:var(--fg2)"></p><p style="margin-top:6px;font-size:14px;color:var(--ok)">● Disponível para envio</p>`
-   :`<div class="gate"><p><strong>Preço de revenda, escalões e disponibilidade</strong> aparecem para contas profissionais validadas.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--sm" href="#/?s=registo">Criar conta profissional</a><button class="btn btn--sm btn--ghost" type="button" data-demo-login>Ver como cliente</button></div><p style="font-size:14px">Pode pedir proposta sem conta:</p>${qtyRow}</div>`;
-  const rel=P.filter(x=>x.sku!==p.sku&&x.img&&x.fam===p.fam).concat(P.filter(x=>x.sku!==p.sku&&x.img&&x.fam!==p.fam)).slice(0,3);
-  box.innerHTML=`<nav class="crumbs" aria-label="Localização"><a href="#/">Início</a><span aria-hidden="true">/</span><a href="#/catalogo">Catálogo</a><span aria-hidden="true">/</span><a href="#/catalogo?fam=${p.fam}">${FAM[p.fam]}</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
-   <div class="pdp" style="margin-top:24px"><div class="pdp__gallery">${gallery}</div><div class="pdp__info"><p class="eyebrow">${FAM[p.fam]} · ${MAT[p.mat]}</p><h1 tabindex="-1" data-focus>${esc(p.name)}</h1>
-   <div class="skuline"><span class="mono">REF ${p.sku}</span><button type="button" data-copy="${p.sku}">Copiar referência</button></div>
-   ${p.desc?`<p style="margin-top:14px;color:var(--fg2)">${esc(p.desc)}</p>`:''}
-   <p style="margin-top:14px;font-size:15px;color:var(--fg2)">PVP recomendado <b class="num" style="color:var(--fg);font-size:20px;font-weight:500">${eur.format(p.pvp)}</b> <span class="mono">com IVA</span></p>
-   <p class="mono" style="margin-top:6px;color:var(--fg3)">Mínimo ${p.moq} un. · múltiplos de ${p.moq}</p>${price}
-   <div class="acc">
-    <details open><summary>Especificações</summary><div class="acc__body"><dl class="specs">${p.specs.map((s,i)=>`<div><dt>${['Material','Detalhe','Medida'][i]||'Detalhe'}</dt><dd>${esc(s)}</dd></div>`).join('')}<div><dt>Unidade de venda</dt><dd>Unidade</dd></div></dl></div></details>
-    <details><summary>Detalhes do material</summary><div class="acc__body"><p>${MATINFO[p.mat]}</p></div></details>
-    <details><summary>Conformidade e ficha técnica</summary><div class="acc__body"><p>Informação sobre materiais e conformidade com o regulamento europeu REACH enviada a pedido, por referência. <a class="link" href="${mailto('Ficha técnica '+p.sku,'Pedido de ficha técnica para a referência '+p.sku+'.\n\nEmpresa:\nNIF:\n')}">Pedir ficha técnica</a></p></div></details>
-   </div></div></div>
-   <section class="related" aria-labelledby="rel-t"><h2 id="rel-t">Da mesma família</h2><div class="grid">${rel.map(x=>cardHTML(x,'h3')).join('')}</div></section>`;
-  if(S.session)updateTiers(p,p.moq)}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b){(navigator.clipboard?navigator.clipboard.writeText(b.dataset.copy):Promise.reject()).then(()=>{b.textContent='Copiada ✓';live('Referência copiada.')},()=>{b.textContent=b.dataset.copy});return}
-  const lb=e.target.closest('[data-lightbox]');if(lb){const d=$('#lightbox');const im=d.querySelector('img');im.src=lb.dataset.lightbox;im.alt=lb.dataset.alt;d.showModal()}});
-$('#lightbox').addEventListener('click',e=>{if(e.target.closest('[data-close]')||e.target===e.currentTarget)e.currentTarget.close()});
-
-/* pedido */
-function formState(){return {emp:$('#q-emp').value.trim(),nif:$('#q-nif').value.replace(/\D/g,''),mail:$('#q-mail').value.trim(),obs:$('#q-obs').value.trim(),consent:$('#q-consent').checked}}
-function steps(){const el=$('#steps');if(!el)return;const d=formState();const s1=S.rfq.length>0,s2=!!(s1&&d.emp&&nifValid(d.nif)&&emailOk(d.mail)),s3=s2&&d.consent,s4=S.sent;
-  const done=[s1,s2,s3,s4];const cur=done.indexOf(false);$$('li',el).forEach((li,i)=>{li.classList.toggle('done',done[i]);if(i===cur)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current')})}
-['#q-emp','#q-mail'].forEach(s=>$(s).addEventListener('input',steps));$('#q-consent').addEventListener('change',steps);
-function renderRFQ(){const tb=$('#lines');steps();if(!S.rfq.length){tb.innerHTML=`<tr><td colspan="6" style="color:var(--fg3)">Ainda sem linhas. Adicione a partir do catálogo, cole uma lista ou importe um CSV.</td></tr>`;return}
-  tb.innerHTML=S.rfq.map((l,i)=>{const p=BY[l.sku];const ok=l.qty>=p.moq&&l.qty%p.moq===0;return `<tr><td class="mono">${p.sku}</td><td>${esc(p.name)}</td><td class="num">${p.moq}</td><td><label class="sr-only" for="l-${i}">Quantidade ${p.sku}</label><input class="qty" id="l-${i}" type="number" min="${p.moq}" step="${p.moq}" value="${l.qty}" data-line="${i}"></td><td class="${ok?'st-ok':'st-warn'}">${ok?'OK':'Ajustar'}</td><td><button type="button" data-del="${i}" aria-label="Remover ${p.sku}">Remover</button></td></tr>`}).join('')}
-document.addEventListener('change',e=>{const i=e.target.closest('[data-line]');if(!i)return;const l=S.rfq[+i.dataset.line];const p=BY[l.sku];const q=fixQty(p,i.value);if(String(q)!==i.value)$('#rfq-live').textContent=`${p.sku}: quantidade ajustada para ${q} (mínimo ${p.moq}, múltiplos de ${p.moq}).`;l.qty=q;saveRFQ();renderRFQ()});
-document.addEventListener('click',e=>{const d=e.target.closest('[data-del]');if(!d)return;const l=S.rfq.splice(+d.dataset.del,1)[0];saveRFQ();renderRFQ();$('#rfq-live').textContent=`${l.sku} removida.`});
-function ingest(text){const rows=text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);let ok=0;const bad=[],adj=[];
-  for(const r of rows){const [skuRaw,qRaw]=r.split(/[;,\t]/);const sku=(skuRaw||'').trim().toUpperCase();if(!BY[sku]){if(!/sku|refer/i.test(skuRaw||''))bad.push(skuRaw);continue}
-    const want=parseInt(qRaw,10)||BY[sku].moq;const q=fixQty(BY[sku],want);if(q!==want)adj.push(`${sku}→${q}`);const l=S.rfq.find(x=>x.sku===sku);if(l)l.qty=fixQty(BY[sku],l.qty+q);else S.rfq.push({sku,qty:q});ok++}
-  saveRFQ();renderRFQ();$('#rfq-live').textContent=`${ok} linha(s) adicionada(s).`+(adj.length?` Ajustadas ao mínimo: ${adj.join(', ')}.`:'')+(bad.length?` Referências desconhecidas: ${bad.join(', ')}.`:'')}
-$('#paste-add').addEventListener('click',()=>{ingest($('#paste').value);$('#paste').value=''});
-$('#csv').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>ingest(String(r.result));r.readAsText(f);e.target.value=''});
-let refName='';$('#q-ref').addEventListener('change',e=>{const f=e.target.files[0];const box=$('#q-ref-prev');$('#q-ref-name').textContent=f?f.name:'Nenhuma imagem escolhida';if(!f){box.hidden=true;refName='';return}refName=f.name;box.hidden=false;box.innerHTML=`<img src="${URL.createObjectURL(f)}" alt="Pré-visualização da imagem de referência"><span>${esc(f.name)} · fica no seu dispositivo; anexe-a ao e-mail.</span>`});
-bindNif($('#q-nif'),$('#q-nif-msg'),steps);
-$('#rfqForm').addEventListener('submit',e=>{e.preventDefault();const msg=$('#q-msg');const d=formState();const errs=[];
-  if(!S.rfq.length)errs.push('pelo menos uma linha');if(!d.emp)errs.push('empresa');if(!nifValid(d.nif))errs.push('NIF válido');if(!emailOk(d.mail))errs.push('e-mail');if(!d.consent)errs.push('consentimento');
-  if(errs.length){msg.className='msg err';msg.textContent='Falta: '+errs.join(', ')+'.';return}
-  const now=new Date();const id=`RFQ-${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
-  const head=`pedido;${id}\nempresa;${d.emp}\nnif;${d.nif}\nemail;${d.mail}\ndata;${now.toISOString()}\n${refName?'imagem_referencia;'+refName+'\n':''}\nreferencia;produto;quantidade;minimo;pvp_recomendado\n`;
-  const csv='﻿'+head+S.rfq.map(l=>{const p=BY[l.sku];return `${p.sku};${p.name.replace(/;/g,',')};${l.qty};${p.moq};${p.pvp.toFixed(2).replace('.',',')}`}).join('\n')+(d.obs?`\n\nobservacoes;${d.obs.replace(/[\r\n;]+/g,' ')}`:'');
-  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=id+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);
-  let lines=S.rfq.map(l=>`${l.sku} × ${l.qty}`).join('\n');if(lines.length>1500)lines=lines.slice(0,1500)+'\n… (lista completa no CSV)';
-  const href=mailto('Pedido de proposta '+id,`Pedido de proposta ${id}\nEmpresa: ${d.emp}\nNIF: ${d.nif}\nE-mail: ${d.mail}\n\n${lines}\n\n${d.obs?'Observações: '+d.obs+'\n\n':''}Em anexo: ${id}.csv${refName?' e '+refName:''}.`);
-  S.sent=true;steps();
-  const r=$('#rfqResult');r.hidden=false;r.innerHTML=`<p class="eyebrow">Pedido ${id}</p><p>Descarregámos o ficheiro <span class="mono">${id}.csv</span> e abrimos o e-mail para a equipa comercial. Anexe o ficheiro${refName?' e a imagem de referência':''} e envie. <a class="link" href="${href}">Abrir o e-mail outra vez</a>.</p>`;
-  msg.className='msg ok';msg.textContent='Pedido preparado.';r.focus();location.href=href});
-
-/* ROUTER + M15 */
-const TITLES={inicio:'LM BIJU — Bijuteria por grosso, à luz certa',catalogo:'Catálogo — LM BIJU',produto:'Produto — LM BIJU',pedido:'Pedido de proposta — LM BIJU'};
-let current=null,first=true,pendingLights=false;
-function parse(){const h=location.hash;if(!h.startsWith('#/'))return null;const [path,q]=h.slice(2).split('?');const parts=path.split('/').filter(Boolean);return {view:parts[0]||'inicio',id:parts[1]?decodeURIComponent(parts[1]):'',q:new URLSearchParams(q||'')}}
-function apply(r){
-  if(current==='inicio'&&r.view!=='inicio'){Hero.stop();Scrub.leave();homeMotionOff()}
-  $$('[data-view-section]').forEach(s=>{s.hidden=s.dataset.viewSection!==r.view});
-  html.dataset.view=r.view;html.dataset.theme=r.view==='inicio'?'dark':'light';
-  $('meta[name="theme-color"]').content=r.view==='inicio'?'#14120F':'#FBFBF9';
-  $$('[data-nav]').forEach(a=>a.removeAttribute('aria-current'));const n=$(`[data-nav="${r.view}"]`);if(n)n.setAttribute('aria-current','page');
-  document.title=TITLES[r.view]||TITLES.inicio;
-  if(r.view==='catalogo')renderCatalog(r.q);if(r.view==='produto')renderPDP(r.id);if(r.view==='pedido')renderRFQ();
-  const target=r.q.get('s');
-  if(r.view==='inicio'&&current!=='inicio'){Hero.start();Scrub.enter();homeMotion()}
-  window.scrollTo(0,0);
-  if(target){const el=document.getElementById(target);if(el)requestAnimationFrame(()=>{lenis?lenis.scrollTo(el,{immediate:true}):el.scrollIntoView()})}
-  if(!first){const f=$(`[data-view-section="${r.view}"] [data-focus]`)||$('#main');f.focus({preventScroll:true})}
-  current=r.view;first=false}
-function route(){let r=parse();if(!r){const id=location.hash.slice(1);if(current==='inicio')return;if(id&&document.getElementById(id))r={view:'inicio',id:'',q:new URLSearchParams('s='+id)};else if(current)return;else r={view:'inicio',id:'',q:new URLSearchParams()}}
-  if(!['inicio','catalogo','produto','pedido'].includes(r.view))r.view='inicio';
-  if(r.view==='inicio'&&current==='inicio'){const el=r.q.get('s')&&document.getElementById(r.q.get('s'));if(el){lenis?lenis.scrollTo(el):el.scrollIntoView({behavior:reduced()?'auto':'smooth'})}return}
-  const lights=pendingLights&&current==='inicio'&&r.view!=='inicio';pendingLights=false;
-  if(!first&&document.startViewTransition&&!reduced()){html.classList.toggle('vt-lights',lights);const t=document.startViewTransition(()=>apply(r));
-    t.finished.finally(()=>{html.classList.remove('vt-lights');$$('[style*="view-transition-name"]').forEach(el=>{if(!el.closest('#pdp'))el.style.viewTransitionName=''})})}
-  else apply(r)}
-document.addEventListener('click',e=>{const l=e.target.closest('[data-lights]');if(!l)return;const r=l.getBoundingClientRect();html.style.setProperty('--vx',(r.left+r.width/2)+'px');html.style.setProperty('--vy',(r.top+r.height/2)+'px');pendingLights=true});
-function rerender(){if(current==='catalogo')renderGrid();if(current==='produto')renderPDP(parse().id)}
-addEventListener('hashchange',route);
-if(RM.addEventListener)RM.addEventListener('change',()=>location.reload());
-html.classList.toggle('session',S.session);$('[data-session-toggle]').setAttribute('aria-pressed',String(S.session));saveRFQ();
-route();
 });
 </script>
 </body>
